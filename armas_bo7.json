@@ -1,0 +1,342 @@
+[
+  {
+    "nome": "AN-94", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/an-94.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Pesado de Fábrica"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Pesado de Fábrica","Cano Tático Ultraleve AN","Cano Estendido Kobra"],"carregador":["Tambor de 60 Projéteis","Carregador de 45 Projéteis","Munição 5.45mm Alta Velocidade"],"coronha":["Coronha Tática FX","Coronha Dobrável Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "REV-46", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/rev-46.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35 Compensated"},{"slot":"Cano","nome":"Cano Bore 99 Leve"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 40 Projéteis"},{"slot":"Coronha","nome":"Coronha Tática Rescue-9"}],
+    "acessorios_exclusivos": {"cano":["Cano Bore 99 Leve","Cano Longo Zulu 40","Cano Curto de Mobilidade"],"carregador":["Carregador de 40 Projéteis","Carregador de 20 Projéteis Rápido","Munição 4.6mm Ponta Oca"],"coronha":["Coronha Tática Rescue-9","Sem Coronha","Coronha Pesada de Estabilidade"]}
+  },
+  {
+    "nome": "MK35-ISR", "jogo": "BO7", "tipo": "Fuzis de Atirador", "tier": "Tier S", "arquivo_imagem": "armas/mk35-isr.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo MK-Titan 28\""},{"slot":"Acoplamento","nome":"Bipé Dobrável Leve"},{"slot":"Carregador","nome":"Carregador Estendido de 15 Projéteis"},{"slot":"Mira","nome":"Mira Heinrich Solar 4.0x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo MK-Titan 28\"","Cano de Precisão ISR-Carbon","Cano Curto Scout MK35"],"carregador":["Carregador Estendido de 15 Projéteis","Carregador de 10 Projéteis Leve","Munição 7.62x51mm Alta Velocidade"],"coronha":["Coronha Almofadada de Precisão","Coronha Tática Esquelética ISR","Sem Coronha"]}
+  },
+  {
+    "nome": "RYDEN-45K", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/ryden-45k.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano K-Ranger 45"},{"slot":"Acoplamento","nome":"Parada de Mão Paracord"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis .45"},{"slot":"Coronha","nome":"Coronha Dobrável Ryden"}],
+    "acessorios_exclusivos": {"cano":["Cano K-Ranger 45","Cano Curto Ryden CQB","Cano Silenciado Shrouded"],"carregador":["Tambor de 50 Projéteis .45","Carregador Rápido de 32 Projéteis","Munição .45 ACP Ponta Oca"],"coronha":["Coronha Dobrável Ryden","Sem Coronha","Coronha Pesada Anti-Recuo"]}
+  },
+  {
+    "nome": "FG42", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/fg42.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Purificador T-G"},{"slot":"Cano","nome":"Cano Pesado Fallschirm 500mm"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador Estendido de 30 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Fallschirm 500mm","Cano Longo Fluted 7.92","Cano Tático CQC"],"carregador":["Carregador Estendido de 30 Projéteis","Carregador Padrão de 20 Rápido","Munição 7.92mm Mauser Perfurante"],"coronha":["Coronha Clássica de Madeira Reforçada","Coronha Tática Esquelética FG","Almofada de Foco Recoil-Pad"]}
+  },
+  {
+    "nome": "VST", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/vst.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo VST Vanguard"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Pivot Vertical"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo VST Vanguard","Cano Curto Stalker","Cano Silenciado Integrado"],"carregador":["Tambor de 60 Projéteis","Carregador de 40 Projéteis Rápido","Munição 5.45mm Alta Velocidade"],"coronha":["Coronha de Combate VST","Coronha Leve Agilidade","Sem Coronha"]}
+  },
+  {
+    "nome": "STRIDER-300", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier A", "arquivo_imagem": "armas/strider-300.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo Strider Match 26\""},{"slot":"Acoplamento","nome":"Bipé Dobrável Leve"},{"slot":"Carregador","nome":"Carregador de 10 Projéteis .300"},{"slot":"Mira","nome":"Mira SP-X 80 6.6x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Strider Match 26\"","Cano Estriado Bull-Barrel","Cano Tático Scout 20\""],"carregador":["Carregador de 10 Projéteis .300","Carregador Leve de 5 Tiros","Munição .300 Alta Velocidade"],"coronha":["Coronha de Precisão com Bochecheira","Coronha Tática Apex","Almofada Amortecedora Strider"]}
+  },
+  {
+    "nome": "DS20-MIRAGE", "jogo": "BO7", "tipo": "Fuzis de Atirador", "tier": "Tier A", "arquivo_imagem": "armas/ds20-mirage.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Mirage Stealth 650mm"},{"slot":"Carregador","nome":"Munição 7.62x54mmR Alta Velocidade"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Mira","nome":"Mira Range 4.0x"}],
+    "acessorios_exclusivos": {"cano":["Cano Mirage Stealth 650mm","Cano Pesado Mirage Long-Range","Cano Curto Flutuante"],"carregador":["Munição 7.62x54mmR Alta Velocidade","Carregador Estendido de 10 Projéteis","Munição Perfurante DS20"],"coronha":["Coronha Esquelética Mirage Carbon","Coronha Pesada com Bipé","Sem Coronha"]}
+  },
+  {
+    "nome": "MPC-25", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/mpc-25.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35 Compensated"},{"slot":"Cano","nome":"Cano Longo MPC Rapid-Fire"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis 9mm"},{"slot":"Coronha","nome":"Coronha Dobrável MPC Tática"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo MPC Rapid-Fire","Cano Curto de Saque MPC","Cano Ported Estabilizador"],"carregador":["Tambor de 50 Projéteis 9mm","Carregador Rápido de 35 Projéteis","Munição 9mm Ponta Oca"],"coronha":["Coronha Dobrável MPC Tática","Sem Coronha","Coronha Almofadada de Retenção"]}
+  },
+  {
+    "nome": "AK-27", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/ak-27.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Ion-X de Precisão"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de Polímero de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Ion-X de Precisão","Cano Curto Redutor de Dispersão","Cano Silenciado Estabilizado Stealth"],"carregador":["Tambor de Polímero de 60 Projéteis","Carregador de Recarga Eletrolítica de 40","Munição 7.62x39mm Hyper-Velocity"],"coronha":["Coronha Dinâmica de Recuo MFS","Coronha de Fibra de Carbono Apex","Sem Coronha"]}
+  },
+  {
+    "nome": "STURMWOLF-45", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/sturmwolf-45.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Purificador T-G"},{"slot":"Cano","nome":"Cano Sturm-Heavy 16\""},{"slot":"Acoplamento","nome":"Parada de Mão Paracord"},{"slot":"Carregador","nome":"Carregador Estendido de 40 Projéteis"},{"slot":"Coronha","nome":"Coronha Wolf-Trek Dobrável"}],
+    "acessorios_exclusivos": {"cano":["Cano Sturm-Heavy 16\"","Cano Curto Blitz-Wolf","Cano Silenciado Integrado .45"],"carregador":["Carregador Estendido de 40 Projéteis","Carregador de 25 Projéteis Rápido","Munição .45 Alta Velocidade"],"coronha":["Coronha Wolf-Trek Dobrável","Coronha Pesada de Estabilidade","Sem Coronha"]}
+  },
+  {
+    "nome": "VX-COMPACT", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/vx-compact.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L Mini"},{"slot":"Cano","nome":"Cano Longo VX Extended"},{"slot":"Carregador","nome":"Tambor Estendido de 36 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Coronha","nome":"Kit de Conversão Carabina VX"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo VX Extended","Cano Tático Ported","Cano Curto CQB"],"carregador":["Tambor Estendido de 36 Projéteis","Carregador de 24 Projéteis Mag-Link","Munição 9mm Ponta Oca"],"coronha":["Coronha Dobrável Ultraleve","Grip Akimbo Duplo","Sem Coronha"],"kit_conversao":["Kit de Conversão Carabina VX"]}
+  },
+  {
+    "nome": "CBRS-3", "jogo": "BO7", "tipo": "Fuzis de Batalha", "tier": "Tier B", "arquivo_imagem": "armas/cbrs-3.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Quartermaster"},{"slot":"Cano","nome":"Cano Condensador CBRS Match"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Célula Estendida de 45 Tiros"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Condensador CBRS Match","Cano de Pulso Acelerado","Cano Dissipador Térmico"],"carregador":["Célula Estendida de 45 Tiros","Célula Rápida de 30 Tiros","Módulo de Alta Densidade"],"coronha":["Coronha Balanceada CBRS","Coronha Leve Tática","Sem Coronha"]}
+  },
+  {
+    "nome": "VOYAK-KT-3", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier B", "arquivo_imagem": "armas/voyak-kt-3.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo KT-3 Vanguard"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo KT-3 Vanguard","Cano Curto Voyak CQB","Cano Estriado de Precisão"],"carregador":["Tambor de 60 Projéteis","Carregador de 40 Projéteis Rápido","Munição 5.45mm Alta Velocidade"],"coronha":["Coronha Almofadada Bullpup","Coronha Tática Leve Voyak","Sem Coronha"]}
+  },
+  {
+    "nome": "M15-MOD-0", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier B", "arquivo_imagem": "armas/m15-mod-0.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Pesado Mod-0 Match 20\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Mod-0 Match 20\"","Cano Curto Tático 11.5\"","Cano Fluted de Alta Precisão"],"carregador":["Carregador de 60 Projéteis","Carregador de 40 Projéteis Rápido","Munição 5.56mm Alta Velocidade"],"coronha":["Coronha Fixa Clássica Mod-0","Coronha Retrátil SOPMOD","Sem Coronha"]}
+  },
+  {
+    "nome": "PEACEKEEPER-MK1", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier B", "arquivo_imagem": "armas/peacekeeper-mk1.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Híbrido Precision-Light"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador Estendido de 45 Projéteis"},{"slot":"Coronha","nome":"Coronha Retrátil Micro-Compensada"}],
+    "acessorios_exclusivos": {"cano":["Cano Híbrido Precision-Light","Cano Longo Mk1 Recon","Cano Curto Infiltrador"],"carregador":["Carregador Estendido de 45 Projéteis","Carregador Mag-Link Duplo de 35","Munição de Ponta Fragmentada"],"coronha":["Coronha Retrátil Micro-Compensada","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "VS-RECON", "jogo": "BO7", "tipo": "Fuzis de Atirador", "tier": "Tier B", "arquivo_imagem": "armas/vs-recon.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo VS-Precision 24\""},{"slot":"Acoplamento","nome":"Bipé Dobrável Leve"},{"slot":"Carregador","nome":"Carregador de 10 Projéteis Recon"},{"slot":"Mira","nome":"Mira Heinrich Solar 4.0x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo VS-Precision 24\"","Cano Flutuante Carbon Recon","Cano Curto Scout 18\""],"carregador":["Carregador de 10 Projéteis Recon","Carregador Estendido de 15 Projéteis","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha de Precisão VS com Almofada","Coronha Leve Tática Recon","Sem Coronha"]}
+  },
+  {
+    "nome": "HAWKER-HX", "jogo": "BO7", "tipo": "LMG", "tier": "Tier B", "arquivo_imagem": "armas/hawker-hx.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado Hawker Horizon 22\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto Estendido de 100 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Hawker Horizon 22\"","Cano Longo Titan HX","Cano Tático Leve Hawker"],"carregador":["Cinto Estendido de 100 Projéteis","Cinto Rápido de 60 Projéteis","Munição Perfurante HX"],"coronha":["Coronha de Estabilidade Pesada HX","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "MXR-17", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/mxr-17.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Pesado Acelerador Gauss"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor Eletromagnético de 50"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Acelerador Gauss","Cano Longo Match-Grade","Cano Tático Dissipador"],"carregador":["Tambor Eletromagnético de 50","Carregador Estendido de 40","Munição de Tungstênio Perfurante"],"coronha":["Coronha Pesada Centurion","Coronha Tática Flex","Sem Coronha"]}
+  },
+  {
+    "nome": "CARBON 57", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/carbon-57.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Carbon-Bore 90"},{"slot":"Acoplamento","nome":"Parada de Mão Paracord"},{"slot":"Carregador","nome":"Tambor Selado de 50 Projéteis"},{"slot":"Laser","nome":"Laser Quadrado de Convergência MFS"}],
+    "acessorios_exclusivos": {"cano":["Cano Carbon-Bore 90","Cano Estendido de Polímero","Cano Silenciado CQC"],"carregador":["Tambor Selado de 50 Projéteis","Carregador de 35 Projéteis Ultra-Rápido","Munição 5.7x28mm Alta Velocidade"],"coronha":["Coronha Dobrável MFS Leve","Sem Coronha","Coronha Pesada Anti-Recuo"]}
+  },
+  {
+    "nome": "RAZOR 9MM", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/razor-9mm.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano de Alta Cadência Razor-X"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor Duplo de 50 Projéteis"},{"slot":"Coronha","nome":"Coronha Esquelética Rápida"}],
+    "acessorios_exclusivos": {"cano":["Cano de Alta Cadência Razor-X","Cano Estendido de Precisão","Cano Curto CQB"],"carregador":["Tambor Duplo de 50 Projéteis","Carregador de 32 Tiros Rápido","Munição 9mm Ponta Oca"],"coronha":["Coronha Esquelética Rápida","Sem Coronha","Coronha de Apoio Revestida"]}
+  },
+  {
+    "nome": "DRAVEC 45", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/dravec-45.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Lacrado S-37C"},{"slot":"Cano","nome":"Cano Longo Heavy Dravec"},{"slot":"Acoplamento","nome":"Empunhadura XRK Edge BW-4"},{"slot":"Carregador","nome":"Carregador Estendido de 40 Projéteis"},{"slot":"Coronha","nome":"Coronha Dobrável Hatchet"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Heavy Dravec","Cano Curto de Saque","Cano Silenciado Whisper"],"carregador":["Carregador Estendido de 40 Projéteis","Tambor Pesado de 50 Projéteis","Munição .45 FMJ Perfurante"],"coronha":["Coronha Dobrável Hatchet","Sem Coronha","Coronha Pesada Tática"]}
+  },
+  {
+    "nome": "XR-3 ION", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier S", "arquivo_imagem": "armas/xr-3-ion.png",
+    "acessorios": [{"slot":"Cano","nome":"Cano Tri-Ion Burst 30\""},{"slot":"Mira","nome":"Mira Óptica Heinrich Solar 4.0x"},{"slot":"Acoplamento","nome":"Bipé Dobrável Leve"},{"slot":"Carregador","nome":"Célula de Energia Ionizada HVP"},{"slot":"Coronha","nome":"Coronha Balanceada MFS Ion"}],
+    "acessorios_exclusivos": {"cano":["Cano Tri-Ion Burst 30\"","Cano Condensador de Pulso","Cano Curto Scout Ion"],"carregador":["Célula de Energia Ionizada HVP","Célula Estendida de Carga Rápida","Módulo de Sobrecarga Térmica"],"coronha":["Coronha Balanceada MFS Ion","Coronha Esquelética Leve","Almofada de Foco Integrada"]}
+  },
+  {
+    "nome": "SHADOW SK", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier A", "arquivo_imagem": "armas/shadow-sk.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo Stealth Recon"},{"slot":"Carregador","nome":"Munição Calibre .300 Alta Velocidade"},{"slot":"Laser","nome":"Laser Agile MFS Pro"},{"slot":"Coronha","nome":"Coronha Tática Semi-Auto"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Stealth Recon","Cano Tático SK-7","Cano Flutuante de Precisão"],"carregador":["Munição Calibre .300 Alta Velocidade","Carregador Estendido de 10 Projéteis","Munição Calibre .300 Perfurante"],"coronha":["Coronha Tática Semi-Auto","Coronha de Precisão Bipod","Sem Coronha"]}
+  },
+  {
+    "nome": "XM325", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/xm325.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado XM Fluted"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de Polímero de 100 Tiros"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado XM Fluted","Cano Longo Titan-325","Cano Tático Ultraleve"],"carregador":["Cinto de Polímero de 100 Tiros","Cinto Rápido de 75 Projéteis","Munição 5.56x45mm Alta Velocidade"],"coronha":["Coronha de Absorção Hidráulica","Coronha Leve Raider","Sem Coronha"]}
+  },
+  {
+    "nome": "AKITA", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/akita.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Automático Akita Long"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Tambor Rotativo de 16 Projéteis"},{"slot":"Coronha","nome":"Sem Coronha"}],
+    "acessorios_exclusivos": {"cano":["Cano Automático Akita Long","Cano Curto de Dispersão Ampla","Cano Silenciado CQC"],"carregador":["Tambor Rotativo de 16 Projéteis","Tambor de 12 Projéteis Rápido","Munição Calibre 12 Balote de Precisão"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Pesada Anti-Recuo"]}
+  },
+  {
+    "nome": "CODA 9", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier S", "arquivo_imagem": "armas/coda-9.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Micro-Port"},{"slot":"Cano","nome":"Cano Full-Auto CODA Long"},{"slot":"Carregador","nome":"Tambor Estendido de 36 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Coronha","nome":"Kit Micro-Carabina CODA 2035"}],
+    "acessorios_exclusivos": {"cano":["Cano Full-Auto CODA Long","Cano Ported de Saque Rápido","Cano Silenciado Stealth"],"carregador":["Tambor Estendido de 36 Projéteis","Carregador de 24 Projéteis Mag-Link","Munição 9mm Ponta Oca"],"coronha":["Punho Duplo Akimbo 2035","Coronha Dobrável Leve","Empunhadura Tática Emborrachada"],"kit_conversao":["Kit Micro-Carabina CODA 2035"]}
+  },
+  {
+    "nome": "1911", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/1911.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L Mini"},{"slot":"Cano","nome":"Cano Longo 1911 Match"},{"slot":"Carregador","nome":"Carregador Estendido de 15 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Gatilho/Modo","nome":"Gatilho Leve de Competição"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo 1911 Match","Cano Tático Ported","Cano Curto Clássico"],"carregador":["Carregador Estendido de 15 Projéteis","Carregador Rápido de 8","Munição .45 ACP Ponta Oca"],"coronha":["Punho Duplo Akimbo Clássico","Coronha Tática Retrátil","Sem Coronha"]}
+  },
+  {
+    "nome": "ABR A1", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/abr-a1.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo de Rajada ABR"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 45 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo de Rajada ABR","Cano Curto Tático","Cano Fluted de Precisão"],"carregador":["Carregador de 45 Projéteis","Carregador Rápido de 30","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Bullpup Reforçada","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "AK-74", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/ak-74.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Spetsnaz 500mm"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Spetsnaz 500mm","Cano Tático AK","Cano Curto CQC"],"carregador":["Tambor de 60 Projéteis","Carregador de 40 Rápido","Munição 5.45mm Alta Velocidade"],"coronha":["Coronha de Madeira Reforçada","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "AMR MOD 4", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier S", "arquivo_imagem": "armas/amr-mod-4.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Pesado MOD-4 Titan"},{"slot":"Acoplamento","nome":"Bipé Dobrável Leve"},{"slot":"Carregador","nome":"Munição .50 Cal Alta Velocidade"},{"slot":"Mira","nome":"Mira SP-X 80 6.6x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado MOD-4 Titan","Cano de Carga Rápida","Cano Curto Scout"],"carregador":["Munição .50 Cal Alta Velocidade","Carregador Estendido de 7 Tiros","Munição Perfurante MOD-4"],"coronha":["Coronha de Precisão com Amortecedor","Coronha Tática Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "CR-56 AMAX", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/cr-56-amax.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo XRK Zodiac de 440mm"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 45 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo XRK Zodiac de 440mm","Cano Curto FSS Intruder","Cano Silenciado Integrado"],"carregador":["Carregador de 45 Projéteis","Carregador de Conversão M67 10 Tiros","Munição 7.62x39mm Alta Velocidade"],"coronha":["Coronha Pesada CR-56","Coronha Tática Esquelética","Sem Coronha"]}
+  },
+  {
+    "nome": "CYPHER 091", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/cypher-091.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo Cypher Match"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Cypher Match","Cano Curto Infiltrador","Cano Fluted de Alta Cadência"],"carregador":["Tambor de 50 Projéteis","Carregador Rápido de 35","Munição 5.56 Ponta Oca"],"coronha":["Coronha MFS Balanceada","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "D13 SECTOR", "jogo": "BO7", "tipo": "Especiais", "tier": "Tier B", "arquivo_imagem": "armas/d13-sector.png",
+    "acessorios": [{"slot":"Munição","nome":"Discos de Plasma de Alta Densidade"}],
+    "acessorios_exclusivos": {"cano":["Guia de Lançamento Magnético"],"carregador":["Discos de Plasma de Alta Densidade","Discos Ricocheteadores Triplos"],"coronha":["Apoio de Retenção Hidráulico"]}
+  },
+  {
+    "nome": "DRESDEN 9MM", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/dresden-9mm.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Longo Dresden Blitz"},{"slot":"Acoplamento","nome":"Parada de Mão Paracord"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis"},{"slot":"Coronha","nome":"Coronha Dobrável Tática"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Dresden Blitz","Cano Curto CQB","Cano Silenciado Integrado"],"carregador":["Tambor de 50 Projéteis","Carregador Rápido de 32","Munição 9mm Alta Velocidade"],"coronha":["Coronha Dobrável Tática","Sem Coronha","Coronha Pesada Anti-Recuo"]}
+  },
+  {
+    "nome": "ECHO 12", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/echo-12.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Longo Echo Defender"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Tubo Estendido de 10 Projéteis"},{"slot":"Coronha","nome":"Sem Coronha"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Echo Defender","Cano Serrado Breacher","Cano Silenciado CQC"],"carregador":["Tubo Estendido de 10 Projéteis","Munição Balote de Precisão","Munição Incendiária"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Almofadada"]}
+  },
+  {
+    "nome": "EGRT-17", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/egrt-17.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Pesado EGRT 16\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado EGRT 16\"","Cano Curto Tático","Cano de Precisão Match"],"carregador":["Tambor de 60 Projéteis","Carregador Rápido de 40","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Balanceada MFS","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "FENG 82", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/feng-82.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado Feng Horizon"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de 100 Projéteis Rápido"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Feng Horizon","Cano Longo Titan","Cano Curto Para"],"carregador":["Cinto de 100 Projéteis Rápido","Cinto Pesado de 150 Tiros","Munição 5.8mm Alta Velocidade"],"coronha":["Coronha Pesada Anti-Recuo","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "FFAR 1", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/ffar-1.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Monolítico"},{"slot":"Cano","nome":"Cano Longo Reinforced Heavy 19.5\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor Salvo de 50 Projéteis"},{"slot":"Coronha","nome":"Coronha Raider Stock"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Reinforced Heavy 19.5\"","Cano Takedown de Alcance","Cano Curto Ultraleve"],"carregador":["Tambor Salvo de 50 Projéteis","Carregador Rápido de 38","Munição 5.56 Ponta Oca"],"coronha":["Coronha Raider Stock","Coronha de Combate SAS","Sem Coronha"]}
+  },
+  {
+    "nome": "GRAVEMARK .357", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/gravemark-357-revolver.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Ported .357"},{"slot":"Cano","nome":"Cano Longo Gravemark Hunter"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Munição .357 Alta Velocidade"},{"slot":"Gatilho/Modo","nome":"Gatilho Leve Match"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Gravemark Hunter","Cano Curto Snub-Nose","Cano Ported de Precisão"],"carregador":["Munição .357 Alta Velocidade","Recarregador Rápido Speed-Loader","Munição Balote de Chumbo"],"coronha":["Grip Akimbo Duplo","Empunhadura de Madeira Polida","Empunhadura Emborrachada"]}
+  },
+  {
+    "nome": "GREMLIN", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/gremlin.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L Mini"},{"slot":"Cano","nome":"Cano Longo Gremlin Extended"},{"slot":"Carregador","nome":"Tambor de 30 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Mira","nome":"Mira Cronen Mini Pro"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Gremlin Extended","Cano Tático Ported","Cano Curto CQB"],"carregador":["Tambor de 30 Projéteis","Carregador Rápido de 20","Munição 9mm Ponta Oca"],"coronha":["Grip Akimbo Duplo","Coronha Micro-Carabina","Sem Coronha"]}
+  },
+  {
+    "nome": "HDR", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier S", "arquivo_imagem": "armas/hdr.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Monolítico"},{"slot":"Cano","nome":"Cano Pro de 26.9\" HDR"},{"slot":"Carregador","nome":"Munição 12.7x108mm Alta Velocidade"},{"slot":"Laser","nome":"Laser Tático 7mW"},{"slot":"Coronha","nome":"Coronha de Campeão FTAC"}],
+    "acessorios_exclusivos": {"cano":["Cano Pro de 26.9\" HDR","Cano Longo de Precisão","Cano Curto Scout"],"carregador":["Munição 12.7x108mm Alta Velocidade","Carregador de 9 Projéteis","Munição Perfurante"],"coronha":["Coronha de Campeão FTAC","Coronha Tática Esquelética","Almofada de Foco"]}
+  },
+  {
+    "nome": "J-GER 45", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/j-ger-45.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L Mini"},{"slot":"Cano","nome":"Cano Longo J-Ger Match"},{"slot":"Carregador","nome":"Carregador Estendido de 14 Projéteis"},{"slot":"Laser","nome":"Laser Tático Corio LAZ-44"},{"slot":"Gatilho/Modo","nome":"Gatilho Leve de Competição"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo J-Ger Match","Cano Tático Ported","Cano Curto CQC"],"carregador":["Carregador Estendido de 14 Projéteis","Carregador Rápido de 10","Munição .45 ACP Alta Velocidade"],"coronha":["Punho Duplo Akimbo","Coronha Tática Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "KILO 141", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/kilo-141.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Monolítico"},{"slot":"Cano","nome":"Cano Singuard Arms 19.8\" Prowler"},{"slot":"Acoplamento","nome":"Empunhadura de Comando"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Singuard Arms 19.8\" Prowler","Cano Whisper Silenciado Integrado","Cano Singuard Arms 16.6\" SOCOM"],"carregador":["Tambor de 60 Projéteis","Tambor de 100 Projéteis","Munição 5.56 Alta Velocidade"],"coronha":["Coronha de Caça FSS","Coronha Ultraleve FTAC","Sem Coronha"]}
+  },
+  {
+    "nome": "KOGOT-7", "jogo": "BO7", "tipo": "Corpo a Corpo", "tier": "Tier A", "arquivo_imagem": "armas/kogot-7.png",
+    "acessorios": [{"slot":"Cabo","nome":"Garras Curvas de Titânio Karambit"}],
+    "acessorios_exclusivos": {"cano":["Lâmina de Aço Temperado Kogot"],"carregador":["Bainha de Saque Rápido"],"coronha":["Punho Ergonômico de Retenção"]}
+  },
+  {
+    "nome": "KRS-762", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/krs-762.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo KRS Match 20\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 40 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo KRS Match 20\"","Cano Curto Raider","Cano Silenciado Heavy"],"carregador":["Carregador de 40 Projéteis","Tambor de 50 Projéteis","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha de Retenção KRS","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "LC10", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/lc10.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Agency"},{"slot":"Cano","nome":"Cano Task Force 13.9\""},{"slot":"Acoplamento","nome":"Empunhadura de Agente de Campo"},{"slot":"Carregador","nome":"Tambor Stanag de 55 Projéteis"},{"slot":"Coronha","nome":"Coronha Raider Stock"}],
+    "acessorios_exclusivos": {"cano":["Cano Task Force 13.9\"","Cano Ranger 11.9\"","Cano Vandal 12.5\""],"carregador":["Tambor Stanag de 55 Projéteis","Carregador Rápido Salvo de 52","Munição 9mm Alta Velocidade"],"coronha":["Coronha Raider Stock","Coronha Tática SAS","Sem Coronha"]}
+  },
+  {
+    "nome": "M10 BREACHER", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/m10-breacher.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Breacher Long 20\""},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Tubo Estendido de 8 Tiros"},{"slot":"Coronha","nome":"Sem Coronha"}],
+    "acessorios_exclusivos": {"cano":["Cano Breacher Long 20\"","Cano Serrado Compact","Cano Silenciado Suppressed"],"carregador":["Tubo Estendido de 8 Tiros","Munição Calibre 12 Balote","Munição Dragon's Breath"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Almofadada"]}
+  },
+  {
+    "nome": "M34 NOVALINE", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/m34-novaline.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado Novaline Match"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de 100 Projéteis Rápido"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado Novaline Match","Cano Longo Titan","Cano Curto Para"],"carregador":["Cinto de 100 Projéteis Rápido","Cinto Pesado de 150 Tiros","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Pesada Anti-Recuo","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "M8A1", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/m8a1.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo M8 Match 20\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador Estendido de 42 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo M8 Match 20\"","Cano de 4 Tiros Burst","Cano Curto CQC"],"carregador":["Carregador Estendido de 42 Projéteis","Carregador Rápido de 32","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Balanceada M8","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "MADDOX RFB", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/maddox-rfb.png",
+    "acessorios": [{"slot":"Boca","nome":"Compensador Ported"},{"slot":"Cano","nome":"Cano Longo RFB Heavy"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador Estendido de 40 Projéteis"},{"slot":"Mira","nome":"Mira Elo Óptica"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo RFB Heavy","Cano Curto Infiltrador","Cano Silenciado Whisper"],"carregador":["Carregador Estendido de 40 Projéteis","Carregador Rápido de 30","Munição 5.56 Ponta Oca"],"coronha":["Coronha Bullpup Maddox","Coronha Leve Agilidade","Sem Coronha"]}
+  },
+  {
+    "nome": "MAELSTROM", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/maelstrom.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Automático Maelstrom Long"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Carregador","nome":"Tambor Duplo de 20 Projéteis"},{"slot":"Coronha","nome":"Sem Coronha"}],
+    "acessorios_exclusivos": {"cano":["Cano Automático Maelstrom Long","Cano Curto Breacher","Cano Silenciado Heavy"],"carregador":["Tambor Duplo de 20 Projéteis","Tambor Rápido de 12","Munição Balote de Precisão"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Almofadada"]}
+  },
+  {
+    "nome": "MERRICK 556", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/merrick-556.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Merrick Recon"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Merrick Recon","Cano Curto Tático","Cano Fluted Match"],"carregador":["Tambor de 60 Projéteis","Carregador Rápido de 40","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Balanceada MFS","Coronha Leve Raider","Sem Coronha"]}
+  },
+  {
+    "nome": "MK78", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/mk78.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado MK78 Titan 22\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de 100 Projéteis Rápido"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado MK78 Titan 22\"","Cano Longo Horizon","Cano Curto CQB"],"carregador":["Cinto de 100 Projéteis Rápido","Cinto Pesado de 150 Tiros","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha Pesada Anti-Recuo","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "NAIL GUN", "jogo": "BO7", "tipo": "Especiais", "tier": "Tier B", "arquivo_imagem": "armas/nail-gun.png",
+    "acessorios": [{"slot":"Cano","nome":"Cano Longo Reforçado Pistola de Pregos"},{"slot":"Carregador","nome":"Pente Estendido de 30 Pregos"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Reforçado Pistola de Pregos","Cano Curto Fast-Fire"],"carregador":["Pente Estendido de 30 Pregos","Pente Leve de 20 Pregos Rápido"],"coronha":["Empunhadura Ergonômica Emborrachada"]}
+  },
+  {
+    "nome": "OLYMPIA", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/olympia.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Duplo Longo Over-Under 710mm"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Munição Calibre 12 Balote"},{"slot":"Coronha","nome":"Coronha de Madeira Clássica Reforçada"}],
+    "acessorios_exclusivos": {"cano":["Cano Duplo Longo Over-Under 710mm","Cano Serrado Sawed-Off Curto","Cano Choked Ported"],"carregador":["Munição Calibre 12 Balote","Munição Dragon's Breath Incendiária","Munição Perfurante"],"coronha":["Coronha de Madeira Clássica Reforçada","Sem Coronha (Alta Mobilidade)","Almofada Recoil-Pad"]}
+  },
+  {
+    "nome": "PML-556", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/pml-556.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado PML Match 22\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de 100 Projéteis Rápido"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Pesado PML Match 22\"","Cano Longo Horizon","Cano Curto Para"],"carregador":["Cinto de 100 Projéteis Rápido","Cinto Pesado de 150 Tiros","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Pesada Anti-Recuo","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "POWER DRILL", "jogo": "BO7", "tipo": "Corpo a Corpo", "tier": "Tier B", "arquivo_imagem": "armas/power-drill.png",
+    "acessorios": [{"slot":"Cabo","nome":"Broca de Perfuração Industrial de Tungstênio"}],
+    "acessorios_exclusivos": {"cano":["Broca de Perfuração Industrial de Tungstênio"],"carregador":["Bateria de Íon-Lítio Sobrecargada"],"coronha":["Empunhadura Ergonômica Emborrachada"]}
+  },
+  {
+    "nome": "PPSH-41", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/ppsh-41.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Gru"},{"slot":"Cano","nome":"Cano Task Force 15.7\""},{"slot":"Acoplamento","nome":"Empunhadura Spetsnaz"},{"slot":"Carregador","nome":"Tambor Stanag de 71 Projéteis"},{"slot":"Coronha","nome":"Coronha Raider Stock"}],
+    "acessorios_exclusivos": {"cano":["Cano Task Force 15.7\"","Cano Ranger 14.3\"","Cano Curto Tático"],"carregador":["Tambor Stanag de 71 Projéteis","Carregador Rápido de 55","Munição 7.62mm Tokarev Ponta Oca"],"coronha":["Coronha Raider Stock","Coronha de Madeira Clássica","Sem Coronha"]}
+  },
+  {
+    "nome": "RK-9", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/rk-9.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Longo RK Match"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis"},{"slot":"Coronha","nome":"Coronha Dobrável RK"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo RK Match","Cano Curto CQB","Cano Silenciado Shroud"],"carregador":["Tambor de 50 Projéteis","Carregador Rápido de 32","Munição 9mm Alta Velocidade"],"coronha":["Coronha Dobrável RK","Sem Coronha","Coronha Tática Pesada"]}
+  },
+  {
+    "nome": "SG-12", "jogo": "BO7", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/sg-12.png",
+    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Longo SG Breacher"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Carregador","nome":"Tambor Estendido de 14 Projéteis"},{"slot":"Coronha","nome":"Sem Coronha"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo SG Breacher","Cano Ported Curto","Cano Silenciado CQC"],"carregador":["Tambor Estendido de 14 Projéteis","Carregador Rápido de 8 Tiros","Munição Balote Match"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Almofadada"]}
+  },
+  {
+    "nome": "SOKOL 545", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/sokol-545.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Sokol Precision"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Sokol Precision","Cano Curto Spetsnaz","Cano Fluted Match"],"carregador":["Tambor de 60 Projéteis","Carregador de 40 Rápido","Munição 5.45mm Alta Velocidade"],"coronha":["Coronha de Madeira Reforçada","Coronha Esquelética Leve","Sem Coronha"]}
+  },
+  {
+    "nome": "STRYDER 22", "jogo": "BO7", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/stryder-22.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L Mini"},{"slot":"Cano","nome":"Cano Longo Stryder Match"},{"slot":"Carregador","nome":"Tambor de 30 Projéteis .22"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Gatilho/Modo","nome":"Gatilho Ultraleve de Competição"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Stryder Match","Cano Tático Ported","Cano Curto CQB"],"carregador":["Tambor de 30 Projéteis .22","Carregador Rápido de 20","Munição .22 LR Alta Velocidade"],"coronha":["Grip Akimbo Duplo","Coronha Micro-Carabina Stryder","Sem Coronha"]}
+  },
+  {
+    "nome": "SWORDFISH A1", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/swordfish-a1.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Penta-Burst de 5 Tiros 22\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador Estendido de 45 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Penta-Burst de 5 Tiros 22\"","Cano Longo Match","Cano Curto Infiltrador"],"carregador":["Carregador Estendido de 45 Projéteis","Carregador Rápido de 35","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Bullpup Swordfish","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "TR2", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/tr2.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo TR2 Recon 20\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo TR2 Recon 20\"","Cano Curto Tático","Cano Fluted de Precisão"],"carregador":["Tambor de 60 Projéteis","Carregador Rápido de 40","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Balanceada MFS","Coronha Leve Raider","Sem Coronha"]}
+  },
+  {
+    "nome": "VELOX 57", "jogo": "BO7", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/velox-57.png",
+    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Longo Velox Match"},{"slot":"Acoplamento","nome":"Parada de Mão Paracord"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Velox Match","Cano Curto CQB","Cano Silenciado Whisper"],"carregador":["Tambor de 50 Projéteis","Carregador Rápido de 35","Munição 5.7x28mm Alta Velocidade"],"coronha":["Coronha Dobrável MFS","Sem Coronha","Coronha Tática Pesada"]}
+  },
+  {
+    "nome": "X52 RESONATOR", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/x52-resonator.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador de Ressonância Iônica"},{"slot":"Cano","nome":"Cano Longo Acelerador X52"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Célula de Plasma Estendida de 50"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Acelerador X52","Cano de Pulso Harmônico","Cano Curto CQC"],"carregador":["Célula de Plasma Estendida de 50","Célula Rápida de 35 Tiros","Módulo de Sobrecarga Térmica"],"coronha":["Coronha Balanceada MFS","Coronha Leve Agile","Sem Coronha"]}
+  },
+  {
+    "nome": "X9 MAVERICK", "jogo": "BO7", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/x9-maverick.png",
+    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Longo Maverick 18\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 45 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
+    "acessorios_exclusivos": {"cano":["Cano Longo Maverick 18\"","Cano Curto Tático","Cano Fluted Sniper"],"carregador":["Carregador de 45 Projéteis","Carregador Rápido de 30","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Maverick Custom","Coronha Leve Raider","Sem Coronha"]}
+  }
+]
