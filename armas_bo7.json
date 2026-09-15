@@ -85,7 +85,7 @@
     "acessorios_exclusivos": {"cano":["Cano Longo VS-Precision 24\"","Cano Flutuante Carbon Recon","Cano Curto Scout 18\""],"carregador":["Carregador de 10 Projéteis Recon","Carregador Estendido de 15 Projéteis","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha de Precisão VS com Almofada","Coronha Leve Tática Recon","Sem Coronha"]}
   },
   {
-    "nome": "HAWKER-HX", "jogo": "BO7", "tipo": "LMG", "tier": "Tier B", "arquivo_imagem": "armas/hawker-hx.png",
+    "nome": "HAWKER-HX", "jogo": "BO7", "tipo": "Fuzis de Precisão", "tier": "Tier B", "arquivo_imagem": "armas/hawker-hx.png",
     "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado Hawker Horizon 22\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto Estendido de 100 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
     "acessorios_exclusivos": {"cano":["Cano Pesado Hawker Horizon 22\"","Cano Longo Titan HX","Cano Tático Leve Hawker"],"carregador":["Cinto Estendido de 100 Projéteis","Cinto Rápido de 60 Projéteis","Munição Perfurante HX"],"coronha":["Coronha de Estabilidade Pesada HX","Coronha Esquelética Leve","Sem Coronha"]}
   },
@@ -240,7 +240,7 @@
     "acessorios_exclusivos": {"cano":["Cano Breacher Long 20\"","Cano Serrado Compact","Cano Silenciado Suppressed"],"carregador":["Tubo Estendido de 8 Tiros","Munição Calibre 12 Balote","Munição Dragon's Breath"],"coronha":["Sem Coronha","Coronha Tática Esquelética","Coronha Almofadada"]}
   },
   {
-    "nome": "M34 NOVALINE", "jogo": "BO7", "tipo": "LMG", "tier": "Tier A", "arquivo_imagem": "armas/m34-novaline.png",
+    "nome": "M34 NOVALINE", "jogo": "BO7", "tipo": "Fuzis de Atirador", "tier": "Tier A", "arquivo_imagem": "armas/m34-novaline.png",
     "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano Pesado Novaline Match"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Cinto de 100 Projéteis Rápido"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
     "acessorios_exclusivos": {"cano":["Cano Pesado Novaline Match","Cano Longo Titan","Cano Curto Para"],"carregador":["Cinto de 100 Projéteis Rápido","Cinto Pesado de 150 Tiros","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Pesada Anti-Recuo","Coronha Esquelética Leve","Sem Coronha"]}
   },

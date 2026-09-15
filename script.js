@@ -1,5 +1,5 @@
 // ========================================================
-//  1. CONFIGURAÇÃO DE ASSETS & CDN DO GITHUB              |
+//  1. CONFIGURAÇÃO DE ASSETS & CDN DO GITHUB         |
 // ========================================================
 const USUARIO_GITHUB = "TH14GO-jinx";
 const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets@main/`;
@@ -8,9 +8,10 @@ const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets
 let listaMetaArmas = [];
 let acessoriosGlobais = {};
 
-// Filtros ativos na Tela Inicial (Home)
+// Filtros e busca ativos na Tela Inicial (Home)
 let filtroHomeJogo = "TODOS";
 let filtroHomeClasse = "TODAS";
+let termoBuscaHome = "";
 
 // Filtros ativos no Armeiro (Gunsmith)
 let filtroJogoAtual = "TODOS";
@@ -18,6 +19,17 @@ let filtroClasseAtual = "TODAS";
 
 // Filtro ativo na Comunidade
 let filtroArmaComunidade = "TODAS";
+
+// Mapeamento de Logos dos Jogos
+function obterLogoJogo(jogo) {
+    const mapaLogos = {
+        "MW2": "logos/mw2-logo.svg",
+        "MW3": "logos/mw3-logo.svg",
+        "BO6": "logos/bo6-logo.svg",
+        "BO7": "logos/bo7-logo.svg"
+    };
+    return mapaLogos[jogo] || "logos/cod-logo.svg";
+}
 
 // Mapeamento de Kits de Conversão Aftermarket oficiais
 const kitsConversaoPorArma = {
@@ -202,7 +214,7 @@ function obterPoolDoJogo(jogo) {
 }
 
 // ========================================================
-//  3. CARREGAMENTO DOS JSONs                              |
+//  3. CARREGAMENTO DOS ARQUIVOS DE ARMAS JSON       |                     |
 // ========================================================
 async function carregarDadosIniciais() {
     const container = document.querySelector("#home .grid-armas");
@@ -255,8 +267,43 @@ async function carregarDadosIniciais() {
 }
 
 // ========================================================
-//  4. FILTROS & CATÁLOGO NA TELA INICIAL (HOME)           |
+//  4. BUSCA, FILTROS & CATÁLOGO NA TELA INICIAL (HOME)    |
 // ========================================================
+
+// 🔍 Barra de pesquisa da Home (em tempo real)
+function filtrarHomeBusca(termo) {
+    termoBuscaHome = (termo || "").trim().toLowerCase();
+    aplicarFiltrosHome();
+}
+
+// ⚙️ Abre / fecha a gaveta compacta de filtros da Home
+function toggleFiltrosHome() {
+    const painel = document.getElementById("homeFilterPanel");
+    const seta = document.getElementById("homeFilterArrow");
+    const btn = document.getElementById("btnToggleHomeFilters");
+    if (!painel) return;
+
+    const estaAberto = painel.style.display === "flex" || painel.style.display === "block";
+
+    if (estaAberto) {
+        painel.style.display = "none";
+        if (seta) seta.textContent = "▼";
+        if (btn) {
+            btn.style.background = "#1a1d26";
+            btn.style.borderColor = "#2e3545";
+            btn.style.color = "#fff";
+        }
+    } else {
+        painel.style.display = "flex";
+        if (seta) seta.textContent = "▲";
+        if (btn) {
+            btn.style.background = "var(--accent)";
+            btn.style.borderColor = "var(--accent)";
+            btn.style.color = "#000";
+        }
+    }
+}
+
 function filtrarHomeJogo(jogo, btnClicado) {
     filtroHomeJogo = jogo;
 
@@ -301,7 +348,8 @@ function aplicarFiltrosHome() {
     const armasFiltradas = listaMetaArmas.filter(arma => {
         const matchJogo = (filtroHomeJogo === "TODOS" || obterJogoDaArma(arma) === filtroHomeJogo);
         const matchClasse = (filtroHomeClasse === "TODAS" || obterClasseDaArma(arma) === filtroHomeClasse);
-        return matchJogo && matchClasse;
+        const matchBusca = !termoBuscaHome || (arma.nome && arma.nome.toLowerCase().includes(termoBuscaHome));
+        return matchJogo && matchClasse && matchBusca;
     });
 
     renderMetaCards(armasFiltradas);
@@ -316,7 +364,7 @@ function renderMetaCards(armas) {
         container.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #8c8ea3; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px dashed #2a2e3d;">
                 <p style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Nenhuma arma encontrada</p>
-                <small>Não há armas cadastradas para o filtro selecionado (${filtroHomeJogo} • ${filtroHomeClasse}).</small>
+                <small>Tente buscar por outro nome ou altere os filtros selecionados.</small>
             </div>
         `;
         return;
@@ -328,19 +376,19 @@ function renderMetaCards(armas) {
 
         const tierClass = (arma.tier || "Tier S").toLowerCase().replace(/\s+/g, "-");
         const jogoArma = obterJogoDaArma(arma);
-        const classeArma = obterClasseDaArma(arma);
-
-        let textoAcessorios = "Build padrão de fábrica";
-        if (arma.acessorios && arma.acessorios.length > 0) {
-            textoAcessorios = arma.acessorios
-                .map(acc => typeof acc === "string" ? acc : `${acc.slot ? acc.slot + ': ' : ''}${acc.nome}`)
-                .join(" • ");
-        }
+        const logoJogo = obterLogoJogo(jogoArma);
 
         card.innerHTML = `
-            <div class="card-header">
+            <!-- CABEÇALHO DO CARD: TIER E LOGO DO JOGO ISOLADO -->
+            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="tier ${tierClass}">${arma.tier || "Tier S"}</span>
-                <span class="tag">${jogoArma} • ${classeArma}</span>
+                <img 
+                    src="${ASSETS_CDN + logoJogo}" 
+                    alt="${jogoArma}" 
+                    title="${jogoArma}" 
+                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"
+                    onerror="this.style.display='none'"
+                >
             </div>
 
             <div style="width: 100%; height: 115px; display: flex; align-items: center; justify-content: center; margin: 0.5rem 0;">
@@ -356,22 +404,18 @@ function renderMetaCards(armas) {
             <h3>${arma.nome}</h3>
             <p class="tipo">${arma.tipo || "Arma Meta"}</p>
 
-            <div class="acessorios" style="margin-top: 0.5rem;">
-                <small>${textoAcessorios}</small>
-            </div>
-
             <div style="display: flex; gap: 0.5rem; margin-top: 0.8rem;">
                 <button 
                     class="btn-submit" 
                     onclick="abrirNoArmeiro('${arma.nome}')" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: var(--accent); color: #000; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    ⚙️ Armeiro
+                    Armeiro
                 </button>
                 <button 
                     class="btn-submit" 
                     onclick="abrirNaComunidade('${arma.nome}')" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: #2a2e3d; color: #fff; border: 1px solid #3f4458; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    👥 Comunidade
+                    Comunidade
                 </button>
             </div>
         `;
@@ -1067,6 +1111,10 @@ function loadCommunityBuilds(atualizarSelect = true) {
         const commentsList = b.comments || [];
         const isSaved = savedList.some(s => s.id === b.id || (s.weapon === b.weapon && s.desc === b.desc));
 
+        const nomeArmaLimpo = (b.weapon || "").split("(")[0].trim();
+        const jogoArma = obterJogoDaArma({ nome: nomeArmaLimpo });
+        const logoJogo = obterLogoJogo(jogoArma);
+
         let commentsHtml = commentsList.map(c => `
             <div style="padding: 0.5rem; background: rgba(0,0,0,0.3); border-left: 2px solid var(--accent); border-radius: 4px; margin-bottom: 0.4rem; font-size: 0.82rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
@@ -1082,9 +1130,15 @@ function loadCommunityBuilds(atualizarSelect = true) {
         }
 
         card.innerHTML = `
-            <div class="card-header">
+            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="tag">Por: ${b.author}</span>
-                <span class="tier tier-b">Comunidade</span>
+                <img 
+                    src="${ASSETS_CDN + logoJogo}" 
+                    alt="${jogoArma}" 
+                    title="${jogoArma}"
+                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    onerror="this.style.display='none'"
+                >
             </div>
             ${imgHtml}
             <h3 style="margin-top: 0.4rem;">${b.weapon}</h3>
@@ -1094,7 +1148,6 @@ function loadCommunityBuilds(atualizarSelect = true) {
             
             ${b.code ? `<button class="btn-copy" onclick="copyCode('${b.code}')" style="margin: 0.8rem 0 0.5rem 0;">📋 Copiar Código (${b.code})</button>` : ""}
 
-            <!-- BARRA DE AÇÕES: CURTIR, COMENTAR & SALVAR -->
             <div style="display: flex; gap: 0.4rem; margin-top: 0.8rem; border-top: 1px solid #232a35; padding-top: 0.8rem;">
                 <button 
                     onclick="alternarCurtida('${b.id}')"
@@ -1115,7 +1168,6 @@ function loadCommunityBuilds(atualizarSelect = true) {
                 </button>
             </div>
 
-            <!-- SEÇÃO EXPANSÍVEL DE COMENTÁRIOS -->
             <div id="comentarios-secao-${b.id}" style="display: none; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed #232a35;">
                 <div id="lista-comentarios-${b.id}" style="max-height: 140px; overflow-y: auto; margin-bottom: 0.6rem; padding-right: 0.2rem;">
                     ${commentsHtml}
@@ -1139,7 +1191,6 @@ function loadCommunityBuilds(atualizarSelect = true) {
     });
 }
 
-// Alterna o salvamento da classe no perfil do usuário
 function alternarSalvarClasse(buildId) {
     const list = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
     const savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
@@ -1150,11 +1201,9 @@ function alternarSalvarClasse(buildId) {
     const index = savedList.findIndex(s => s.id === build.id || (s.weapon === build.weapon && s.desc === build.desc));
 
     if (index !== -1) {
-        // Remove dos salvos
         savedList.splice(index, 1);
         localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
     } else {
-        // Adiciona aos salvos
         savedList.unshift({
             id: build.id,
             author: build.author,
@@ -1271,11 +1320,19 @@ function renderSavedClassesInProfile() {
         }
 
         const nomeArmaLimpo = (s.weapon || "").split("(")[0].trim();
+        const jogoArma = obterJogoDaArma({ nome: nomeArmaLimpo });
+        const logoJogo = obterLogoJogo(jogoArma);
 
         card.innerHTML = `
-            <div class="card-header">
+            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="tag">Autor: ${s.author}</span>
-                <span class="tier tier-s" style="background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #f59e0b;">Salva</span>
+                <img 
+                    src="${ASSETS_CDN + logoJogo}" 
+                    alt="${jogoArma}" 
+                    title="${jogoArma}"
+                    style="height: 48px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    onerror="this.style.display='none'"
+                >
             </div>
             ${imgHtml}
             <h3 style="margin-top: 0.4rem;">${s.weapon}</h3>
