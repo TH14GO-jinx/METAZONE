@@ -1,122 +1,2990 @@
 [
   {
-    "nome": "M4", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/m4.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Hightower de 20\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 60 Projéteis"},{"slot":"Coronha","nome":"Kit de Conversão JAK Patriot"}],
-    "acessorios_exclusivos": {"cano":["Cano Hightower de 20\"","Cano Tempest Trench Pro","Cano Curto Tático de 11.5\""],"carregador":["Carregador de 60 Projéteis","Carregador de 45 Projéteis","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Pesada Demo Precision","Coronha Tática Tempus P80","Sem Coronha"],"kit_conversao":["Kit de Conversão JAK Patriot"]}
+    "nome": ".50 GS",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/50-gs.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo SA Tyrant Fifty"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 13 Projéteis"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Gatilho Leve de Competição"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo SA Tyrant Fifty",
+        "Cano Ported CQB"
+      ],
+      "carregador": [
+        "Carregador de 7 Projéteis",
+        "Carregador de 10 Projéteis",
+        "Carregador Estendido de 13 Projéteis"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "KASTOV 762", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier S", "arquivo_imagem": "armas/kastov-762.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Kas-10 584mm"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Kit JAK Cataclysm .50 Cal"}],
-    "acessorios_exclusivos": {"cano":["Cano Kas-10 584mm","Cano IG-K30 406mm","Cano KSTV RPK"],"carregador":["Carregador de 40 Projéteis","Tambor de 50 Projéteis","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha KSTV-IV","Coronha de Precisão Kastov-Rama","Sem Coronha"],"kit_conversao":["Kit JAK Cataclysm .50 Cal"]}
+    "nome": "556 Icarus",
+    "jogo": "MW2",
+    "tipo": "LMG",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/556-icarus.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano FTAC Coldforge 16\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Corio Precision"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano FTAC Coldforge 16\"",
+        "Cano Curto de Saque",
+        "Cano Fluted de Precisão"
+      ],
+      "carregador": [
+        "Tambor Duplo de 100 Projéteis 5.56"
+      ],
+      "coronha": [
+        "Coronha Corio Precision",
+        "Coronha Leve Demo Fade",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "LACHMANN SUB", "jogo": "MW2", "tipo": "Submetralhadora", "tier": "Tier S", "arquivo_imagem": "armas/lachmann-sub.png",
-    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Longo L38 Falcon"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Tambor de 50 Projéteis"},{"slot":"Coronha","nome":"Coronha Leve Meer Recoil"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo L38 Falcon","Cano Integrado Silenciado Pulsar","Cano Curto Lachmann Recon"],"carregador":["Tambor de 50 Projéteis","Carregador de 40 Projéteis","Carregador Rápido de 15 Projéteis"],"coronha":["Coronha Leve Meer Recoil","Coronha Dobrável LM-S","Sem Coronha"]}
+    "nome": "9mm Daemon",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/9mm-daemon.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 26 Projéteis"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Gatilho Leve de Competição"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Daemon Akimbo"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Daemon Match",
+        "Cano Curto CQB"
+      ],
+      "carregador": [
+        "Carregador de 15 Projéteis",
+        "Carregador Estendido de 26 Projéteis"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "VEL 46", "jogo": "MW2", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/vel-46.png",
-    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano Lachmann Shroud 9.5\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 50 Projéteis 4.6mm"},{"slot":"Coronha","nome":"Coronha Dobrável Demo RXT"}],
-    "acessorios_exclusivos": {"cano":["Cano Lachmann Shroud 9.5\"","Cano RV-B de 200mm","Cano Tático Tango-228"],"carregador":["Carregador de 50 Projéteis 4.6mm","Carregador de 60 Projéteis","Carregador de 30 Rápido"],"coronha":["Coronha Dobrável Demo RXT","Sem Coronha","Coronha de Assalto Vel"]}
+    "nome": "BAS-P",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/bas-p.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Bruen Typhon 8\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Bruen Flash V4"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Bruen Typhon 8\"",
+        "Cano Silenciado Integrado",
+        "Cano Curto Rusher"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Bruen Flash V4",
+        "Coronha Dobrável Skeleton",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "TAQ-56", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/taq-56.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Tundra Pro de 17.5\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 60 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
-    "acessorios_exclusivos": {"cano":["Cano Tundra Pro de 17.5\"","Cano Curto TV LP de 12\"","Cano Tático de Precisão"],"carregador":["Carregador de 60 Projéteis","Carregador de 40 Projéteis","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Tática TV Cardinal","Coronha Pesada Tactique Brute","Sem Coronha"]}
+    "nome": "Basilisk",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/basilisk.png",
+    "acessorios": [
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo FTAC Arrow 10.5\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor Rápido de 5 Projéteis .500"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Gatilho Leve Match Bryson"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Akimbo Basilisk"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo FTAC Arrow 10.5\"",
+        "Cano Curto Snub-Nose"
+      ],
+      "carregador": [
+        "Tambor Padrão de 5 Projéteis",
+        "Tambor Rápido de 5 Projéteis .500"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "M13B", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/m13b.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Bruen Echelon 14\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
-    "acessorios_exclusivos": {"cano":["Cano Bruen Echelon 14\"","Cano Curto 7\" Tempest Minis","Cano Silenciado 10\""],"carregador":["Carregador de 60 Projéteis","Carregador de 45 Projéteis","Munição 5.56 Alta Velocidade"],"coronha":["Coronha M13 de Fábrica","Coronha Leve Bruen Flash V45","Sem Coronha"]}
+    "nome": "Bryson 800",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/bryson-800.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Mack 800 29.5\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Mack 800 29.5\"",
+        "Cano Curto Sweeper",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Tubo de 8 Projéteis",
+        "Tubo Modificado de 9 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática de Competição",
+        "Coronha de Madeira",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "ISO HEMLOCK", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/iso-hemlock.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Fielder T de 500mm"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Tambor de 45 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
-    "acessorios_exclusivos": {"cano":["Cano Fielder T de 500mm","Cano Silenciado Integrado Cypher-9","Cano Curto LR-300"],"carregador":["Tambor de 45 Projéteis","Carregador de .300 Blackout 30","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Resgate-9","Coronha Leve R-50","Sem Coronha"]}
+    "nome": "Bryson 890",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/bryson-890.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano TacFire 21.5\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 12 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano TacFire 21.5\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Bryson"
+      ],
+      "carregador": [
+        "Carregador de 8 Projéteis",
+        "Carregador Estendido de 12 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Esquelética",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "CHIMERA", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier A", "arquivo_imagem": "armas/chimera.png",
-    "acessorios": [{"slot":"Cano","nome":"Cano Silenciado Integrado 10\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 45 Projéteis"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Mira","nome":"Mira Slate Reflector"}],
-    "acessorios_exclusivos": {"cano":["Cano Silenciado Integrado 10\"","Cano Longo Phoenix 14\"","Cano Curto EXF Vorpal"],"carregador":["Carregador de 45 Projéteis","Carregador Rápido de 30","Munição .300 BLK Ponta Oca"],"coronha":["Coronha Tática TRX-56","Coronha Leve Ravager-8","Sem Coronha"]}
+    "nome": "Carrack .300",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/carrack-300.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Heavy Match 30\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 15 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Almofada de Foco Carrack"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Heavy Match 30\"",
+        "Cano Curto Scout",
+        "Cano Fluted de Alta Velocidade"
+      ],
+      "carregador": [
+        "Carregador de 10 Projéteis",
+        "Carregador Estendido de 15 Projéteis"
+      ],
+      "coronha": [
+        "Almofada de Foco Carrack",
+        "Coronha Leve de Mobilidade",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "VAZNEV-9K", "jogo": "MW2", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/vaznev-9k.png",
-    "acessorios": [{"slot":"Boca","nome":"Quebra-chamas Zehmn35"},{"slot":"Cano","nome":"Cano KAS-1 381mm"},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Carregador de 45 Projéteis"},{"slot":"Coronha","nome":"Coronha Otrezat"}],
-    "acessorios_exclusivos": {"cano":["Cano KAS-1 381mm","Cano Curto SA Response III","Cano Silenciado Integrado"],"carregador":["Carregador de 45 Projéteis","Carregador Rápido de 30","Munição 9mm Alta Velocidade"],"coronha":["Coronha Otrezat","Coronha Esquelética Markeev","Sem Coronha"]}
+    "nome": "Chimera",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/chimera.png",
+    "acessorios": [
+      {
+        "slot": "Cano",
+        "nome": "Cano Silenciado Honey Badger 10\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Ravager-8"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Silenciado Honey Badger 10\"",
+        "Cano Curto CQB",
+        "Cano Longo Shrouded"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Ravager-8",
+        "Coronha Dobrável TRX",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "FSS HURRICANE", "jogo": "MW2", "tipo": "Submetralhadora", "tier": "Tier A", "arquivo_imagem": "armas/fss-hurricane.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo FSS Cannon 16\""},{"slot":"Acoplamento","nome":"Parada de Mão DR-6"},{"slot":"Carregador","nome":"Munição 5.7x28mm Alta Velocidade"},{"slot":"Coronha","nome":"Coronha Demo Quicksilver"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo FSS Cannon 16\"","Cano Curto Hurricane CQB","Cano Silenciado Integrado"],"carregador":["Munição 5.7x28mm Alta Velocidade","Munição 5.7x28mm Perfurante","Carregador de Fábrica 50"],"coronha":["Coronha Demo Quicksilver","Coronha Leve Assault-60","Sem Coronha"]}
+    "nome": "Cronen Squall",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Batalha",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/cronen-squall.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo HR6.8 20\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo HR6.8 20\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Squall",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "RPK", "jogo": "MW2", "tipo": "LMG", "tier": "Tier S", "arquivo_imagem": "armas/rpk.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire L"},{"slot":"Cano","nome":"Cano TAC-597 de 597mm"},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"},{"slot":"Carregador","nome":"Kit JAK Cataclysm Sniper"}],
-    "acessorios_exclusivos": {"cano":["Cano TAC-597 de 597mm","Cano Kas-10 de 584mm","Cano Curto Bi-Bore"],"carregador":["Tambor de 75 Projéteis","Carregador Rápido de 40","Munição 7.62mm Alta Velocidade"],"coronha":["Coronha Pro Pesada RPK","Coronha de Precisão Kastov-Rama","Sem Coronha"],"kit_conversao":["Kit JAK Cataclysm Sniper"]}
+    "nome": "Crossbow",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/crossbow.png",
+    "acessorios": [],
+    "acessorios_exclusivos": {}
   },
   {
-    "nome": "LOCKWOOD 300", "jogo": "MW2", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/lockwood-300.png",
-    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Matuzek 812mm"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Munição Calibre 12 Balote"},{"slot":"Gatilho/Modo","nome":"Gatilho Maelstrom Duplo"}],
-    "acessorios_exclusivos": {"cano":["Cano Matuzek 812mm","Cano Serrado Bryson 449mm","Cano Choked Longo"],"carregador":["Munição Calibre 12 Balote","Munição Dragon's Breath","Munição Explosiva"],"coronha":["Coronha Tática He расширенная","Sem Coronha (Mobilidade)","Almofada Amortecedora"],"kit_conversao":["Gatilho Maelstrom Duplo"]}
+    "nome": "EBR-14",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/ebr-14.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Boremaster 22\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 20 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Boremaster 22\"",
+        "Cano Fluted Match",
+        "Cano Curto Scout"
+      ],
+      "carregador": [
+        "Carregador de 10 Projéteis",
+        "Carregador de 20 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática EBR",
+        "Coronha de Precisão com Bochecheira",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "LOCKWOOD MK2", "jogo": "MW2", "tipo": "Fuzis de Atirador", "tier": "Tier S", "arquivo_imagem": "armas/lockwood-mk2.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo Buffalo 25\""},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Mira","nome":"Mira Range 4.0x"},{"slot":"Coronha","nome":"Kit JAK Wardens Akimbo"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo Buffalo 25\"","Cano Curto Outlaw 18\"","Cano Serrado CQB"],"carregador":["Munição .45-70 Alta Velocidade","Munição .45-70 Perfurante","Alavanca de Recarga Rápida"],"coronha":["Kit JAK Wardens Akimbo","Coronha Clássica de Madeira","Sem Coronha"],"kit_conversao":["Kit JAK Wardens Akimbo"]}
+    "nome": "Expedite 12",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/expedite-12.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Expedite L-Bolt"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Alavanca Rápida de Disparo"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Expedite L-Bolt",
+        "Cano Curto Rusher"
+      ],
+      "carregador": [
+        "Tubo Padrão de 7 Projéteis",
+        "Tubo Modificado de 8 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática de Polímero",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "KV BROADSIDE", "jogo": "MW2", "tipo": "Espingardas", "tier": "Tier A", "arquivo_imagem": "armas/kv-broadside.png",
-    "acessorios": [{"slot":"Boca","nome":"Choke Crown Breaker"},{"slot":"Cano","nome":"Cano Longo Gunner D20"},{"slot":"Laser","nome":"Laser Ponto Tático 1mW"},{"slot":"Carregador","nome":"Tambor de 25 Projéteis"},{"slot":"Coronha","nome":"Kit JAK Jawbreaker"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo Gunner D20","Cano Curto Range Twelve","Cano Silenciado CQC"],"carregador":["Tambor de 25 Projéteis","Carregador de 12 Tiros","Munição Dragon's Breath Incendiária"],"coronha":["Kit JAK Jawbreaker","Sem Coronha","Coronha Tática Kastov"],"kit_conversao":["Kit JAK Jawbreaker"]}
+    "nome": "Fennec 45",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/fennec-45.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo ZLR 16\" Apex"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 45 Projéteis .45"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo ZLR 16\" Apex",
+        "Cano Curto de Saque",
+        "Cano Silenciado Integrado"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 45 Projéteis .45"
+      ],
+      "coronha": [
+        "Coronha Fennec Magpie",
+        "Coronha Tática Esquelética",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "FJX IMPERIUM", "jogo": "MW2", "tipo": "Fuzis de Precisão", "tier": "Tier S", "arquivo_imagem": "armas/fjx-imperium.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Fahrenheit 29\""},{"slot":"Carregador","nome":"Munição .408 Alta Velocidade"},{"slot":"Laser","nome":"Laser FSS OLE-V"},{"slot":"Coronha","nome":"Coronha Pesada FJX Lux"}],
-    "acessorios_exclusivos": {"cano":["Cano Fahrenheit 29\"","Cano Curto CQC 20\"","Cano Fluted Match"],"carregador":["Munição .408 Alta Velocidade","Carregador de 7 Projéteis","Munição Explosiva .408"],"coronha":["Coronha Pesada FJX Lux","Coronha Tática Esquelética","Almofada de Foco"]}
+    "nome": "FJX Imperium",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier A",
+    "arquivo_imagem": "armas/fjx-imperium.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Fahrenheit 29\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 7 Projéteis .408"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Leve FJX Kilo-Tac"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Fahrenheit 29\"",
+        "Cano Fluted de Alta Velocidade",
+        "Cano Curto Quickscope"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis",
+        "Carregador de 7 Projéteis .408"
+      ],
+      "coronha": [
+        "Coronha Leve FJX Kilo-Tac",
+        "Coronha Pesada de Bochecha",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "MCPR-300", "jogo": "MW2", "tipo": "Fuzis de Precisão", "tier": "Tier S", "arquivo_imagem": "armas/mcpr-300.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Longo 22\" OMX-456"},{"slot":"Carregador","nome":"Munição .300 Mag Alta Velocidade"},{"slot":"Laser","nome":"Laser FSS OLE-V"},{"slot":"Coronha","nome":"Coronha FSS Merc"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo 22\" OMX-456","Cano Silentfire Integrado","Cano Curto de Precisão 17.5\""],"carregador":["Munição .300 Mag Alta Velocidade","Carregador Rápido de 5 Tiros","Carregador Estendido de 10 Tiros"],"coronha":["Coronha FSS Merc","Coronha Pesada de Bipé","Sem Coronha"]}
+    "nome": "FR Avancer",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/fr-avancer.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 600mm FR Titan"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 600mm FR Titan",
+        "Cano Curto Rusher 395mm",
+        "Cano Match Precision"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Acolchoada Avancer",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "SIGNAL 50", "jogo": "MW2", "tipo": "Fuzis de Precisão", "tier": "Tier A", "arquivo_imagem": "armas/signal-50.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Kノン-50 de 21.5\""},{"slot":"Carregador","nome":"Munição .50 Cal Alta Velocidade"},{"slot":"Laser","nome":"Laser FSS OLE-V"},{"slot":"Coronha","nome":"Coronha Pesada FSS Echo"}],
-    "acessorios_exclusivos": {"cano":["Cano Kノン-50 de 21.5\"","Cano Longo TV Fifty","Cano Curto Semi-Auto"],"carregador":["Munição .50 Cal Alta Velocidade","Carregador Estendido de 9 Tiros","Carregador Rápido de 7 Tiros"],"coronha":["Coronha Pesada FSS Echo","Coronha Tática SA","Almofada de Foco"]}
+    "nome": "FSS Hurricane",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/fss-hurricane.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo FSS Cannon 16\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo FSS Cannon 16\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Tambor Superior de 50 Projéteis 5.7mm"
+      ],
+      "coronha": [
+        "Coronha Demo Quicksilver",
+        "Coronha Tática de Apoio",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "VICTUS XMR", "jogo": "MW2", "tipo": "Fuzis de Precisão", "tier": "Tier A", "arquivo_imagem": "armas/victus-xmr.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano Mack 8 de 33.5\""},{"slot":"Carregador","nome":"Munição .50 Cal Alta Velocidade"},{"slot":"Laser","nome":"Laser FSS OLE-V"},{"slot":"Coronha","nome":"Coronha de Precisão XMR"}],
-    "acessorios_exclusivos": {"cano":["Cano Mack 8 de 33.5\"","Cano Silenciado Integrado Corvus","Cano Curto Executive 21\""],"carregador":["Munição .50 Cal Alta Velocidade","Carregador Estendido de 9 Tiros","Munição Explosiva"],"coronha":["Coronha de Precisão XMR","Coronha Tática Leve","Sem Coronha"]}
+    "nome": "FTAC Recon",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Batalha",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/ftac-recon.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Bull Rider 16.5\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 15 Projéteis .458"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Bull Rider 16.5\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 10 Projéteis",
+        "Carregador de 15 Projéteis .458"
+      ],
+      "coronha": [
+        "Coronha Tática Demo Precision",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "SP-R 208", "jogo": "MW2", "tipo": "Fuzis de Atirador", "tier": "Tier A", "arquivo_imagem": "armas/sp-r-208.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano ZXR de 24\""},{"slot":"Carregador","nome":"Munição .300 Alta Velocidade"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Coronha","nome":"Coronha ZRL T70"}],
-    "acessorios_exclusivos": {"cano":["Cano ZXR de 24\"","Cano Curto SP-X 18.5\"","Cano Fluted de Precisão"],"carregador":["Munição .300 Alta Velocidade","Carregador Estendido de 10 Tiros","Alavanca de Recarga Rápida"],"coronha":["Coronha ZRL T70","Coronha Esquelética Leve","Sem Coronha"]}
+    "nome": "FTAC Siege",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/ftac-siege.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Super Tac-VI"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 72 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Super Tac-VI",
+        "Cano Curto CQB"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis",
+        "Tambor de 72 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável Siege",
+        "Coronha Tática de Ombro",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "SA-B 50", "jogo": "MW2", "tipo": "Fuzis de Atirador", "tier": "Tier A", "arquivo_imagem": "armas/sa-b-50.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador Sonic L"},{"slot":"Cano","nome":"Cano SPX-80 18.5\""},{"slot":"Carregador","nome":"Munição .308 Alta Velocidade"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Coronha","nome":"Coronha de Saque Rápido"}],
-    "acessorios_exclusivos": {"cano":["Cano SPX-80 18.5\"","Cano Curto 12.5\" Ruffian","Cano Longo Match 22\""],"carregador":["Munição .308 Alta Velocidade","Carregador Rápido de 5 Tiros","Carregador de 10 Tiros"],"coronha":["Coronha de Saque Rápido","Coronha Tática FSS","Sem Coronha"]}
+    "nome": "GS Magna",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/gs-magna.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo SA Tyrant Fifty"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 13 Projéteis .50"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Antiderrapante Ergo"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo SA Tyrant Fifty",
+        "Cano Ported de Saque"
+      ],
+      "carregador": [
+        "Carregador de 7 Projéteis",
+        "Carregador de 10 Projéteis",
+        "Carregador de 13 Projéteis .50"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "LACHMANN-556", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier B", "arquivo_imagem": "armas/lachmann-556.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Lachmann Nova de 15.9\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 60 Projéteis"},{"slot":"Mira","nome":"Mira Corio Eagleseye 2.5x"}],
-    "acessorios_exclusivos": {"cano":["Cano Lachmann Nova de 15.9\"","Cano Curto Lachmann Rapp","Cano Silenciado Integrado"],"carregador":["Carregador de 60 Projéteis","Carregador de 40 Projéteis","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Pesada LM-S","Coronha Leve Meer Recoil","Sem Coronha"]}
+    "nome": "HCR 56",
+    "jogo": "MW2",
+    "tipo": "LMG",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/hcr-56.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Bruen S-620"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 100 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Bruen S-620",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 42 Projéteis",
+        "Carregador de 60 Projéteis",
+        "Tambor de 100 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Pesada HCR",
+        "Coronha Dobrável Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "STB 556", "jogo": "MW2", "tipo": "Fuzis de Assalto", "tier": "Tier B", "arquivo_imagem": "armas/stb-556.png",
-    "acessorios": [{"slot":"Boca","nome":"Silenciador VT-7 Spiritfire"},{"slot":"Cano","nome":"Cano Bruen Turaco 18\""},{"slot":"Acoplamento","nome":"Empunhadura Bruen Heavy Support"},{"slot":"Carregador","nome":"Carregador de 42 Projéteis"},{"slot":"Mira","nome":"JAK Glassless Optic"}],
-    "acessorios_exclusivos": {"cano":["Cano Bruen Turaco 18\"","Cano Longo 20\" Bruen S-620","Cano Curto Cloak-40"],"carregador":["Carregador de 42 Projéteis","Carregador Rápido de 30","Munição 5.56 Alta Velocidade"],"coronha":["Coronha Bullpup STB","Coronha Tática Bruen","Sem Coronha"]}
+    "nome": "ISO 45",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/iso-45.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 16\" Recon"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 45 Projéteis .45"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 16\" Recon",
+        "Cano Curto CQB",
+        "Cano Silenciado Integrado"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 45 Projéteis .45"
+      ],
+      "coronha": [
+        "Coronha Dobrável ISO",
+        "Coronha Leve de Mobilidade",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "FTAC SIEGE", "jogo": "MW2", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/ftac-siege.png",
-    "acessorios": [{"slot":"Boca","nome":"Compensador Ported"},{"slot":"Cano","nome":"Cano Longo Super TCK IV"},{"slot":"Carregador","nome":"Tambor de 72 Projéteis 9mm"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Coronha","nome":"Coronha Dobrável Siege"}],
-    "acessorios_exclusivos": {"cano":["Cano Longo Super TCK IV","Cano Curto Enforcer","Cano Silenciado Whisper"],"carregador":["Tambor de 72 Projéteis 9mm","Carregador de 50 Projéteis","Munição 9mm Ponta Oca"],"coronha":["Coronha Dobrável Siege","Grip Akimbo Duplo Full-Auto","Sem Coronha"]}
+    "nome": "ISO 9mm",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/iso-9mm.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 9\" Gyro"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 9\" Gyro",
+        "Cano Curto de Resposta",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável ISO",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
   },
   {
-    "nome": "50 GS", "jogo": "MW2", "tipo": "Pistolas", "tier": "Tier A", "arquivo_imagem": "armas/50gs.png",
-    "acessorios": [{"slot":"Boca","nome":"Compensador EXF Fifty"},{"slot":"Cano","nome":"Cano SA Tyrant Fifty 10\""},{"slot":"Carregador","nome":"Carregador de 13 Projéteis .50 AE"},{"slot":"Laser","nome":"Laser SL Razorhawk"},{"slot":"Gatilho/Modo","nome":"Gatilho Leve de Competição"}],
-    "acessorios_exclusivos": {"cano":["Cano SA Tyrant Fifty 10\"","Cano Curto SA Longshot","Cano Ported Match"],"carregador":["Carregador de 13 Projéteis .50 AE","Carregador Rápido de 7","Munição .50 AE Perfurante"],"coronha":["Grip Akimbo Duplo Desert Eagle","Coronha Tática Apex","Empunhadura Ergonômica"]}
+    "nome": "ISO Hemlock",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/iso-hemlock.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Fielder 50"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Fielder 50",
+        "Cano Curto LR-30",
+        "Cano Silenciado Cypher"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Pesada R-Com-4",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Kastov 545",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/kastov-545.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo IG-K30 406mm"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo IG-K30 406mm",
+        "Cano Curto de Saque",
+        "Cano Fluted Titan"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Spetsnaz Kastov",
+        "Coronha Leve Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Kastov 762",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/kastov-762.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 40 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Kit JAK Cataclysm .50 Cal"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo KAS-10 584mm",
+        "Cano Curto KAS-7",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 40 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Spetsnaz S-10",
+        "Coronha Leve Esquelética",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit JAK Cataclysm .50 Cal"
+      ]
+    }
+  },
+  {
+    "nome": "Kastov-74u",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/kastov-74u.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Curto BR209"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Curto BR209",
+        "Cano Longo de Precisão",
+        "Cano Estriado Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável Spetsnaz",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "KV Broadside",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/kv-broadside.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Kit JAK Jawbreaker"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Gunner D20",
+        "Cano Curto Range Twelve",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 8 Projéteis",
+        "Carregador de 12 Projéteis",
+        "Tambor de 25 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática KV",
+        "Coronha Leve",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit JAK Jawbreaker"
+      ]
+    }
+  },
+  {
+    "nome": "LA-B 330",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/la-b-330.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 23.5\" Fluted Fifty"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis .300"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Leve ZLR Extension"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 23.5\" Fluted Fifty",
+        "Cano Curto de Saque",
+        "Cano Heavy Match"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis .300",
+        "Carregador Estendido de 10 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Leve ZLR Extension",
+        "Coronha de Precisão com Bochecheira",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Lachmann Shroud",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/lachmann-shroud.png",
+    "acessorios": [
+      {
+        "slot": "Cano",
+        "nome": "Cano Silenciado Shroud Integrado"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Móvel FT Mobile"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Silenciado Shroud Integrado",
+        "Cano Curto CQB"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Móvel FT Mobile",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Lachmann Sub",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/lachmann-sub.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo L38 Falcon 226mm"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Dobrável LM"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo L38 Falcon 226mm",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 40 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável LM",
+        "Coronha Leve de Mobilidade",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Lachmann-556",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/lachmann-556.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Lachmann RAPP 15.9\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Lachmann RAPP 15.9\"",
+        "Cano Curto de Assalto",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha de Precisão LM",
+        "Coronha Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Lachmann-762",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Batalha",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/lachmann-762.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 15.9\" Lachmann"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis 7.62"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 15.9\" Lachmann",
+        "Cano Curto de Saque",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis 7.62"
+      ],
+      "coronha": [
+        "Coronha de Estabilidade LM",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "LM-S",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/lm-s.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo KAS-10 584mm"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 20 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo KAS-10 584mm",
+        "Cano Fluted Match",
+        "Cano Curto Scout"
+      ],
+      "carregador": [
+        "Carregador de 10 Projéteis",
+        "Carregador de 15 Projéteis",
+        "Carregador de 20 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática de Alinhamento",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Lockwood 300",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/lockwood-300.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 711mm Matuzek"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha de Caça Lockwood"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Gatilho Maelstrom Duplo"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 711mm Matuzek",
+        "Cano Curto Serrado",
+        "Cano Fluted Choke"
+      ],
+      "carregador": [
+        "Câmara Dupla Padrão 12 Gauge"
+      ],
+      "coronha": [
+        "Coronha de Caça Lockwood",
+        "Coronha Tática",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Gatilho Maelstrom Duplo"
+      ]
+    }
+  },
+  {
+    "nome": "Lockwood MK2",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/lockwood-mk2.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Kit JAK Wardens Akimbo"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 25\" Buffalo",
+        "Cano Curto de Saque",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Tubo de 6 Projéteis .45-70",
+        "Tubo Modificado de 8 Projéteis"
+      ],
+      "coronha": [
+        "Coronha de Madeira Clássica",
+        "Coronha Tática de Polímero",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit JAK Wardens Akimbo"
+      ]
+    }
+  },
+  {
+    "nome": "M13B",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/m13b.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 14\" Bruen Echelon"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 14\" Bruen Echelon",
+        "Cano Curto CQB 7\"",
+        "Cano Match Precision"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha M13 de Estabilidade",
+        "Coronha Dobrável M13",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "M13C",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/m13c.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Curto 7\" M13C"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis .300"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Dobrável Esquelética"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Curto 7\" M13C",
+        "Cano Longo de Supressão",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis .300"
+      ],
+      "coronha": [
+        "Coronha Dobrável Esquelética",
+        "Coronha Tática M13",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "M16",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/m16.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Corvus Ranger 20\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Corvus Ranger 20\"",
+        "Cano Curto de Saque",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática M16A4",
+        "Coronha Leve Demo Fade",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit de Conversão JAK Patriot"
+      ]
+    }
+  },
+  {
+    "nome": "M4",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/m4.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Kit de Conversão JAK Patriot"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Hightower 20\"",
+        "Cano Curto Tempest Trench Pro",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Pesada Corio Precision",
+        "Coronha Leve Demo Fade",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit de Conversão JAK Patriot"
+      ]
+    }
+  },
+  {
+    "nome": "MCPR-300",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/mcpr-300.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 22\" OMX-456"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis .300 Mag"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Almofada de Foco Cronen Lion"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 22\" OMX-456",
+        "Cano Curto Quickscope",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis .300 Mag",
+        "Carregador Estendido de 10 Projéteis"
+      ],
+      "coronha": [
+        "Almofada de Foco Cronen Lion",
+        "Coronha Pesada de Bochecha",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Minibak",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/minibak.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo BAK-9 279mm"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo BAK-9 279mm",
+        "Cano Curto de Saque",
+        "Cano Fluted de Competição"
+      ],
+      "carregador": [
+        "Tambor Helicoidal de 64 Projéteis 9mm"
+      ],
+      "coronha": [
+        "Coronha Spetsnaz Otrez",
+        "Coronha Dobrável Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "MX Guardian",
+    "jogo": "MW2",
+    "tipo": "Espingardas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/mx-guardian.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Choke Crown Breaker"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo HYP-LM"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Mecanismo Automático Guardian"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo HYP-LM",
+        "Cano Curto de Dispersão"
+      ],
+      "carregador": [
+        "Carregador Rotativo de 15 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática MX",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "MX9",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/mx9.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 16.5\" STB Factory"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 32 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 16.5\" STB Factory",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 25 Projéteis",
+        "Carregador de 32 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Bruen S-90",
+        "Coronha Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "P890",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/p890.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 12 Projéteis"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Gatilho Leve de Competição"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Akimbo P890"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Matuzek Cottonmouth",
+        "Cano Curto CQB"
+      ],
+      "carregador": [
+        "Carregador de 8 Projéteis",
+        "Carregador Estendido de 10 Projéteis",
+        "Carregador Estendido de 12 Projéteis"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "PDSW 528",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/pdsw-528.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo FTAC Series IX 14.5\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha CQB PDSW"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo FTAC Series IX 14.5\"",
+        "Cano Curto de Saque",
+        "Cano Fluted de Precisão"
+      ],
+      "carregador": [
+        "Carregador Superior P90 de 50 Projéteis 5.7mm"
+      ],
+      "coronha": [
+        "Coronha CQB PDSW",
+        "Coronha Tática Esquelética",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "RAAL MG",
+    "jogo": "MW2",
+    "tipo": "LMG",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/raal-mg.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 26\" Rhino"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Cinto de 100 Projéteis .338"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 26\" Rhino",
+        "Cano Curto de Saque",
+        "Cano Fluted Pesado"
+      ],
+      "carregador": [
+        "Cinto de 50 Projéteis",
+        "Cinto de 100 Projéteis .338",
+        "Cinto Pesado de 150 Projéteis"
+      ],
+      "coronha": [
+        "Coronha de Apoio Pesada RAAL",
+        "Coronha Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "RAPP H",
+    "jogo": "MW2",
+    "tipo": "LMG",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/rapp-h.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Romeo FT 18\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 75 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Romeo FT 18\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Tambor de 75 Projéteis",
+        "Caixa de 100 Projéteis 7.62"
+      ],
+      "coronha": [
+        "Coronha Pesada FT Mobile",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "RPK",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/rpk.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Pesada de Apoio RPK"
+      },
+      {
+        "slot": "Kit de Conversão",
+        "nome": "Kit JAK Cataclysm Sniper"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo RPK 590mm",
+        "Cano Curto Spetsnaz",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Tambor de 75 Projéteis",
+        "Carregador Rápido de 40 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Pesada de Apoio RPK",
+        "Coronha Dobrável Skeleton",
+        "Sem Coronha"
+      ],
+      "kit_conversao": [
+        "Kit JAK Cataclysm Sniper"
+      ]
+    }
+  },
+  {
+    "nome": "SA-B 50",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/sa-b-50.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 18.5\" Bryson LR"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Leve SP-X 80"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 18.5\" Bryson LR",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis",
+        "Carregador de 10 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Leve SP-X 80",
+        "Coronha de Precisão com Bochecheira",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Sakin MG38",
+    "jogo": "MW2",
+    "tipo": "LMG",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/sakin-mg38.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 20\" Bruen Silver Series"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Caixa de 100 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 20\" Bruen Silver Series",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Caixa de 100 Projéteis",
+        "Caixa Pesada de 150 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Pesada Sakin",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Signal 50",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/signal-50.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 29\" TV Kilo-50"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador Estendido de 7 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Almofada de Foco SO Inline"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 29\" TV Kilo-50",
+        "Cano Fluted de Competição",
+        "Cano Curto Quickscope"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis",
+        "Carregador Estendido de 7 Projéteis"
+      ],
+      "coronha": [
+        "Almofada de Foco SO Inline",
+        "Coronha Pesada de Bochecha",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "SO-14",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Batalha",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/so-14.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 22\" Boremaster"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 22\" Boremaster",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática SO-14",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "SP-R 208",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/sp-r-208.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 23.5\" Fluted R-67"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha ZLR T-Bolt"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 23.5\" Fluted R-67",
+        "Cano Curto Scout",
+        "Cano Fluted de Precisão"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis",
+        "Carregador de 10 Projéteis"
+      ],
+      "coronha": [
+        "Coronha ZLR T-Bolt",
+        "Coronha de Madeira Clássica",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "SP-X 80",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/sp-x-80.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 22\" Elevate-11"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis .300"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Leve PVZ-890"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 22\" Elevate-11",
+        "Cano Fluted de Alta Velocidade",
+        "Cano Curto Quickscope"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis .300",
+        "Carregador Estendido de 8 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Leve PVZ-890",
+        "Coronha de Precisão com Bochecheira",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "STB 556",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/stb-556.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Bruen Guerilla 18\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 42 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Bruen Guerilla 18\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 42 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Bruen S-90",
+        "Coronha Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "TAQ-56",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/taq-56.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Tundra Pro 17.5\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Tundra Pro 17.5\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 40 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Tac-Brute",
+        "Coronha Dobrável Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "TAQ-M",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/taq-m.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo LR Clean-Cut 20\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 20 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo LR Clean-Cut 20\"",
+        "Cano Fluted Match",
+        "Cano Curto Scout"
+      ],
+      "carregador": [
+        "Carregador de 10 Projéteis",
+        "Carregador de 15 Projéteis",
+        "Carregador de 20 Projéteis"
+      ],
+      "coronha": [
+        "Coronha de Precisão Tac-Brute",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "TAQ-V",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Batalha",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/taq-v.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Lance-50 18\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Lance-50 18\"",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Tac-Brute",
+        "Coronha Dobrável",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Tempus Razorback",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/tempus-razorback.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 18\" Tack-2L"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 60 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "JAK Glassless Optic"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 18\" Tack-2L",
+        "Cano Curto Rusher 13\"",
+        "Cano Match Precision"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 40 Projéteis",
+        "Carregador de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Ergonômica Razorback",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Tempus Torrent",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Atirador",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/tempus-torrent.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo 24\" Chroma LRS"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 30 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo 24\" Chroma LRS",
+        "Cano Curto Scout",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha de Precisão Torrent",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "TR-76 Geist",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Assalto",
+    "tier": "Tier C",
+    "arquivo_imagem": "armas/tr-76-geist.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador VT-7 Spiritfire"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Bruen Bridger"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Bruen Heavy Support"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis"
+      },
+      {
+        "slot": "Mira",
+        "nome": "Mira Corio Eagleseye 2.5x"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Bruen Bridger",
+        "Cano Curto CQB",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 20 Projéteis",
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Tática Geist",
+        "Coronha Dobrável Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Vaznev-9K",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/vaznev-9k.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano KAS-1 381mm"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 45 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Dobrável Otrez"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano KAS-1 381mm",
+        "Cano Curto de Saque",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 45 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável Otrez",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Vel 46",
+    "jogo": "MW2",
+    "tipo": "Submetralhadoras",
+    "tier": "Tier B",
+    "arquivo_imagem": "armas/vel-46.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Lachmann Schuler 16\""
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Parada de Mão DR-6"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Lachmann Schuler 16\"",
+        "Cano Curto Rusher",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 30 Projéteis",
+        "Carregador de 50 Projéteis",
+        "Tambor de 60 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável Vel",
+        "Coronha Leve",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "Victus XMR",
+    "jogo": "MW2",
+    "tipo": "Fuzis de Precisão",
+    "tier": "Tier A",
+    "arquivo_imagem": "armas/victus-xmr.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Mack 8 33.5\""
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser FSS OLE-V"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Carregador de 5 Projéteis .50 BMG"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Almofada de Foco Corvus Predator"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Mack 8 33.5\"",
+        "Cano Curto Quickscope",
+        "Cano Fluted Match"
+      ],
+      "carregador": [
+        "Carregador de 5 Projéteis .50 BMG"
+      ],
+      "coronha": [
+        "Almofada de Foco Corvus Predator",
+        "Coronha Pesada de Bochecha",
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "X12",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/x12.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Sonic L"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 33 Projéteis"
+      },
+      {
+        "slot": "Gatilho/Modo",
+        "nome": "Gatilho Leve de Competição"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Akimbo X12"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo XRK Sidewinder-6",
+        "Cano Curto CQB"
+      ],
+      "carregador": [
+        "Carregador de 17 Projéteis",
+        "Carregador de 24 Projéteis",
+        "Tambor de 33 Projéteis"
+      ],
+      "coronha": [
+        "Sem Coronha"
+      ]
+    }
+  },
+  {
+    "nome": "X13 Auto",
+    "jogo": "MW2",
+    "tipo": "Pistolas",
+    "tier": "Tier D",
+    "arquivo_imagem": "armas/x13-auto.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Quebra-chamas Zehmn35"
+      },
+      {
+        "slot": "Laser",
+        "nome": "Laser Ponto Tático 1mW"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Cabo",
+        "nome": "Empunhadura Akimbo X13"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Sem Coronha"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Impact Point",
+        "Cano Curto de Saque"
+      ],
+      "carregador": [
+        "Carregador de 24 Projéteis",
+        "Tambor de 33 Projéteis",
+        "Tambor de 50 Projéteis"
+      ],
+      "coronha": [
+        "Coronha Dobrável XRK",
+        "Sem Coronha"
+      ]
+    }
   }
 ]

@@ -1,5 +1,5 @@
 // ========================================================
-//  1. CONFIGURAÇÃO DE ASSETS & CDN DO GITHUB         |
+//  1. CONFIGURAÇÃO DE ASSETS & CDN DO GITHUB              |
 // ========================================================
 const USUARIO_GITHUB = "TH14GO-jinx";
 const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets@main/`;
@@ -25,7 +25,7 @@ function obterLogoJogo(jogo) {
     const mapaLogos = {
         "MW2": "logos/mw2-logo.svg",
         "MW3": "logos/mw3-logo.svg",
-        "BO6": "logos/bo6-logo.svg",
+        "BO6": "logos/bo7-logo.svg",
         "BO7": "logos/bo7-logo.svg"
     };
     return mapaLogos[jogo] || "logos/cod-logo.svg";
@@ -145,55 +145,80 @@ function obterJogoDaArma(arma) {
     return "MW3";
 }
 
+// 🎯 Padronizado com SMT e ML
 function obterClasseDaArma(arma) {
     const tipo = (arma.tipo || "").toLowerCase().trim();
     const nome = (arma.nome || "").toUpperCase().trim();
 
-    // 1. ESPINGARDAS (Checado antes de 'ar' para evitar falso positivo)
+    // 1. ESPINGARDAS
     if (tipo.includes("espingarda") || tipo.includes("shotgun")) return "Espingardas";
-    const shotgunNomes = ["LOCKWOOD", "HAYMAKER", "AKITA", "MARINE SP", "ASG-89", "ECHO 12", "M10 BREACHER", "MAELSTROM", "OLYMPIA", "SG-12", "RECLAIMER 18", "KV BROADSIDE", "BRYSON", "RIVETER"];
+    const shotgunNomes = [
+        "LOCKWOOD", "HAYMAKER", "AKITA", "MARINE SP", "ASG-89", "ECHO 12",
+        "M10 BREACHER", "MAELSTROM", "OLYMPIA", "SG-12", "RECLAIMER 18",
+        "KV BROADSIDE", "BRYSON", "RIVETER", "EXPEDITE 12", "MX GUARDIAN"
+    ];
     if (shotgunNomes.some(w => nome.includes(w))) return "Espingardas";
 
-    // 2. SUBMETRALHADORAS (SMGs)
-    if (tipo.includes("submetralhadora") || tipo.includes("smg")) return "Submetralhadoras";
+    // 2. SMT (Submetralhadoras) - Checado antes de ML
+    if (tipo.includes("smt") || tipo.includes("submetralhadora") || tipo.includes("smg")) return "SMT";
     const smgNomes = [
         "REV-46", "RYDEN-45K", "MPC-25", "STURMWOLF-45", "SUPERI", "STRIKER",
         "HRM-9", "FJX HORUS", "WSP", "RIVAL-9", "LACHMANN SUB", "JACKAL",
         "C9", "KSV", "CARBON 57", "RAZOR", "DRAVEC", "KOMPAKT 92", "TANTO .22",
         "PP-919", "SAUG", "DRESDEN 9MM", "LADRA", "LC10", "PPSH-41", "RK-9",
-        "VELOX 57", "VEL 46", "VAZNEV-9K", "FSS HURRICANE", "STATIC-HV", "RAM-9", "AMR9"
+        "VELOX 57", "VEL 46", "VAZNEV-9K", "FSS HURRICANE", "STATIC-HV", "RAM-9", "AMR9",
+        "BAS-P", "FENNEC 45", "ISO 45", "ISO 9MM", "MINIBAK", "MX9", "PDSW 528", "LACHMANN SHROUD"
     ];
-    if (smgNomes.some(w => nome.includes(w))) return "Submetralhadoras";
+    if (smgNomes.some(w => nome.includes(w))) return "SMT";
 
-    // 3. FUZIS DE ATIRADOR (Marksman Rifles)
-    if (tipo.includes("atirador") || tipo.includes("marksman")) return "Fuzis de Atirador";
-    const atiradorNomes = ["KAR98K", "MK35-ISR", "VS-RECON", "DS20-MIRAGE", "SWAT 5.56", "AEK-973", "DM-10", "TSARKOV 7.62", "ESSEX MODEL 07", "LOCKWOOD MK2", "SP-R 208", "SA-B 50", "TEMPUS TORRENT", "EBR-14", "LM-S"];
-    if (atiradorNomes.some(w => nome.includes(w))) return "Fuzis de Atirador";
-
-    // 4. FUZIS DE PRECISÃO (Snipers)
+    // 3. FUZIS DE PRECISÃO (Snipers - Hawker e M34 Novaline)
     if (tipo.includes("precisão") || tipo.includes("precisao") || tipo.includes("sniper")) return "Fuzis de Precisão";
     const sniperNomes = [
-        "XRK STALKER", "MORS", "KATT-AMR", "LR 7.62", "XR-3 ION", "SHADOW SK", "STRIDER-300",
-        "LW3A1 FROSTLINE", "SVD", "AMR MOD 4", "HDR", "FJX IMPERIUM", "MCPR-300", "SIGNAL 50", "VICTUS XMR", "SP-X 80", "LA-B 330", "CARRACK .300"
+        "HAWKER-HX", "HAWKER", "M34 NOVALINE", "NOVALINE", "XRK STALKER", "MORS",
+        "KATT-AMR", "LONGBOW", "KV INHIBITOR", "LR 7.62", "LW3A1 FROSTLINE", "SVD",
+        "MCPR-300", "SIGNAL 50", "VICTUS XMR", "SP-X 80", "LA-B 330", "CARRACK .300",
+        "FJX IMPERIUM", "AMR MOD 4", "HDR", "SHADOW SK", "STRIDER-300", "XR-3 ION"
     ];
     if (sniperNomes.some(w => nome.includes(w))) return "Fuzis de Precisão";
 
-    // 5. LMG (Metralhadoras Leves)
-    if (tipo.includes("metralhadora") || tipo.includes("leve") || tipo.includes("lmg")) return "LMG";
-    const lmgNomes = ["HAWKER-HX", "DG-58 LSW", "PULEMYOT", "BRUEN MK9", "XMG", "XM325", "PU-21", "GPMG-7", "FENG 82", "M34 NOVALINE", "MK78", "PML-556", "RPK", "SAKIN MG38", "RAAL MG", "RAPP H", "HCR 56", "HOLGER 26", "TAQ ERADICATOR", "TAQ EVOLVERE"];
-    if (lmgNomes.some(w => nome.includes(w))) return "LMG";
+    // 4. FUZIS DE ATIRADOR (Marksman)
+    if (tipo.includes("atirador") || tipo.includes("marksman")) return "Fuzis de Atirador";
+    const atiradorNomes = [
+        "KAR98K", "MK35-ISR", "VS-RECON", "DS20-MIRAGE", "SWAT 5.56", "AEK-973",
+        "DM-10", "TSARKOV 7.62", "ESSEX MODEL 07", "LOCKWOOD MK2", "SP-R 208",
+        "SA-B 50", "TEMPUS TORRENT", "EBR-14", "LM-S", "DM56", "MTZ INTERCEPTOR",
+        "MCW 6.8", "KVD ENFORCER", "WARDEN 308", "CROSSBOW", "TAQ-M"
+    ];
+    if (atiradorNomes.some(w => nome.includes(w))) return "Fuzis de Atirador";
 
-    // 6. PISTOLAS
+    // 5. ML (Metralhadoras Leves) - Bloqueio estrito para nunca capturar SMT
+    if ((tipo.includes("ml") || tipo.includes("lmg") || tipo.includes("metralhadora") || tipo.includes("leve")) && !tipo.includes("sub") && !tipo.includes("smt")) return "ML";
+    const lmgNomes = [
+        "DG-58 LSW", "PULEMYOT", "BRUEN MK9", "XMG", "XM325", "PU-21", "GPMG-7",
+        "FENG 82", "MK78", "PML-556", "RPK", "SAKIN MG38", "RAAL MG", "RAPP H",
+        "HCR 56", "HOLGER 26", "TAQ ERADICATOR", "TAQ EVOLVERE", "KASTOV LSW", "556 ICARUS"
+    ];
+    if (lmgNomes.some(w => nome.includes(w))) return "ML";
+
+    // 6. FUZIS DE BATALHA
+    if (tipo.includes("batalha") || tipo.includes("battle") || tipo === "br") return "Fuzis de Batalha";
+    const battleRifles = [
+        "BAS-B", "SIDEWINDER", "MTZ-762", "SOA SUBVERTER", "DTIR 30-06",
+        "LACHMANN-762", "FTAC RECON", "SO-14", "TAQ-V", "CRONEN SQUALL", "CBRS-3"
+    ];
+    if (battleRifles.some(w => nome.includes(w))) return "Fuzis de Batalha";
+
+    // 7. PISTOLAS (VX-Compact removida para seguir a categoria do JSON)
     if (tipo.includes("pistola") || tipo.includes("handgun")) return "Pistolas";
-    const pistolaNomes = ["VX-COMPACT", "RENETTI", "COR-45", "CODA 9", "9MM PM", "GREKHOVA", "GS45", "SIRIN 9MM", "1911", "GRAVEMARK .357", "GREMLIN", "J-GER 45", "STRYDER 22", "FTAC SIEGE", "50 GS", "TYR", "WSP STINGER", "X12", "X13 AUTO", "P890", "BASILISK", "9MM DAEMON"];
+    const pistolaNomes = [
+        "RENETTI", "COR-45", "CODA 9", "9MM PM", "GREKHOVA", "GS45",
+        "SIRIN 9MM", "1911", "GRAVEMARK .357", "GREMLIN", "J-GER 45", "STRYDER 22",
+        "FTAC SIEGE", "50 GS", "TYR", "WSP STINGER", "X12", "X13 AUTO", "P890",
+        "BASILISK", "9MM DAEMON", "GS MAGNA"
+    ];
     if (pistolaNomes.some(w => nome.includes(w))) return "Pistolas";
 
-    // 7. FUZIS DE BATALHA
-    if (tipo.includes("batalha") || tipo === "br") return "Fuzis de Batalha";
-    const brNomes = ["SOA SUBVERTER", "BAS-B", "MTZ-762", "CBRS-3", "TAQ-V", "FTAC RECON", "SO-14", "LACHMANN-762", "CRONEN SQUALL", "SIDEWINDER"];
-    if (brNomes.some(w => nome.includes(w))) return "Fuzis de Batalha";
-
-    // 8. FUZIS DE ASSALTO (Padrão para ARs)
+    // 8. FUZIS DE ASSALTO (Padrão)
     return "Fuzis de Assalto";
 }
 
@@ -214,7 +239,7 @@ function obterPoolDoJogo(jogo) {
 }
 
 // ========================================================
-//  3. CARREGAMENTO DOS ARQUIVOS DE ARMAS JSON       |                     |
+//  3. CARREGAMENTO DOS JSONs                              |
 // ========================================================
 async function carregarDadosIniciais() {
     const container = document.querySelector("#home .grid-armas");
@@ -269,14 +294,11 @@ async function carregarDadosIniciais() {
 // ========================================================
 //  4. BUSCA, FILTROS & CATÁLOGO NA TELA INICIAL (HOME)    |
 // ========================================================
-
-// 🔍 Barra de pesquisa da Home (em tempo real)
 function filtrarHomeBusca(termo) {
     termoBuscaHome = (termo || "").trim().toLowerCase();
     aplicarFiltrosHome();
 }
 
-// ⚙️ Abre / fecha a gaveta compacta de filtros da Home
 function toggleFiltrosHome() {
     const painel = document.getElementById("homeFilterPanel");
     const seta = document.getElementById("homeFilterArrow");
@@ -379,14 +401,14 @@ function renderMetaCards(armas) {
         const logoJogo = obterLogoJogo(jogoArma);
 
         card.innerHTML = `
-            <!-- CABEÇALHO DO CARD: TIER E LOGO DO JOGO ISOLADO -->
+            <!-- CABEÇALHO DO CARD -->
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="tier ${tierClass}">${arma.tier || "Tier S"}</span>
                 <img 
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}" 
-                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"
+                    style="height: 20px; max-width: 55px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -409,13 +431,13 @@ function renderMetaCards(armas) {
                     class="btn-submit" 
                     onclick="abrirNoArmeiro('${arma.nome}')" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: var(--accent); color: #000; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    Armeiro
+                    ⚙️ Armeiro
                 </button>
                 <button 
                     class="btn-submit" 
                     onclick="abrirNaComunidade('${arma.nome}')" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: #2a2e3d; color: #fff; border: 1px solid #3f4458; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    Comunidade
+                    👥 Comunidade
                 </button>
             </div>
         `;
@@ -525,7 +547,7 @@ function abrirNaComunidade(nomeArma) {
 }
 
 // ========================================================
-//  5. BANCADA DO ARMEIRO COM 11 SLOTS & KITS              |
+//  5. BANCADA DO ARMEIRO                                  |
 // ========================================================
 function filtrarArmasArmeiro(jogo, btnClicado) {
     filtroJogoAtual = jogo;
@@ -590,13 +612,16 @@ function popularSelectArmas() {
         document.getElementById("gunsmithPreviewImg").style.display = "none";
         document.getElementById("gunsmithWeaponTitle").textContent = "Nenhuma arma";
         document.getElementById("gunsmithWeaponCategory").textContent = "-";
+        
+        const logoImg = document.getElementById("gunsmithGameLogo");
+        if (logoImg) logoImg.style.display = "none";
         return;
     }
 
     armasFiltradas.forEach(({ arma, indexOriginal }) => {
         const opt = document.createElement("option");
         opt.value = indexOriginal;
-        opt.textContent = `[${obterJogoDaArma(arma)} | ${obterClasseDaArma(arma)}] ${arma.nome}`;
+        opt.textContent = arma.nome;
         select.appendChild(opt);
     });
 
@@ -608,17 +633,30 @@ function inicializarArmeiro() {
     popularSelectArmas();
 }
 
+// 🎯 Renderiza na bancada exclusivamente o ícone do jogo
 function atualizarArmeiro() {
     const selectArma = document.getElementById("gunsmithWeaponSelect");
     const img = document.getElementById("gunsmithPreviewImg");
     const titulo = document.getElementById("gunsmithWeaponTitle");
     const categoria = document.getElementById("gunsmithWeaponCategory");
+    const gameLogo = document.getElementById("gunsmithGameLogo");
 
     if (!selectArma || !listaMetaArmas[selectArma.value]) return;
 
     const arma = listaMetaArmas[selectArma.value];
+    const jogoArma = obterJogoDaArma(arma);
+    const classeArma = obterClasseDaArma(arma);
+
     titulo.textContent = arma.nome;
-    categoria.textContent = `[${obterJogoDaArma(arma)}] ${obterClasseDaArma(arma)} • ${arma.tipo || "Arma Meta"}`;
+    categoria.textContent = `${classeArma} • ${arma.tipo || "Arma Meta"}`;
+
+    // Apenas o logo oficial é renderizado
+    if (gameLogo) {
+        gameLogo.src = ASSETS_CDN + obterLogoJogo(jogoArma);
+        gameLogo.alt = jogoArma;
+        gameLogo.title = jogoArma;
+        gameLogo.style.display = "block";
+    }
 
     img.src = ASSETS_CDN + arma.arquivo_imagem;
     img.style.display = "block";
@@ -883,34 +921,14 @@ function obterAcessoriosEquipados() {
     return equipados;
 }
 
-function copiarClassePersonalizada(btn) {
+// 🚀 Publica diretamente na Comunidade
+function publicarClasseNoMural(btn) {
     const select = document.getElementById("gunsmithWeaponSelect");
     const arma = listaMetaArmas[select.value];
     if (!arma) return;
 
     const equipados = obterAcessoriosEquipados();
-    const nick = document.getElementById("customClassNick").value.trim() || "Operador";
-
-    let texto = `=== CLASSE: ${arma.nome} [${obterJogoDaArma(arma)} | ${obterClasseDaArma(arma)}] ===\nCriador: ${nick}\n`;
-    texto += equipados.length > 0 
-        ? equipados.map(e => `• ${e.slot}: ${e.acessorio}`).join("\n") 
-        : "Sem acessórios equipados.";
-
-    navigator.clipboard.writeText(texto).then(() => {
-        const original = btn.textContent;
-        btn.textContent = "✓ Classe Copiada!";
-        setTimeout(() => btn.textContent = original, 1800);
-    });
-}
-
-// Salva a classe diretamente do Armeiro para o Perfil
-function salvarClasseArmeiro(btn) {
-    const select = document.getElementById("gunsmithWeaponSelect");
-    const arma = listaMetaArmas[select.value];
-    if (!arma) return;
-
-    const equipados = obterAcessoriosEquipados();
-    const nick = document.getElementById("customClassNick").value.trim() || localStorage.getItem("wz_logged_user") || "Operador";
+    const author = document.getElementById("customClassNick").value.trim() || localStorage.getItem("wz_logged_user") || "Operador";
     const estilo = document.getElementById("customClassNotes").value.trim();
 
     let desc = equipados.length > 0 
@@ -919,26 +937,33 @@ function salvarClasseArmeiro(btn) {
 
     if (estilo) desc += ` [Foco: ${estilo}]`;
 
-    const savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
-    const newSaved = {
-        id: `custom-${Date.now()}`,
-        author: nick,
-        weapon: `${arma.nome} (${obterJogoDaArma(arma)} - ${obterClasseDaArma(arma)})`,
-        desc: desc,
-        code: `WZ-${arma.nome.toUpperCase().replace(/[^A-Z0-9]/g, "")}-CUSTOM`,
-        img: arma.arquivo_imagem
+    const code = `WZ-${arma.nome.toUpperCase().replace(/[^A-Z0-9]/g, "")}-CUSTOM`;
+
+    const builds = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
+    const novaBuild = { 
+        id: `pub-${Date.now()}`,
+        author, 
+        weapon: `${arma.nome} (${obterJogoDaArma(arma)} - ${obterClasseDaArma(arma)})`, 
+        desc, 
+        code,
+        img: arma.arquivo_imagem,
+        likes: 0,
+        liked: false,
+        comments: []
     };
 
-    savedList.unshift(newSaved);
-    localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
+    builds.unshift(novaBuild);
+    localStorage.setItem("wz_community_builds", JSON.stringify(builds));
 
-    const orig = btn.textContent;
-    btn.textContent = "✓ Salvo no Perfil!";
+    loadCommunityBuilds(true);
+
+    const original = btn.textContent;
+    btn.textContent = "✓ Publicado com Sucesso!";
     setTimeout(() => {
-        btn.textContent = orig;
-    }, 1800);
-
-    renderSavedClassesInProfile();
+        btn.textContent = original;
+        const navComunidade = document.querySelector("a[onclick*=\"'comunidade'\"]");
+        showSection(null, 'comunidade', navComunidade);
+    }, 800);
 }
 
 // ========================================================
@@ -978,20 +1003,20 @@ function inicializarBuildsComunidadePadrao() {
             {
                 id: "b3",
                 author: "TreyarchFan",
-                weapon: "Jackal PDW (BO6 - Submetralhadora)",
+                weapon: "Jackal PDW (BO6 - SMT)",
                 desc: "Quebra-chamas Compensado • Cano Longo Reinforced • Parada de Mão DR-6 • Tambor de 40 Projéteis • Coronha Dobrável CQB [Foco: Máxima mobilidade Omnimovement]",
                 code: "WZ-JACKAL-OMNI",
                 img: "armas/jackal-pdw.png",
                 likes: 67,
                 liked: false,
                 comments: [
-                    { author: "Viper", text: "Melhor SMG pra entrar correndo nas casas.", time: "Há 3 horas" }
+                    { author: "Viper", text: "Melhor SMT pra entrar correndo nas casas.", time: "Há 3 horas" }
                 ]
             },
             {
                 id: "b4",
                 author: "Rusher_RJ",
-                weapon: "Superi 46 (MW3 - Submetralhadora)",
+                weapon: "Superi 46 (MW3 - SMT)",
                 desc: "Quebra-chamas Zehmn35 • Cano Zulu OP3 Recon • Parada de Mão DR-6 • Carregador de 40 Projéteis • Coronha Rescue-9 [Foco: Strafing absurdo de rápido]",
                 code: "WZ-SUPERI-SPEED",
                 img: "armas/superi-46.png",
@@ -1136,7 +1161,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}"
-                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    style="height: 18px; max-width: 48px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -1300,7 +1325,7 @@ function renderSavedClassesInProfile() {
         container.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #8c8ea3; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px dashed #2a2e3d;">
                 <p style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Nenhuma classe salva ainda</p>
-                <small>Quando você gostar de uma build na Comunidade ou no Armeiro, clique em <strong>Salvar</strong> para guardar aqui.</small>
+                <small>Quando você gostar de uma build na Comunidade, clique em <strong>Salvar</strong> para guardar aqui.</small>
             </div>
         `;
         return;
@@ -1330,7 +1355,7 @@ function renderSavedClassesInProfile() {
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}"
-                    style="height: 48px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    style="height: 18px; max-width: 48px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
                     onerror="this.style.display='none'"
                 >
             </div>
