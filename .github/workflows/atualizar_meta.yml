@@ -35,5 +35,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add *.json
+          git add -f armas_bo7.json armas_bo6.json armas_mw3.json armas_mw2.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore(meta): sincronizacao automatica [skip ci]" && git push)
