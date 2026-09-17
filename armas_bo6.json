@@ -3,7 +3,7 @@
     "nome": "9mm PM",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/9mm-pm.png",
     "acessorios": [
       {
@@ -39,13 +39,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "ABR A1",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/abr-a1.png",
     "acessorios": [
       {
@@ -84,13 +86,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AEK-973",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/aek-973.png",
     "acessorios": [
       {
@@ -129,13 +133,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AK-74",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ak-74.png",
     "acessorios": [
       {
@@ -175,7 +181,9 @@
         "Coronha Leve Dobrável",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AMES 85",
@@ -220,13 +228,15 @@
         "Coronha Dobrável Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AMR Mod 4",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/amr-mod-4.png",
     "acessorios": [
       {
@@ -265,13 +275,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AS VAL",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/as-val.png",
     "acessorios": [
       {
@@ -310,7 +322,9 @@
         "Coronha de Madeira Clássica",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "ASG-89",
@@ -353,13 +367,15 @@
         "Coronha Tática ASG",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "C9",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/c9.png",
     "acessorios": [
       {
@@ -398,22 +414,26 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "CIGMA 2B",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/cigma-2b.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "CR-56 AMAX",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/cr-56-amax.png",
     "acessorios": [
       {
@@ -452,7 +472,9 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Cypher 091",
@@ -497,22 +519,26 @@
         "Coronha Tática",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "D13 Sector",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/d13-sector.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DM-10",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier S",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/dm-10.png",
     "acessorios": [
       {
@@ -551,13 +577,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Dresden 9mm",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/dresden-9mm.png",
     "acessorios": [
       {
@@ -594,7 +622,9 @@
         "Coronha Dobrável CQB",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Essex Model 07",
@@ -639,13 +669,15 @@
         "Coronha Tática Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Feng 82",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier S",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/feng-82.png",
     "acessorios": [
       {
@@ -684,13 +716,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "FFAR 1",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/ffar-1.png",
     "acessorios": [
       {
@@ -729,13 +763,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Goblin Mk 2",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/goblin-mk-2.png",
     "acessorios": [
       {
@@ -774,13 +810,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "GPMG-7",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/gpmg-7.png",
     "acessorios": [
       {
@@ -819,13 +857,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "GPR 91",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/gpr-91.png",
     "acessorios": [
       {
@@ -864,13 +904,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Gravemark .357 Revolver",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/gravemark-357-revolver.png",
     "acessorios": [
       {
@@ -906,13 +948,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Grekhova",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/grekhova.png",
     "acessorios": [
       {
@@ -948,13 +992,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "GS45",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/gs45.png",
     "acessorios": [
       {
@@ -990,13 +1036,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "HDR",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/hdr.png",
     "acessorios": [
       {
@@ -1035,22 +1083,26 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "HE-1",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/he-1.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Jackal PDW",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/jackal-pdw.png",
     "acessorios": [
       {
@@ -1089,7 +1141,9 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Kilo 141",
@@ -1135,13 +1189,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Kompakt 92",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kompakt-92.png",
     "acessorios": [
       {
@@ -1178,13 +1234,15 @@
         "Coronha Dobrável Kompakt",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Krig C",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/krig-c.png",
     "acessorios": [
       {
@@ -1223,13 +1281,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "KSV",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/ksv.png",
     "acessorios": [
       {
@@ -1268,13 +1328,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Ladra",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/ladra.png",
     "acessorios": [
       {
@@ -1312,13 +1374,15 @@
         "Coronha Tática Ladra",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "LC10",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lc10.png",
     "acessorios": [
       {
@@ -1357,13 +1421,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "LR 7.62",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lr-762.png",
     "acessorios": [
       {
@@ -1402,13 +1468,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "LW3A1 Frostline",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lw3a1-frostline.png",
     "acessorios": [
       {
@@ -1447,13 +1515,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Maelstrom",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier S",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/maelstrom.png",
     "acessorios": [
       {
@@ -1490,13 +1560,15 @@
         "Coronha de Madeira Clássica",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Marine SP",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/marine-sp.png",
     "acessorios": [
       {
@@ -1533,13 +1605,15 @@
         "Coronha Tática Marine",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Merrick 556",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/merrick-556.png",
     "acessorios": [
       {
@@ -1578,13 +1652,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Model L",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/model-l.png",
     "acessorios": [
       {
@@ -1623,22 +1699,26 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Nail Gun",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/nail-gun.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Olympia",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier S",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/olympia.png",
     "acessorios": [
       {
@@ -1670,13 +1750,15 @@
         "Coronha de Madeira Clássica",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "PML-556",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/pml-556.png",
     "acessorios": [
       {
@@ -1715,13 +1797,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "PP-919",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/pp-919.png",
     "acessorios": [
       {
@@ -1759,13 +1843,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "PPSH-41",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/ppsh-41.png",
     "acessorios": [
       {
@@ -1804,13 +1890,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "PU-21",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/pu-21.png",
     "acessorios": [
       {
@@ -1849,13 +1937,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Saug",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/saug.png",
     "acessorios": [
       {
@@ -1894,13 +1984,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Sirin 9mm",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/sirin-9mm.png",
     "acessorios": [
       {
@@ -1936,7 +2028,9 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Stryder 22",
@@ -1978,13 +2072,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "SVD",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/svd.png",
     "acessorios": [
       {
@@ -2023,13 +2119,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "SWAT 5.56",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/swat-556.png",
     "acessorios": [
       {
@@ -2068,13 +2166,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Tanto .22",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/tanto-22.png",
     "acessorios": [
       {
@@ -2113,13 +2213,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "TR2",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/tr2.png",
     "acessorios": [
       {
@@ -2158,13 +2260,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Tsarkov 7.62",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/tsarkov-762.png",
     "acessorios": [
       {
@@ -2203,22 +2307,26 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "X52 Resonator",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/x52-resonator.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "XM4",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/xm4.png",
     "acessorios": [
       {
@@ -2257,13 +2365,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "XMG",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/xmg.png",
     "acessorios": [
       {
@@ -2302,6 +2412,8 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   }
 ]

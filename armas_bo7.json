@@ -3,7 +3,7 @@
     "nome": "1911",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/1911.png",
     "acessorios": [
       {
@@ -40,7 +40,9 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AK-27",
@@ -86,7 +88,9 @@
         "Coronha Alpha Esquelética",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Akita",
@@ -132,7 +136,9 @@
         "Coronha Leve Akita",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "AN-94",
@@ -178,13 +184,15 @@
         "Coronha Leve Dobrável",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Carbon 57",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/carbon-57.png",
     "acessorios": [
       {
@@ -224,13 +232,15 @@
         "Coronha Esquelética Carbon",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "CBRS-3",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier S",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/cbrs-3.png",
     "acessorios": [
       {
@@ -270,13 +280,15 @@
         "Coronha Leve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Coda 9",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/coda-9.png",
     "acessorios": [
       {
@@ -317,13 +329,15 @@
       "kit_conversao": [
         "Kit Micro-Carabina CODA 2035"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Dravec 45",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/dravec-45.png",
     "acessorios": [
       {
@@ -363,13 +377,15 @@
         "Coronha Dobrável Ultraleve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DS20-Mirage",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/ds20-mirage.png",
     "acessorios": [
       {
@@ -409,13 +425,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Echo 12",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/echo-12.png",
     "acessorios": [
       {
@@ -455,13 +473,15 @@
         "Coronha Leve Esquelética",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "EGRT-17",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/egrt-17.png",
     "acessorios": [
       {
@@ -501,7 +521,9 @@
         "Coronha Leve EGRT",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "FG42",
@@ -547,13 +569,15 @@
         "Coronha Tática de Alinhamento",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Gremlin",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/gremlin.png",
     "acessorios": [
       {
@@ -593,13 +617,15 @@
         "Coronha Leve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Hawker-HX",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/hawker-hx.png",
     "acessorios": [
       {
@@ -639,13 +665,15 @@
         "Coronha de Precisão Tática",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "J-Ger 45",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/j-ger-45.png",
     "acessorios": [
       {
@@ -682,13 +710,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Kogot-7",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/kogot-7.png",
     "acessorios": [
       {
@@ -728,13 +758,15 @@
         "Coronha Ultraleve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "KRS-762",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/krs-762.png",
     "acessorios": [
       {
@@ -774,13 +806,15 @@
         "Coronha de Precisão Alpha",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "M10 Breacher",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/m10-breacher.png",
     "acessorios": [
       {
@@ -820,7 +854,9 @@
         "Coronha de Polímero Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "M15-Mod-0",
@@ -866,13 +902,15 @@
         "Coronha Pesada de Estabilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "M34 Novaline",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/m34-novaline.png",
     "acessorios": [
       {
@@ -912,13 +950,15 @@
         "Coronha Leve Agilidade Novaline",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "M8A1",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/m8a1.png",
     "acessorios": [
       {
@@ -958,13 +998,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Maddox RFB",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/maddox-rfb.png",
     "acessorios": [
       {
@@ -1004,7 +1046,9 @@
         "Coronha de Precisão RFB",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MK35-ISR",
@@ -1050,13 +1094,15 @@
         "Coronha Esquelética Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MK78",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/mk78.png",
     "acessorios": [
       {
@@ -1096,13 +1142,15 @@
         "Coronha Leve Esquelética",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MPC-25",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/mpc-25.png",
     "acessorios": [
       {
@@ -1142,13 +1190,15 @@
         "Coronha de Precisão MPC",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MXR-17",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier S",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mxr-17.png",
     "acessorios": [
       {
@@ -1188,13 +1238,15 @@
         "Coronha Reforçada de Apoio",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Peacekeeper-MK1",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/peacekeeper-mk1.png",
     "acessorios": [
       {
@@ -1234,13 +1286,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Razor 9mm",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/razor-9mm.png",
     "acessorios": [
       {
@@ -1280,13 +1334,15 @@
         "Coronha Tática Razor",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "REV-46",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/rev-46.png",
     "acessorios": [
       {
@@ -1326,13 +1382,15 @@
         "Coronha Tática de Controle",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "RK-9",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/rk-9.png",
     "acessorios": [
       {
@@ -1369,7 +1427,9 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Ryden-45K",
@@ -1415,13 +1475,15 @@
         "Coronha Ergonômica de Absorção",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "SG-12",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/sg-12.png",
     "acessorios": [
       {
@@ -1461,13 +1523,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Shadow SK",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/shadow-sk.png",
     "acessorios": [
       {
@@ -1507,13 +1571,15 @@
         "Coronha de Foco Tático",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Sokol 545",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/sokol-545.png",
     "acessorios": [
       {
@@ -1553,13 +1619,15 @@
         "Coronha Leve Sokol",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Strider-300",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/strider-300.png",
     "acessorios": [
       {
@@ -1599,13 +1667,15 @@
         "Coronha Esquelética Strider",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Sturmwolf-45",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/sturmwolf-45.png",
     "acessorios": [
       {
@@ -1645,13 +1715,15 @@
         "Coronha Esquelética Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Swordfish A1",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier S",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/swordfish-a1.png",
     "acessorios": [
       {
@@ -1691,13 +1763,15 @@
         "Coronha Bullpup Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Velox 57",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/velox-57.png",
     "acessorios": [
       {
@@ -1734,13 +1808,15 @@
       "coronha": [
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Voyak-KT-3",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/voyak-kt-3.png",
     "acessorios": [
       {
@@ -1780,13 +1856,15 @@
         "Coronha Leve Voyak",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "VS-Recon",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/vs-recon.png",
     "acessorios": [
       {
@@ -1826,13 +1904,15 @@
         "Coronha Leve VS",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "VST",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/vst.png",
     "acessorios": [
       {
@@ -1872,13 +1952,15 @@
         "Coronha Leve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "VX-Compact",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/vx-compact.png",
     "acessorios": [
       {
@@ -1921,13 +2003,15 @@
       "kit_conversao": [
         "Kit de Conversão Carabina VX"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Warden 308",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/warden-308.png",
     "acessorios": [
       {
@@ -1967,13 +2051,15 @@
         "Coronha de Precisão com Bochecheira",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "X9 Maverick",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/x9-maverick.png",
     "acessorios": [
       {
@@ -2013,13 +2099,15 @@
         "Coronha Dobrável CQB",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "XM325",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier S",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/xm325.png",
     "acessorios": [
       {
@@ -2059,13 +2147,15 @@
         "Coronha Dobrável Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "XR-3 Ion",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/xr-3-ion.png",
     "acessorios": [
       {
@@ -2105,6 +2195,8 @@
         "Coronha Leve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   }
 ]

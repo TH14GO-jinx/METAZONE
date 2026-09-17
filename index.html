@@ -104,19 +104,17 @@
     <main>
         <!-- TELA 1: Início -->
         <section id="home" class="page-section active-section">
-            <div class="hero">
-                <div class="hero-content">
-                    <span class="badge">Meta da Temporada</span>
-                    <h1>DOMINE O META</h1>
-                    <p>Builds oficiais atualizadas, bancada de armeiro e configurações para alto desempenho.</p>
-                </div>
+            
+            <!-- CABEÇALHO LIMPO E CENTRALIZADO -->
+            <div class="container" style="margin-top: 2rem; margin-bottom: 1.2rem; text-align: center;">
+                <span class="badge" style="background: var(--accent); color: #000; font-weight: 800; font-size: 0.85rem; letter-spacing: 2px; padding: 6px 18px; border-radius: 4px; box-shadow: 0 0 15px rgba(0,0,0,0.5); display: inline-block;">
+                    META DA TEMPORADA
+                </span>
             </div>
 
-            <div class="container" style="margin-top: 2rem;">
-                <h2>Armas do Meta Atual</h2>
-
-                <!-- BARRA DE BUSCA E GAVETA DE FILTROS COMPACTA -->
-                <div class="home-search-filter-wrapper" style="margin: 1.5rem 0 2rem 0;">
+            <div class="container">
+                <!-- BARRA DE BUSCA E FILTROS -->
+                <div class="home-search-filter-wrapper" style="margin: 0.5rem 0 2rem 0;">
                     <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center;">
                         <div style="flex: 1; min-width: 260px; position: relative;">
                             <input 
@@ -152,7 +150,7 @@
                             <button type="button" class="btn-filter-home-jogo" onclick="filtrarHomeJogo('BO7', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">BO7</button>
                         </div>
 
-                        <!-- Linha 2: Classe com SMT e ML -->
+                        <!-- Linha 2: Classe -->
                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                             <span style="color: #8c8ea3; font-size: 0.8rem; font-weight: bold; min-width: 110px;">POR CLASSE:</span>
                             <button type="button" class="btn-filter-home-classe active" onclick="filtrarHomeClasse('TODAS', this)" style="padding: 0.35rem 0.8rem; background: var(--accent); color: #000; border: 1px solid var(--accent); border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">TODAS</button>
@@ -168,8 +166,14 @@
                     </div>
                 </div>
 
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin: 0;">Arsenal Completo</h2>
+                    <span id="catalogoCountTag" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #8c8ea3; font-size: 0.8rem; padding: 4px 10px;">Ordenado por Meta</span>
+                </div>
+
+                <!-- Grid Único com as armas Meta no topo -->
                 <div class="grid-armas">
-                    <!-- Cards renderizados dinamicamente pelo script.js -->
+                    <!-- Renderizado dinamicamente via script.js -->
                 </div>
             </div>
         </section>
@@ -192,7 +196,7 @@
                         <button type="button" class="btn-filter-armeiro" onclick="filtrarArmasArmeiro('BO7', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">BO7</button>
                     </div>
 
-                    <!-- Linha 2: Classe com SMT e ML -->
+                    <!-- Linha 2: Classe -->
                     <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                         <span style="color: #8c8ea3; font-size: 0.8rem; font-weight: bold; min-width: 120px;">POR CLASSE:</span>
                         <button type="button" class="btn-filter-classe active" onclick="filtrarClasseArmeiro('TODAS', this)" style="padding: 0.35rem 0.8rem; background: var(--accent); color: #000; border: 1px solid var(--accent); border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">TODAS</button>
@@ -242,7 +246,7 @@
                     <span id="gunsmithSlotCounter" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #fff; font-weight: bold; font-size: 0.85rem; padding: 5px 12px; border-radius: 4px;">0 / 5 Equipados</span>
                 </div>
                 
-                <!-- Grade com 11 Categorias Oficiais (10 Padrão + Kit de Conversão) -->
+                <!-- Grade com 11 Categorias Oficiais -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <div class="form-col">
                         <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">1. BOCA</label>
@@ -397,8 +401,64 @@
                     <div class="avatar-circle" id="profileAvatar">?</div>
                     <h2 id="profileUsernameDisplay" style="color: var(--accent); font-size: 2.2rem; margin-top: 0.5rem; letter-spacing: 1px;">Usuário</h2>
                 </div>
-                
-                <div class="community-box" style="max-width: 600px; margin: 0 auto;">
+
+                <!-- BOX DE VÍNCULO DA ACTIVISION ID COM ESTATÍSTICAS -->
+                <div class="community-box" style="max-width: 650px; margin: 0 auto 2rem auto; border: 1px solid var(--accent); background: linear-gradient(180deg, rgba(26, 29, 38, 0.95) 0%, rgba(17, 19, 27, 0.95) 100%);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #232a35; padding-bottom: 0.8rem; margin-bottom: 1.2rem;">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <span style="font-size: 1.4rem;">🎮</span>
+                            <h3 style="margin: 0; color: #fff; font-size: 1.15rem; letter-spacing: 1px;">VÍNCULO ACTIVISION ID</h3>
+                        </div>
+                        <span id="activisionStatusBadge" class="badge" style="background: #2a2e3d; color: #8c8ea3; font-size: 0.72rem; padding: 4px 8px;">NÃO VINCULADO</span>
+                    </div>
+
+                    <div class="form-row" style="margin-bottom: 1rem;">
+                        <div class="form-col" style="flex: 2;">
+                            <label for="activisionIdInput" style="color: #c4c7d4; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">DIGITE SEU ACTIVISION ID COM TAG</label>
+                            <input type="text" id="activisionIdInput" placeholder="Ex: Ghost#1234567" style="width: 100%; padding: 0.75rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;">
+                        </div>
+                        <div class="form-col" style="flex: 1;">
+                            <label for="activisionPlatformSelect" style="color: #c4c7d4; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">PLATAFORMA</label>
+                            <select id="activisionPlatformSelect" class="select-box" style="width: 100%; padding: 0.75rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;">
+                                <option value="Battle.net">Battle.net</option>
+                                <option value="Steam">Steam</option>
+                                <option value="PlayStation">PlayStation</option>
+                                <option value="Xbox">Xbox</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-submit" onclick="vincularActivisionId()" style="width: 100%; padding: 0.75rem; background: var(--accent); color: #000; font-weight: bold; margin-bottom: 1.2rem;">
+                        🔗 Sincronizar e Buscar Estatísticas
+                    </button>
+
+                    <div id="activisionStatsContainer" style="display: none; padding: 1.2rem; background: rgba(0,0,0,0.4); border-radius: 8px; border: 1px dashed #2e3545;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <strong id="statsPlayerTag" style="color: var(--accent); font-size: 1.1rem; letter-spacing: 1px;">-</strong>
+                            <span id="statsPlayerPlatform" class="tag" style="background: #11131b; border: 1px solid #232a35; font-size: 0.75rem;">-</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; text-align: center;">
+                            <div style="background: #11131b; padding: 0.8rem 0.4rem; border-radius: 6px; border: 1px solid #232a35;">
+                                <small style="color: #8c8ea3; font-size: 0.7rem; text-transform: uppercase;">K/D RATIO</small>
+                                <h4 id="statKd" style="color: #22c55e; font-size: 1.3rem; margin: 0.2rem 0 0 0;">-</h4>
+                            </div>
+                            <div style="background: #11131b; padding: 0.8rem 0.4rem; border-radius: 6px; border: 1px solid #232a35;">
+                                <small style="color: #8c8ea3; font-size: 0.7rem; text-transform: uppercase;">VITÓRIAS</small>
+                                <h4 id="statWins" style="color: #eab308; font-size: 1.3rem; margin: 0.2rem 0 0 0;">-</h4>
+                            </div>
+                            <div style="background: #11131b; padding: 0.8rem 0.4rem; border-radius: 6px; border: 1px solid #232a35;">
+                                <small style="color: #8c8ea3; font-size: 0.7rem; text-transform: uppercase;">PARTIDAS</small>
+                                <h4 id="statMatches" style="color: #fff; font-size: 1.3rem; margin: 0.2rem 0 0 0;">-</h4>
+                            </div>
+                            <div style="background: #11131b; padding: 0.8rem 0.4rem; border-radius: 6px; border: 1px solid #232a35;">
+                                <small style="color: #8c8ea3; font-size: 0.7rem; text-transform: uppercase;">PRESTÍGIO</small>
+                                <h4 id="statPrestige" style="color: var(--accent); font-size: 1.3rem; margin: 0.2rem 0 0 0;">-</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-box" style="max-width: 650px; margin: 0 auto;">
                     <form id="profileForm" onsubmit="saveProfile(event)">
                         <div class="form-row">
                             <div class="form-col" style="flex: 1;">

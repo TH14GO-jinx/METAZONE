@@ -46,13 +46,15 @@
       "kit_conversao": [
         "Kit de Conversão Carabina JAK Atlas"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "BAL-27",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/bal-27.png",
     "acessorios": [
       {
@@ -94,13 +96,15 @@
       "kit_conversao": [
         "Kit de Conversão JAK Annihilator Laser"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "BAS-B",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier C",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/bas-b.png",
     "acessorios": [
       {
@@ -140,13 +144,15 @@
         "Coronha Leve Flash",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "BP50",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/bp50.png",
     "acessorios": [
       {
@@ -188,7 +194,9 @@
       "kit_conversao": [
         "Kit de Conversão JAK Revenger 9mm"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Bruen Mk9",
@@ -234,13 +242,15 @@
         "Coronha Dobrável Skeleton",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "COR-45",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/cor-45.png",
     "acessorios": [
       {
@@ -280,7 +290,9 @@
       "kit_conversao": [
         "Kit de Conversão Binária JAK"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DG-58",
@@ -326,13 +338,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DG-58 LSW",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/dg-58-lsw.png",
     "acessorios": [
       {
@@ -375,7 +389,9 @@
       "kit_conversao": [
         "Kit de Conversão JAK Requiem"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DM56",
@@ -421,13 +437,15 @@
         "Coronha Leve DM",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "DTIR 30-06",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/dtir-30-06.png",
     "acessorios": [
       {
@@ -467,13 +485,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "FJX Horus",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/fjx-horus.png",
     "acessorios": [
       {
@@ -513,7 +533,9 @@
         "Coronha Tática Ripper",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "FR 5.56",
@@ -559,13 +581,15 @@
         "Coronha Leve de Combate",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Haymaker",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/haymaker.png",
     "acessorios": [
       {
@@ -608,7 +632,9 @@
       "kit_conversao": [
         "Kit JAK Maglift (Tambor Especial)"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Holger 26",
@@ -653,7 +679,9 @@
         "Coronha Dobrável Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Holger 556",
@@ -701,13 +729,15 @@
       "kit_conversao": [
         "Kit de Conversão JAK Backsaw"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "HRM-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/hrm-9.png",
     "acessorios": [
       {
@@ -746,7 +776,9 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Kar98k",
@@ -791,13 +823,15 @@
         "Coronha Esquelética Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Kastov LSW",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kastov-lsw.png",
     "acessorios": [
       {
@@ -836,13 +870,15 @@
         "Coronha Dobrável Skeleton",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "KATT-AMR",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/katt-amr.png",
     "acessorios": [
       {
@@ -881,13 +917,15 @@
         "Coronha Pesada de Bochecha",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "KV Inhibitor",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/kv-inhibitor.png",
     "acessorios": [
       {
@@ -927,13 +965,15 @@
         "Coronha Leve Esquelética",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "KVD Enforcer",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/kvd-enforcer.png",
     "acessorios": [
       {
@@ -973,13 +1013,15 @@
         "Coronha Leve Dobrável",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Lockwood 680",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lockwood-680.png",
     "acessorios": [
       {
@@ -1021,7 +1063,9 @@
       "kit_conversao": [
         "Kit de Conversão Gatilho Duplo"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Longbow",
@@ -1066,7 +1110,9 @@
         "Coronha Tática Longbow",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MCW",
@@ -1115,13 +1161,15 @@
       "kit_conversao": [
         "Kit de Conversão JAK Raven (.300 BLK)"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MCW 6.8",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mcw-68.png",
     "acessorios": [
       {
@@ -1161,13 +1209,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MORS",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mors.png",
     "acessorios": [
       {
@@ -1205,13 +1255,15 @@
         "Coronha de Precisão Estabilizada",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MTZ Interceptor",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mtz-interceptor.png",
     "acessorios": [
       {
@@ -1250,13 +1302,15 @@
         "Coronha Leve Esquelética",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MTZ-556",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mtz-556.png",
     "acessorios": [
       {
@@ -1295,7 +1349,9 @@
         "Coronha Dobrável Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "MTZ-762",
@@ -1340,7 +1396,9 @@
         "Coronha Esquelética Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Pulemyot 762",
@@ -1388,13 +1446,15 @@
       "kit_conversao": [
         "Kit Bullpup JAK Annihilator"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "RAM-7",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/ram-7.png",
     "acessorios": [
       {
@@ -1434,13 +1494,15 @@
         "Coronha Ultraleve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "RAM-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/ram-9.png",
     "acessorios": [
       {
@@ -1479,13 +1541,15 @@
         "Coronha Tática RAM",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Reclaimer 18",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/reclaimer-18.png",
     "acessorios": [
       {
@@ -1524,7 +1588,9 @@
         "Coronha Dobrável de Metal",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Renetti",
@@ -1570,22 +1636,26 @@
       "kit_conversao": [
         "Kit de Conversão Carabina JAK Ferocity"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "RGL-80",
     "jogo": "MW3",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/rgl-80.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Rival-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/rival-9.png",
     "acessorios": [
       {
@@ -1628,7 +1698,9 @@
       "kit_conversao": [
         "Kit de Conversão Headhunter JAK Carbine"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Riveter",
@@ -1673,7 +1745,9 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Sidewinder",
@@ -1718,13 +1792,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "SOA Subverter",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/soa-subverter.png",
     "acessorios": [
       {
@@ -1764,13 +1840,15 @@
         "Coronha Leve Dobrável",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Static-HV",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/static-hv.png",
     "acessorios": [
       {
@@ -1808,13 +1886,15 @@
         "Coronha Leve de Corrida",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "STG44",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/stg44.png",
     "acessorios": [
       {
@@ -1854,22 +1934,26 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Stormender",
     "jogo": "MW3",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/stormender.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Striker",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/striker.png",
     "acessorios": [
       {
@@ -1908,13 +1992,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Striker 9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/striker-9.png",
     "acessorios": [
       {
@@ -1954,13 +2040,15 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Superi 46",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/superi-46.png",
     "acessorios": [
       {
@@ -1999,13 +2087,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "SVA 545",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/sva-545.png",
     "acessorios": [
       {
@@ -2045,13 +2135,15 @@
         "Coronha Dobrável Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "TAQ Eradicator",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/taq-eradicator.png",
     "acessorios": [
       {
@@ -2090,13 +2182,15 @@
         "Coronha Dobrável",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "TAQ Evolvere",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/taq-evolvere.png",
     "acessorios": [
       {
@@ -2135,7 +2229,9 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "Torque 35",
@@ -2144,7 +2240,9 @@
     "tier": "Tier C",
     "arquivo_imagem": "armas/torque-35.png",
     "acessorios": [],
-    "acessorios_exclusivos": {}
+    "acessorios_exclusivos": {},
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "TYR",
@@ -2185,13 +2283,15 @@
       "kit_conversao": [
         "Kit JAK Beholder Rifle"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "WSP Stinger",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/wsp-stinger.png",
     "acessorios": [
       {
@@ -2228,7 +2328,9 @@
         "Coronha Dobrável WSP",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "WSP Swarm",
@@ -2274,13 +2376,15 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "WSP-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/wsp-9.png",
     "acessorios": [
       {
@@ -2319,7 +2423,9 @@
         "Coronha Leve",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   },
   {
     "nome": "XRK Stalker",
@@ -2365,6 +2471,8 @@
         "Coronha Leve de Mobilidade",
         "Sem Coronha"
       ]
-    }
+    },
+    "patch_versao": "patch-notes-landing-template",
+    "ultima_atualizacao": "2026-09-17"
   }
 ]
