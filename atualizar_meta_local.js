@@ -80,62 +80,11 @@ function resetarJsonsParaTierE() {
     });
 }
 
-async function rasparTabelaVisivel(page) {
-    return await page.evaluate(() => {
-        const resultado = {};
-        const linhas = Array.from(document.querySelectorAll('tr, [role="row"], div[class*="table-row"], div[class*="row"]'));
-
-        linhas.forEach(linha => {
-            const linkArma = linha.querySelector('a[href*="/weapon/"], a[href*="/weapons/"]');
-            if (!linkArma) return;
-
-            const elNome = linkArma.querySelector('h2, h3, h4, span, p') || linkArma;
-            const nome = (elNome.innerText || '').split('\n')[0].trim().toUpperCase();
-
-            if (!nome || nome.length < 2 || nome.includes('TIER') || nome.includes('LOADOUT')) return;
-            if (resultado[nome]) return;
-
-            const textoLinha = (linha.innerText || '').toUpperCase();
-            let tierDetectado = null;
-
-            if (textoLinha.includes('ABSOLUTE META') || textoLinha.includes('ABSOLUTE')) {
-                tierDetectado = 'Tier S';
-            } else if (textoLinha.includes('A TIER') || textoLinha.includes('TIER A') || (textoLinha.includes('META') && !textoLinha.includes('WARZONE META'))) {
-                tierDetectado = 'Tier A';
-            } else if (textoLinha.includes('B TIER') || textoLinha.includes('TIER B')) {
-                tierDetectado = 'Tier B';
-            } else if (textoLinha.includes('C TIER') || textoLinha.includes('TIER C')) {
-                tierDetectado = 'Tier C';
-            } else if (textoLinha.includes('D TIER') || textoLinha.includes('TIER D')) {
-                tierDetectado = 'Tier D';
-            }
-
-            if (!tierDetectado) {
-                const badges = Array.from(linha.querySelectorAll('span, div, td, p'));
-                for (const b of badges) {
-                    const t = (b.innerText || '').trim().toUpperCase();
-                    if (t === 'S') { tierDetectado = 'Tier S'; break; }
-                    if (t === 'A') { tierDetectado = 'Tier A'; break; }
-                    if (t === 'B') { tierDetectado = 'Tier B'; break; }
-                    if (t === 'C') { tierDetectado = 'Tier C'; break; }
-                    if (t === 'D') { tierDetectado = 'Tier D'; break; }
-                }
-            }
-
-            if (tierDetectado) {
-                resultado[nome] = tierDetectado;
-            }
-        });
-
-        return resultado;
-    });
-}
-
 async function sincronizarComMetaTable() {
     resetarJsonsParaTierE();
 
     console.log("\n==========================================================");
-    console.log("  ETAPA 2: LENDO COMPARISON TABLE OFICIAL DO WARZONE      ");
+    console.log("  ETAPA 2: ABRINDO CODMUNITY E ATIVANDO FILTROS DE JOGOS  ");
     console.log("==========================================================\n");
 
     const browser = await puppeteer.launch({
@@ -159,71 +108,128 @@ async function sincronizarComMetaTable() {
     await page.goto(URL_CODMUNITY, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await new Promise(r => setTimeout(r, 4000));
 
-    // 1. Rola suavemente até a Comparison Table sem alterar filtros (visão pura oficial)
-    console.log("⏳ Rolando até a Meta Comparison Table na visão oficial...");
+    console.log("🎮 Buscando os botões reais de BO6, MW3 e MW2 na interface...");
+    const acionamentos = await page.evaluate(async () => {
+        let logs = [];
+        
+        // Rolar um pouco a tela para garantir que a área de filtros não está oculta no topo
+        window.scrollBy(0, 500);
+        await new Promise(r => setTimeout(r, 1000));
+
+        const alvos = [
+            { id: 'BO6', termos: ['BO6'] },
+            { id: 'MW3', termos: ['MW3', 'MWIII'] },
+            { id: 'MW2', termos: ['MW2', 'MWII'] }
+        ];
+
+        // Seleciona TUDO no DOM para fazer um raio-x dos textos
+        const todos = Array.from(document.querySelectorAll('*'));
+
+        for (const alvo of alvos) {
+            const possiveis = todos.filter(el => {
+                // Filtramos elementos folha (sem muitos filhos) para não pegar divs gigantes
+                if (el.children.length > 2) return false; 
+                
+                const txt = (el.textContent || '').trim().toUpperCase();
+                if (!alvo.termos.includes(txt)) return false;
+
+                const rect = el.getBoundingClientRect();
+                // O botão precisa estar visível na tela e não ser o link do cabeçalho
+                return rect.height > 0 && rect.top > 60;
+            });
+
+            if (possiveis.length > 0) {
+                const btn = possiveis[0];
+                // Sobe a hierarquia para achar o contêiner interativo (button, label, etc)
+                const clicavel = btn.closest('button, [role="button"], [role="checkbox"], [role="tab"], label, div[class*="cursor"]') || btn;
+                clicavel.click();
+                logs.push(`✓ Filtro ativado na tela: ${alvo.id}`);
+                await new Promise(r => setTimeout(r, 2000)); // Tempo pro React inserir o jogo na tabela
+            } else {
+                logs.push(`⚠️ Filtro não encontrado na tela: ${alvo.id}`);
+            }
+        }
+        return logs;
+    });
+
+    acionamentos.forEach(log => console.log(`   └─ ${log}`));
+    await new Promise(r => setTimeout(r, 3000));
+
+    console.log("⏳ Rolando até a Meta Comparison Table...");
     for (let passo = 0; passo < 8; passo++) {
-        await page.evaluate(() => window.scrollBy(0, 750));
-        await new Promise(r => setTimeout(r, 300));
+        await page.evaluate(() => window.scrollBy(0, 600));
+        await new Promise(r => setTimeout(r, 250));
     }
     await new Promise(r => setTimeout(r, 2000));
 
-    // 2. Extrai o Meta Geral Primário (onde o Tier S real está intacto)
-    console.log("📋 Extraindo dados primários oficiais...");
-    const mapaOficial = await rasparTabelaVisivel(page);
-    console.log(`   ✓ ${Object.keys(mapaOficial).length} armas oficiais mapeadas.`);
+    console.log("📋 Varrendo a tabela consolidada (50 passos acumulativos)...");
+    const mapaGeral = {};
 
-    // 3. Para catalogar armas restantes de outros jogos (BO6, MW3, MW2),
-    // alternamos individualmente, MAS impedimos que qualquer arma sobrescreva ou ganhe Tier S indevido
-    const mapaGeral = { ...mapaOficial };
+    for (let passo = 0; passo < 50; passo++) {
+        const armasNaTela = await page.evaluate(() => {
+            const itens = {};
+            const linhas = Array.from(document.querySelectorAll('tr, [role="row"], div[class*="table-row"], div[class*="row"]'));
 
-    const abasSecundarias = ['BO6', 'MW3', 'MW2'];
-    for (const aba of abasSecundarias) {
-        const clicou = await page.evaluate((nomeAba) => {
-            const botoes = Array.from(document.querySelectorAll('button, [role="tab"], [role="button"], span, div'));
-            const btn = botoes.find(el => {
-                const t = (el.innerText || '').trim().toUpperCase();
-                const ehVisivel = el.offsetParent !== null;
-                if (!ehVisivel) return false;
-                if (nomeAba === 'MW3') return t === 'MW3' || t === 'MWIII';
-                if (nomeAba === 'MW2') return t === 'MW2' || t === 'MWII';
-                return t === nomeAba;
+            linhas.forEach(linha => {
+                const linkArma = linha.querySelector('a[href*="/weapon/"], a[href*="/weapons/"]');
+                if (!linkArma) return;
+
+                const elNome = linkArma.querySelector('h2, h3, h4, span, p') || linkArma;
+                const nome = (elNome.innerText || '').split('\n')[0].trim().toUpperCase();
+
+                if (!nome || nome.length < 2 || nome.includes('TIER') || nome.includes('LOADOUT')) return;
+                if (itens[nome]) return;
+
+                const textoLinha = (linha.innerText || '').toUpperCase();
+                let tierDetectado = null;
+
+                if (textoLinha.includes('ABSOLUTE META') || textoLinha.includes('ABSOLUTE')) {
+                    tierDetectado = 'Tier S';
+                } else if (textoLinha.includes('A TIER') || textoLinha.includes('TIER A') || (textoLinha.includes('META') && !textoLinha.includes('WARZONE META'))) {
+                    tierDetectado = 'Tier A';
+                } else if (textoLinha.includes('B TIER') || textoLinha.includes('TIER B')) {
+                    tierDetectado = 'Tier B';
+                } else if (textoLinha.includes('C TIER') || textoLinha.includes('TIER C')) {
+                    tierDetectado = 'Tier C';
+                } else if (textoLinha.includes('D TIER') || textoLinha.includes('TIER D')) {
+                    tierDetectado = 'Tier D';
+                }
+
+                if (!tierDetectado) {
+                    const badges = Array.from(linha.querySelectorAll('span, div, td, p'));
+                    for (const b of badges) {
+                        const t = (b.innerText || '').trim().toUpperCase();
+                        if (t === 'S') { tierDetectado = 'Tier S'; break; }
+                        if (t === 'A') { tierDetectado = 'Tier A'; break; }
+                        if (t === 'B') { tierDetectado = 'Tier B'; break; }
+                        if (t === 'C') { tierDetectado = 'Tier C'; break; }
+                        if (t === 'D') { tierDetectado = 'Tier D'; break; }
+                    }
+                }
+
+                if (tierDetectado) {
+                    itens[nome] = tierDetectado;
+                }
             });
 
-            if (btn) {
-                btn.click();
-                return true;
-            }
-            return false;
-        }, aba);
+            return itens;
+        });
 
-        if (clicou) {
-            console.log(`🎮 Coletando dados complementares de ${aba}...`);
-            await new Promise(r => setTimeout(r, 2500));
-
-            // Rola levemente para garantir montagem
-            await page.evaluate(() => window.scrollBy(0, 300));
-            await new Promise(r => setTimeout(r, 1000));
-
-            const dadosAba = await rasparTabelaVisivel(page);
-
-            for (const [arma, tier] of Object.entries(dadosAba)) {
-                // REGRA CRÍTICA: Se a arma já foi definida no Meta Geral primário, NÃO SOBRESCREVE.
-                if (!mapaGeral[arma]) {
-                    // Armas legadas vindas de abas secundárias nunca podem ser Tier S no Warzone atual:
-                    // se a aba isolada deu Tier S para uma arma de MW3/MW2, ela é ajustada para Tier B/C conforme o meta global.
-                    let tierAjustado = tier;
-                    if (tierAjustado === 'Tier S') {
-                        tierAjustado = 'Tier B';
-                    }
-                    mapaGeral[arma] = tierAjustado;
-                }
+        // Mescla as armas encontradas na tela com o mapa global
+        for (const [arma, tier] of Object.entries(armasNaTela)) {
+            if (!mapaGeral[arma]) {
+                mapaGeral[arma] = tier;
             }
         }
+
+        // Desce aos poucos para carregar a próxima página invisível da tabela
+        await page.evaluate(() => window.scrollBy(0, 450));
+        await new Promise(r => setTimeout(r, 200));
     }
 
     await browser.close();
 
-    console.log(`\n✓ Total de armas consolidadas: ${Object.keys(mapaGeral).length}`);
+    console.log(`\n✓ Total de armas consolidadas de todos os jogos: ${Object.keys(mapaGeral).length}`);
 
     console.log("\n📡 Armas em Absolute Meta (Tier S):");
     let totalS = 0;
@@ -235,7 +241,6 @@ async function sincronizarComMetaTable() {
     }
     console.log("Total em Tier S: " + totalS);
 
-    // Gravação final nos arquivos JSON
     const dataHoje = new Date().toISOString().split('T')[0];
 
     ARQUIVOS_JSON.forEach(caminho => {
