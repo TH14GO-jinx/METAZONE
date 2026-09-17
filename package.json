@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "puppeteer": "^25.11.0"
-  }
+  },
+  "name": "metazone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "atualizar_meta_local.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TH14GO-jinx/METAZONE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TH14GO-jinx/METAZONE/issues"
+  },
+  "homepage": "https://github.com/TH14GO-jinx/METAZONE#readme"
 }
