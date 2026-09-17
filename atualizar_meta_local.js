@@ -84,7 +84,7 @@ async function sincronizarComMetaTable() {
     resetarJsonsParaTierE();
 
     console.log("\n==========================================================");
-    console.log("  ETAPA 2: ABRINDO CODMUNITY E ATIVANDO FILTROS DE JOGOS  ");
+    console.log("  ETAPA 2: ABRINDO CODMUNITY E EXPANDINDO TABELA COMPLETA ");
     console.log("==========================================================\n");
 
     const browser = await puppeteer.launch({
@@ -104,15 +104,30 @@ async function sincronizarComMetaTable() {
     await page.setViewport({ width: 1920, height: 1080 });
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36');
 
+    // Bloqueia imagens, vídeos e fontes para carregar instantaneamente
+    await page.setRequestInterception(true);
+    page.on('request', (req) => {
+        const tipo = req.resourceType();
+        if (tipo === 'image' || tipo === 'media' || tipo === 'font') {
+            req.abort();
+        } else {
+            req.continue();
+        }
+    });
+
     console.log("🔗 Conectando a " + URL_CODMUNITY + "...");
-    await page.goto(URL_CODMUNITY, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    
+    // try/catch blinda o código contra a queda por timeout
+    try {
+        await page.goto(URL_CODMUNITY, { waitUntil: 'domcontentloaded', timeout: 40000 });
+    } catch (error) {
+        console.log("   ⚠️ Timeout ignorado. Forçando a continuação com a página carregada parcialmente...");
+    }
     await new Promise(r => setTimeout(r, 4000));
 
-    console.log("🎮 Buscando os botões reais de BO6, MW3 e MW2 na interface...");
+    console.log("🎮 Ativando filtros de BO6, MW3 e MW2 na interface...");
     const acionamentos = await page.evaluate(async () => {
         let logs = [];
-        
-        // Rolar um pouco a tela para garantir que a área de filtros não está oculta no topo
         window.scrollBy(0, 500);
         await new Promise(r => setTimeout(r, 1000));
 
@@ -122,50 +137,54 @@ async function sincronizarComMetaTable() {
             { id: 'MW2', termos: ['MW2', 'MWII'] }
         ];
 
-        // Seleciona TUDO no DOM para fazer um raio-x dos textos
         const todos = Array.from(document.querySelectorAll('*'));
 
         for (const alvo of alvos) {
             const possiveis = todos.filter(el => {
-                // Filtramos elementos folha (sem muitos filhos) para não pegar divs gigantes
                 if (el.children.length > 2) return false; 
-                
                 const txt = (el.textContent || '').trim().toUpperCase();
                 if (!alvo.termos.includes(txt)) return false;
-
                 const rect = el.getBoundingClientRect();
-                // O botão precisa estar visível na tela e não ser o link do cabeçalho
                 return rect.height > 0 && rect.top > 60;
             });
 
             if (possiveis.length > 0) {
                 const btn = possiveis[0];
-                // Sobe a hierarquia para achar o contêiner interativo (button, label, etc)
                 const clicavel = btn.closest('button, [role="button"], [role="checkbox"], [role="tab"], label, div[class*="cursor"]') || btn;
                 clicavel.click();
-                logs.push(`✓ Filtro ativado na tela: ${alvo.id}`);
-                await new Promise(r => setTimeout(r, 2000)); // Tempo pro React inserir o jogo na tabela
+                logs.push(`✓ Filtro ativado: ${alvo.id}`);
+                await new Promise(r => setTimeout(r, 2000));
             } else {
-                logs.push(`⚠️ Filtro não encontrado na tela: ${alvo.id}`);
+                logs.push(`⚠️ Filtro não encontrado: ${alvo.id}`);
             }
         }
         return logs;
     });
 
     acionamentos.forEach(log => console.log(`   └─ ${log}`));
-    await new Promise(r => setTimeout(r, 3000));
-
-    console.log("⏳ Rolando até a Meta Comparison Table...");
-    for (let passo = 0; passo < 8; passo++) {
-        await page.evaluate(() => window.scrollBy(0, 600));
-        await new Promise(r => setTimeout(r, 250));
-    }
     await new Promise(r => setTimeout(r, 2000));
 
-    console.log("📋 Varrendo a tabela consolidada (50 passos acumulativos)...");
+    console.log("📜 Clicando repetidamente em 'Show More' para revelar o catálogo completo...");
+    for (let i = 0; i < 15; i++) {
+        await page.evaluate(() => {
+            const elementos = Array.from(document.querySelectorAll('button, span, div, a'));
+            const btnMore = elementos.find(el => {
+                const txt = (el.innerText || '').trim().toUpperCase();
+                return (txt === 'SHOW MORE' || txt === 'LOAD MORE' || txt === 'VER MAIS') && el.offsetParent !== null;
+            });
+            if (btnMore) btnMore.click();
+            window.scrollBy(0, 600);
+        });
+        await new Promise(r => setTimeout(r, 1200));
+    }
+
+    console.log("📋 Lendo as linhas da tabela estendida (varredura progressiva)...");
+    await page.evaluate(() => window.scrollTo(0, 500));
+    await new Promise(r => setTimeout(r, 1000));
+
     const mapaGeral = {};
 
-    for (let passo = 0; passo < 50; passo++) {
+    for (let passo = 0; passo < 65; passo++) {
         const armasNaTela = await page.evaluate(() => {
             const itens = {};
             const linhas = Array.from(document.querySelectorAll('tr, [role="row"], div[class*="table-row"], div[class*="row"]'));
@@ -215,21 +234,19 @@ async function sincronizarComMetaTable() {
             return itens;
         });
 
-        // Mescla as armas encontradas na tela com o mapa global
         for (const [arma, tier] of Object.entries(armasNaTela)) {
             if (!mapaGeral[arma]) {
                 mapaGeral[arma] = tier;
             }
         }
 
-        // Desce aos poucos para carregar a próxima página invisível da tabela
         await page.evaluate(() => window.scrollBy(0, 450));
-        await new Promise(r => setTimeout(r, 200));
+        await new Promise(r => setTimeout(r, 150));
     }
 
     await browser.close();
 
-    console.log(`\n✓ Total de armas consolidadas de todos os jogos: ${Object.keys(mapaGeral).length}`);
+    console.log(`\n✓ Total consolidado (todos os jogos expandidos): ${Object.keys(mapaGeral).length} armas`);
 
     console.log("\n📡 Armas em Absolute Meta (Tier S):");
     let totalS = 0;
