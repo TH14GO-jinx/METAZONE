@@ -20,58 +20,20 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
-      - name: Instalar bibliotecas de sistema do Linux para o Chromium
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libasound2 \
-            libatk-bridge2.0-0 \
-            libatk1.0-0 \
-            libc6 \
-            libcairo2 \
-            libcups2 \
-            libdbus-1-3 \
-            libexpat1 \
-            libfontconfig1 \
-            libgbm1 \
-            libgcc1 \
-            libglib2.0-0 \
-            libgtk-3-0 \
-            libnspr4 \
-            libnss3 \
-            libpango-1.0-0 \
-            libpangocairo-1.0-0 \
-            libstdc++6 \
-            libx11-6 \
-            libx11-xcb1 \
-            libxcb1 \
-            libxcomposite1 \
-            libxcursor1 \
-            libxdamage1 \
-            libxext6 \
-            libxfixes3 \
-            libxi6 \
-            libxrandr2 \
-            libxrender1 \
-            libxss1 \
-            libxtst6 \
-            ca-certificates \
-            fonts-liberation \
-            xdg-utils
-
-      - name: Instalar Puppeteer
+      - name: Instalar dependências e navegador Chromium
         run: |
           npm init -y
           npm install puppeteer
+          npx puppeteer browsers install chrome
 
-      - name: Executar script de atualizacao do Meta
+      - name: Executar script de sincronizacao do Meta
         run: node atualizar_meta_local.js
 
-      - name: Salvar alteracoes nos arquivos JSON
+      - name: Salvar e Enviar JSONs atualizados
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add *.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(meta): atualizacao automatica CODMunity [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(meta): sincronizacao automatica [skip ci]" && git push)
