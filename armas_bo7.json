@@ -144,7 +144,7 @@
     "nome": "AN-94",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/an-94.png",
     "acessorios": [
       {
@@ -1627,7 +1627,7 @@
     "nome": "Strider-300",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/strider-300.png",
     "acessorios": [
       {
@@ -1816,7 +1816,7 @@
     "nome": "Voyak-KT-3",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/voyak-kt-3.png",
     "acessorios": [
       {
