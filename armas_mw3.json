@@ -3,7 +3,7 @@
     "nome": "AMR9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/amr9.png",
     "acessorios": [
       {
@@ -104,7 +104,7 @@
     "nome": "BAS-B",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/bas-b.png",
     "acessorios": [
       {
@@ -152,7 +152,7 @@
     "nome": "BP50",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/bp50.png",
     "acessorios": [
       {
@@ -202,7 +202,7 @@
     "nome": "Bruen Mk9",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/bruen-mk9.png",
     "acessorios": [
       {
@@ -250,7 +250,7 @@
     "nome": "COR-45",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/cor-45.png",
     "acessorios": [
       {
@@ -298,7 +298,7 @@
     "nome": "DG-58",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/dg-58.png",
     "acessorios": [
       {
@@ -346,7 +346,7 @@
     "nome": "DG-58 LSW",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/dg-58-lsw.png",
     "acessorios": [
       {
@@ -397,7 +397,7 @@
     "nome": "DM56",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/dm56.png",
     "acessorios": [
       {
@@ -445,7 +445,7 @@
     "nome": "DTIR 30-06",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/dtir-30-06.png",
     "acessorios": [
       {
@@ -493,7 +493,7 @@
     "nome": "FJX Horus",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/fjx-horus.png",
     "acessorios": [
       {
@@ -541,7 +541,7 @@
     "nome": "FR 5.56",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/fr-556.png",
     "acessorios": [
       {
@@ -589,7 +589,7 @@
     "nome": "Haymaker",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/haymaker.png",
     "acessorios": [
       {
@@ -640,7 +640,7 @@
     "nome": "Holger 26",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/holger-26.png",
     "acessorios": [
       {
@@ -687,7 +687,7 @@
     "nome": "Holger 556",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/holger-556.png",
     "acessorios": [
       {
@@ -737,7 +737,7 @@
     "nome": "HRM-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/hrm-9.png",
     "acessorios": [
       {
@@ -784,7 +784,7 @@
     "nome": "Kar98k",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kar98k.png",
     "acessorios": [
       {
@@ -831,7 +831,7 @@
     "nome": "Kastov LSW",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/kastov-lsw.png",
     "acessorios": [
       {
@@ -878,7 +878,7 @@
     "nome": "KATT-AMR",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier D",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/katt-amr.png",
     "acessorios": [
       {
@@ -925,7 +925,7 @@
     "nome": "KV Inhibitor",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/kv-inhibitor.png",
     "acessorios": [
       {
@@ -973,7 +973,7 @@
     "nome": "KVD Enforcer",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/kvd-enforcer.png",
     "acessorios": [
       {
@@ -1021,7 +1021,7 @@
     "nome": "Lockwood 680",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/lockwood-680.png",
     "acessorios": [
       {
@@ -1071,7 +1071,7 @@
     "nome": "Longbow",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/longbow.png",
     "acessorios": [
       {
@@ -1118,7 +1118,7 @@
     "nome": "MCW",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mcw.png",
     "acessorios": [
       {
@@ -1169,7 +1169,7 @@
     "nome": "MCW 6.8",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mcw-68.png",
     "acessorios": [
       {
@@ -1217,7 +1217,7 @@
     "nome": "MORS",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/mors.png",
     "acessorios": [
       {
@@ -1263,7 +1263,7 @@
     "nome": "MTZ Interceptor",
     "jogo": "MW3",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/mtz-interceptor.png",
     "acessorios": [
       {
@@ -1310,7 +1310,7 @@
     "nome": "MTZ-556",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mtz-556.png",
     "acessorios": [
       {
@@ -1357,7 +1357,7 @@
     "nome": "MTZ-762",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/mtz-762.png",
     "acessorios": [
       {
@@ -1404,7 +1404,7 @@
     "nome": "Pulemyot 762",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/pulemyot-762.png",
     "acessorios": [
       {
@@ -1454,7 +1454,7 @@
     "nome": "RAM-7",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/ram-7.png",
     "acessorios": [
       {
@@ -1502,7 +1502,7 @@
     "nome": "RAM-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/ram-9.png",
     "acessorios": [
       {
@@ -1549,7 +1549,7 @@
     "nome": "Reclaimer 18",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/reclaimer-18.png",
     "acessorios": [
       {
@@ -1596,7 +1596,7 @@
     "nome": "Renetti",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/renetti.png",
     "acessorios": [
       {
@@ -1655,7 +1655,7 @@
     "nome": "Rival-9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/rival-9.png",
     "acessorios": [
       {
@@ -1706,7 +1706,7 @@
     "nome": "Riveter",
     "jogo": "MW3",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/riveter.png",
     "acessorios": [
       {
@@ -1753,7 +1753,7 @@
     "nome": "Sidewinder",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/sidewinder.png",
     "acessorios": [
       {
@@ -1800,7 +1800,7 @@
     "nome": "SOA Subverter",
     "jogo": "MW3",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/soa-subverter.png",
     "acessorios": [
       {
@@ -1848,7 +1848,7 @@
     "nome": "Static-HV",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/static-hv.png",
     "acessorios": [
       {
@@ -1894,7 +1894,7 @@
     "nome": "STG44",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/stg44.png",
     "acessorios": [
       {
@@ -1953,7 +1953,7 @@
     "nome": "Striker",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/striker.png",
     "acessorios": [
       {
@@ -2000,7 +2000,7 @@
     "nome": "Striker 9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/striker-9.png",
     "acessorios": [
       {
@@ -2048,7 +2048,7 @@
     "nome": "Superi 46",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/superi-46.png",
     "acessorios": [
       {
@@ -2095,7 +2095,7 @@
     "nome": "SVA 545",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/sva-545.png",
     "acessorios": [
       {
@@ -2143,7 +2143,7 @@
     "nome": "TAQ Eradicator",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/taq-eradicator.png",
     "acessorios": [
       {
@@ -2190,7 +2190,7 @@
     "nome": "TAQ Evolvere",
     "jogo": "MW3",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/taq-evolvere.png",
     "acessorios": [
       {
@@ -2237,7 +2237,7 @@
     "nome": "Torque 35",
     "jogo": "MW3",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/torque-35.png",
     "acessorios": [],
     "acessorios_exclusivos": {},
@@ -2248,7 +2248,7 @@
     "nome": "TYR",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/tyr.png",
     "acessorios": [
       {
@@ -2291,7 +2291,7 @@
     "nome": "WSP Stinger",
     "jogo": "MW3",
     "tipo": "Pistolas",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/wsp-stinger.png",
     "acessorios": [
       {
@@ -2336,7 +2336,7 @@
     "nome": "WSP Swarm",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/wsp-swarm.png",
     "acessorios": [
       {
@@ -2431,7 +2431,7 @@
     "nome": "XRK Stalker",
     "jogo": "MW3",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier A",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/xrk-stalker.png",
     "acessorios": [
       {

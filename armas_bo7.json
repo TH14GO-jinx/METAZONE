@@ -1,5 +1,93 @@
 [
   {
+    "nome": "TR51 PARA",
+    "tipo": "Fuzis de Batalha",
+    "jogo": "BO7",
+    "tier": "Tier S",
+    "arquivo_imagem": "armas/TR51-PARA.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Compensador Tático"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo de Precisão"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Pesada"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor Estendido"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha de Combate"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo de Precisão",
+        "Cano Curto CQB"
+      ],
+      "coronha": [
+        "Coronha de Combate",
+        "Sem Coronha"
+      ],
+      "carregador": [
+        "Tambor Estendido",
+        "Carregador Rápido"
+      ]
+    },
+    "ultima_atualizacao": "2026-09-17"
+  },
+  {
+    "nome": "VMP",
+    "tipo": "SMT",
+    "jogo": "BO7",
+    "tier": "Tier S",
+    "arquivo_imagem": "armas/VMP.png",
+    "acessorios": [
+      {
+        "slot": "Boca",
+        "nome": "Silenciador Monolítico"
+      },
+      {
+        "slot": "Cano",
+        "nome": "Cano Longo Ranger"
+      },
+      {
+        "slot": "Acoplamento",
+        "nome": "Empunhadura Frontal de Operador"
+      },
+      {
+        "slot": "Carregador",
+        "nome": "Tambor de 50 Projéteis"
+      },
+      {
+        "slot": "Coronha",
+        "nome": "Coronha Sem Apoio"
+      }
+    ],
+    "acessorios_exclusivos": {
+      "cano": [
+        "Cano Longo Ranger",
+        "Cano Compacto CQB"
+      ],
+      "coronha": [
+        "Coronha Tática",
+        "Sem Coronha"
+      ],
+      "carregador": [
+        "Carregador Rápido 40 Projéteis",
+        "Tambor de 50 Projéteis"
+      ]
+    },
+    "ultima_atualizacao": "2026-09-17"
+  },
+  {
     "nome": "1911",
     "jogo": "BO7",
     "tipo": "Pistolas",
@@ -144,7 +232,7 @@
     "nome": "AN-94",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier S",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/an-94.png",
     "acessorios": [
       {
@@ -673,7 +761,7 @@
     "nome": "J-Ger 45",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/j-ger-45.png",
     "acessorios": [
       {
@@ -766,7 +854,7 @@
     "nome": "KRS-762",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/krs-762.png",
     "acessorios": [
       {
@@ -1051,10 +1139,10 @@
     "ultima_atualizacao": "2026-09-17"
   },
   {
-    "nome": "MK35-ISR",
+    "nome": "MK35 ISR",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mk35-isr.png",
     "acessorios": [
       {
@@ -1102,7 +1190,7 @@
     "nome": "MK78",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/mk78.png",
     "acessorios": [
       {
@@ -1198,7 +1286,7 @@
     "nome": "MXR-17",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/mxr-17.png",
     "acessorios": [
       {
@@ -1771,7 +1859,7 @@
     "nome": "Velox 57",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/velox-57.png",
     "acessorios": [
       {
@@ -1813,10 +1901,10 @@
     "ultima_atualizacao": "2026-09-17"
   },
   {
-    "nome": "Voyak-KT-3",
+    "nome": "Voyak KT-3",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/voyak-kt-3.png",
     "acessorios": [
       {

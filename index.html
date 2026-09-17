@@ -111,14 +111,14 @@
                 </span>
             </div>
 
-            <!-- BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDE ROTATIVO) -->
+            <!-- BANNER ESTILO ANÚNCIO (SLIDER DINÂMICO DE ARMAS TIER S) -->
             <div class="container" style="padding-top: 0; padding-bottom: 0;">
                 <section class="ad-banner-section" id="secaoMetaBanner">
                     <div class="ad-banner-wrapper">
                         <!-- Seta Esquerda -->
                         <button class="ad-nav-btn prev-btn" id="adPrevBtn" type="button" aria-label="Anterior">&#10094;</button>
 
-                        <!-- Janela do Slider -->
+                        <!-- Janela do Slide -->
                         <div class="ad-banner-viewport">
                             <div class="ad-banner-track" id="adBannerTrack">
                                 <!-- Slides gerados via script.js -->
@@ -129,9 +129,9 @@
                         <button class="ad-nav-btn next-btn" id="adNextBtn" type="button" aria-label="Próximo">&#10095;</button>
                     </div>
 
-                    <!-- As 3 Bolinhas Inferiores -->
+                    <!-- Bolinhas Inferiores Dinâmicas -->
                     <div class="ad-dots-container" id="adDotsContainer">
-                        <!-- Geradas via script.js -->
+                        <!-- Geradas via script.js de acordo com a quantidade de armas Tier S -->
                     </div>
                 </section>
             </div>
@@ -195,7 +195,7 @@
                     <span id="catalogoCountTag" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #8c8ea3; font-size: 0.8rem; padding: 4px 10px;">Ordenado por Meta</span>
                 </div>
 
-                <!-- Grid Único de Armas -->
+                <!-- Grid de Armas -->
                 <div class="grid-armas">
                     <!-- Renderizado dinamicamente via script.js -->
                 </div>
@@ -250,7 +250,6 @@
 
                 <!-- Prévia Visual da Arma -->
                 <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); border: 1px dashed #2a2e3d; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
-                    
                     <div style="position: absolute; top: 1rem; right: 1rem; display: flex; align-items: center; justify-content: center; background: rgba(17, 19, 27, 0.85); padding: 1px 12px; border-radius: 6px; border: 1px solid #232a35;">
                         <img id="gunsmithGameLogo" src="" alt="Jogo" style="height: 40px; max-width: 65px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); display: none;">
                     </div>

@@ -3,7 +3,7 @@
     "nome": "9mm PM",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/9mm-pm.png",
     "acessorios": [
       {
@@ -189,7 +189,7 @@
     "nome": "AMES 85",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ames-85.png",
     "acessorios": [
       {
@@ -236,7 +236,7 @@
     "nome": "AMR Mod 4",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/amr-mod-4.png",
     "acessorios": [
       {
@@ -283,7 +283,7 @@
     "nome": "AS VAL",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/as-val.png",
     "acessorios": [
       {
@@ -330,7 +330,7 @@
     "nome": "ASG-89",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/asg-89.png",
     "acessorios": [
       {
@@ -375,7 +375,7 @@
     "nome": "C9",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/c9.png",
     "acessorios": [
       {
@@ -480,7 +480,7 @@
     "nome": "Cypher 091",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/cypher-091.png",
     "acessorios": [
       {
@@ -538,7 +538,7 @@
     "nome": "DM-10",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/dm-10.png",
     "acessorios": [
       {
@@ -585,7 +585,7 @@
     "nome": "Dresden 9mm",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/dresden-9mm.png",
     "acessorios": [
       {
@@ -630,7 +630,7 @@
     "nome": "Essex Model 07",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/essex-model-07.png",
     "acessorios": [
       {
@@ -677,7 +677,7 @@
     "nome": "Feng 82",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/feng-82.png",
     "acessorios": [
       {
@@ -724,7 +724,7 @@
     "nome": "FFAR 1",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ffar-1.png",
     "acessorios": [
       {
@@ -771,7 +771,7 @@
     "nome": "Goblin Mk 2",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/goblin-mk-2.png",
     "acessorios": [
       {
@@ -818,7 +818,7 @@
     "nome": "GPMG-7",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/gpmg-7.png",
     "acessorios": [
       {
@@ -912,7 +912,7 @@
     "nome": "Gravemark .357 Revolver",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/gravemark-357-revolver.png",
     "acessorios": [
       {
@@ -956,7 +956,7 @@
     "nome": "Grekhova",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/grekhova.png",
     "acessorios": [
       {
@@ -1242,7 +1242,7 @@
     "nome": "Krig C",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/krig-c.png",
     "acessorios": [
       {
@@ -1289,7 +1289,7 @@
     "nome": "KSV",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ksv.png",
     "acessorios": [
       {
@@ -1336,7 +1336,7 @@
     "nome": "Ladra",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ladra.png",
     "acessorios": [
       {
@@ -1429,7 +1429,7 @@
     "nome": "LR 7.62",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/lr-762.png",
     "acessorios": [
       {
@@ -1476,7 +1476,7 @@
     "nome": "LW3A1 Frostline",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/lw3a1-frostline.png",
     "acessorios": [
       {
@@ -1523,7 +1523,7 @@
     "nome": "Maelstrom",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/maelstrom.png",
     "acessorios": [
       {
@@ -1568,7 +1568,7 @@
     "nome": "Marine SP",
     "jogo": "BO6",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/marine-sp.png",
     "acessorios": [
       {
@@ -1613,7 +1613,7 @@
     "nome": "Merrick 556",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/merrick-556.png",
     "acessorios": [
       {
@@ -1660,7 +1660,7 @@
     "nome": "Model L",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/model-l.png",
     "acessorios": [
       {
@@ -1707,7 +1707,7 @@
     "nome": "Nail Gun",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/nail-gun.png",
     "acessorios": [],
     "acessorios_exclusivos": {},
@@ -1758,7 +1758,7 @@
     "nome": "PML-556",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/pml-556.png",
     "acessorios": [
       {
@@ -1805,7 +1805,7 @@
     "nome": "PP-919",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/pp-919.png",
     "acessorios": [
       {
@@ -1851,7 +1851,7 @@
     "nome": "PPSH-41",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/ppsh-41.png",
     "acessorios": [
       {
@@ -1898,7 +1898,7 @@
     "nome": "PU-21",
     "jogo": "BO6",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/pu-21.png",
     "acessorios": [
       {
@@ -1945,7 +1945,7 @@
     "nome": "Saug",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/saug.png",
     "acessorios": [
       {
@@ -2036,7 +2036,7 @@
     "nome": "Stryder 22",
     "jogo": "BO6",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/stryder-22.png",
     "acessorios": [
       {
@@ -2080,7 +2080,7 @@
     "nome": "SVD",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/svd.png",
     "acessorios": [
       {
@@ -2127,7 +2127,7 @@
     "nome": "SWAT 5.56",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/swat-556.png",
     "acessorios": [
       {
@@ -2174,7 +2174,7 @@
     "nome": "Tanto .22",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/tanto-22.png",
     "acessorios": [
       {
@@ -2221,7 +2221,7 @@
     "nome": "TR2",
     "jogo": "BO6",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/tr2.png",
     "acessorios": [
       {
@@ -2268,7 +2268,7 @@
     "nome": "Tsarkov 7.62",
     "jogo": "BO6",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier D",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/tsarkov-762.png",
     "acessorios": [
       {
@@ -2315,7 +2315,7 @@
     "nome": "X52 Resonator",
     "jogo": "BO6",
     "tipo": "Lançadores / Especiais / Facas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/x52-resonator.png",
     "acessorios": [],
     "acessorios_exclusivos": {},

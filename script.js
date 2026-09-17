@@ -8,7 +8,7 @@ const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets
 let listaMetaArmas = [];
 let acessoriosGlobais = {};
 
-// Variáveis do Banner Estilo Anúncio (Absolute Meta)
+// Variáveis de controle dinâmico do Banner (Absolute Meta)
 let slideAtualBanner = 0;
 let totalSlidesBanner = 0;
 let intervaloAutoplayBanner = null;
@@ -36,7 +36,7 @@ function obterLogoJogo(jogo) {
     return mapaLogos[jogo] || "logos/cod-logo.svg";
 }
 
-// Mapeamento de Kits de Conversão Aftermarket oficiais
+// Mapeamento de Kits de Conversão Aftermarket
 const kitsConversaoPorArma = {
     "RENETTI": ["Kit de Conversão Carabina JAK Ferocity"],
     "PULEMYOT 762": ["Kit Bullpup JAK Annihilator"],
@@ -85,14 +85,12 @@ const slotsBloqueadosPorKit = {
     "Kit Micro-Carabina CODA 2035": ["slot-coronha", "slot-cano"]
 };
 
-// Mapeamento de vídeos de fundo por tema
 const themeVideos = {
     mw4: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw2.webm",
     mw3: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw3.webm",
     bo6: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm"
 };
 
-// Mapeamento de partículas por tema
 const themeParticleColors = {
     mw4: ["#4ade80", "#22c55e", "#86efac", "#16a34a", "#ffffff"],
     mw3: ["#ef4444", "#dc2626", "#f87171", "#b91c1c", "#ff9999"],
@@ -278,7 +276,7 @@ async function carregarDadosIniciais() {
         }
     }
 
-    // Inicializa o Banner Rotativo Estilo Anúncio (Absolute Meta)
+    // Inicializa o Banner Dinâmico com todas as armas Tier S
     renderizarBannerAnuncio(listaMetaArmas);
 
     aplicarFiltrosHome();
@@ -288,7 +286,7 @@ async function carregarDadosIniciais() {
 }
 
 // ========================================================
-//  BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDER ROTATIVO)|
+//  BANNER ESTILO ANÚNCIO (DINÂMICO PARA N ARMAS TIER S)   |
 // ========================================================
 function renderizarBannerAnuncio(listaCompleta) {
     const track = document.getElementById("adBannerTrack");
@@ -299,10 +297,11 @@ function renderizarBannerAnuncio(listaCompleta) {
 
     if (!track || !dotsContainer) return;
 
-    // Filtra estritamente as 3 armas do Absolute Meta (Tier S)
+    // Filtra todas as armas que estiverem no Tier S
     const armasAbsoluteMeta = listaCompleta.filter(arma => (arma.tier || "").toUpperCase() === "TIER S");
     totalSlidesBanner = armasAbsoluteMeta.length;
 
+    // Se nenhuma estiver classificada como S, esconde o banner
     if (totalSlidesBanner === 0) {
         if (secaoBanner) secaoBanner.style.display = "none";
         return;
@@ -345,7 +344,7 @@ function renderizarBannerAnuncio(listaCompleta) {
         `;
         track.appendChild(slide);
 
-        // Cria a bolinha indicadora
+        // Gera exatamente 1 bolinha por arma Tier S (3, 5 ou mais)
         const dot = document.createElement("div");
         dot.className = `ad-dot ${index === 0 ? 'active' : ''}`;
         dot.addEventListener("click", () => {
@@ -355,7 +354,7 @@ function renderizarBannerAnuncio(listaCompleta) {
         dotsContainer.appendChild(dot);
     });
 
-    // Eventos dos botões de navegação
+    // Controles das setas
     if (nextBtn) {
         nextBtn.onclick = () => {
             slideAtualBanner = (slideAtualBanner + 1) % totalSlidesBanner;
@@ -500,7 +499,7 @@ function pontuarTierMeta(arma) {
 function aplicarFiltrosHome() {
     let armasFiltradas = listaMetaArmas.filter(arma => {
         const matchJogo = (filtroHomeJogo === "TODOS" || obterJogoDaArma(arma) === filtroHomeJogo);
-        const matchClasse = (filtroHomeClasse === "TODAS" || obterClasseDaArma(arma) === filtroHomeClasse);
+        const matchClasse = (filtroHomeClasse === "TODAS" || obterClasseDaArma(arma) === filtroClasseAtual);
         const matchBusca = !termoBuscaHome || (arma.nome && arma.nome.toLowerCase().includes(termoBuscaHome));
         return matchJogo && matchClasse && matchBusca;
     });
@@ -905,9 +904,6 @@ function preencherSelectSimples(selectElement, listaOpcoes) {
     });
 }
 
-// ========================================================
-//  SISTEMA DE BLOQUEIO DE SLOTS POR KIT DE CONVERSÃO      |
-// ========================================================
 function aplicarBloqueiosDoKit() {
     const slotKit = document.getElementById("slot-kit-conversao");
     const kitSelecionado = slotKit ? slotKit.value.trim() : "";

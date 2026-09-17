@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rajdhani', sans-serif; 
+    font-family: 'Rajdhani', sans-serif;
 }
 
 h1, h2, h3, .badge, .tier, .btn-submit, .btn-copy, .btn-social {
@@ -31,7 +31,7 @@ body {
     color: #e5e7eb;
     line-height: 1.5;
     font-size: 1.05rem;
-    padding-top: 285px; 
+    padding-top: 285px;
     position: relative;
     min-height: 100vh;
 }
@@ -86,7 +86,7 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     padding: 0.8rem 2rem;
     background-color: rgba(21, 25, 30, 0.75);
     backdrop-filter: blur(14px);
@@ -100,7 +100,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 0.8rem; 
+    margin-bottom: 0.8rem;
     position: relative;
     z-index: 1002;
 }
@@ -128,7 +128,7 @@ body {
 }
 
 .logo-img {
-    height: 200px; 
+    height: 200px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
@@ -280,7 +280,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 2rem; 
+    gap: 2rem;
     list-style: none;
 }
 
@@ -357,7 +357,7 @@ body {
 }
 
 /* ==========================================================
-   BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDER ROTATIVO)
+   BANNER ESTILO ANÚNCIO (SLIDER DINÂMICO ABSOLUTE META)
    ========================================================== */
 .ad-banner-section {
     max-width: 960px;
@@ -1014,11 +1014,11 @@ footer {
     }
     
     .desktop-theme-selector {
-        display: none; 
+        display: none;
     }
 
     .logo-img {
-        height: 75px; 
+        height: 75px;
     }
 
     .navbar.scrolled .logo-img {
