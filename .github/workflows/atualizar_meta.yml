@@ -1,0 +1,39 @@
+name: Atualizacao Diaria do Meta Warzone
+
+on:
+  schedule:
+    # 03:00 UTC corresponde exatamente a 00:00 no Horário de Brasília
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Permite rodar manualmente com 1 clique a qualquer momento
+
+jobs:
+  sincronizar-meta:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Permissão obrigatória para gravar os novos JSONs no repositório
+
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar ambiente Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar Puppeteer e Chromium Headless
+        run: |
+          npm init -y
+          npm install puppeteer
+          npx puppeteer browsers install chrome
+
+      - name: Executar raspagem e atualização dos Tiers
+        run: node atualizar_meta_local.js
+
+      - name: Salvar e Enviar JSONs atualizados ao repositório
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(meta): sincronizacao automatica CODMunity [skip ci]" && git push)

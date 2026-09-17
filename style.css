@@ -45,10 +45,10 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Preenche 100% da tela sem achatar nem distorcer */
-    z-index: 0; /* Camada mais profunda */
+    object-fit: cover;
+    z-index: 0;
     opacity: 0.70;
-    pointer-events: none; /* Deixa cliques passarem livremente */
+    pointer-events: none;
     transition: opacity 0.4s ease-in-out;
 }
 
@@ -62,7 +62,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: radial-gradient(circle, rgba(13, 15, 18, 0.35) 0%, rgba(13, 15, 18, 0.88) 100%);
-    z-index: 1; /* Acima do vídeo, abaixo das faíscas */
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -75,7 +75,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 2; /* Acima da overlay do vídeo */
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -88,7 +88,6 @@ body {
     display: flex;
     flex-direction: column; 
     padding: 0.8rem 2rem;
-    /* Transparência calibrada (75%) com desfoque de vidro fosco */
     background-color: rgba(21, 25, 30, 0.75);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -128,7 +127,6 @@ body {
     justify-content: center;
 }
 
-/* LOGO DE 200PX REGULADO */
 .logo-img {
     height: 200px; 
     width: auto;
@@ -358,14 +356,178 @@ body {
     transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* --- HERO: OCUPA O RESTANTE VISÍVEL DA TELA --- */
+/* ==========================================================
+   BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDER ROTATIVO)
+   ========================================================== */
+.ad-banner-section {
+    max-width: 960px;
+    margin: 0.5rem auto 2rem auto;
+    position: relative;
+    background: radial-gradient(circle at center, rgba(26, 30, 40, 0.95), rgba(12, 14, 18, 0.98));
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 1.2rem 1rem 0.9rem 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.ad-banner-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ad-banner-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ad-banner-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.ad-slide-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.8rem 3.2rem;
+    gap: 1.5rem;
+}
+
+.ad-slide-info {
+    max-width: 50%;
+}
+
+.ad-meta-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    font-weight: 900;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 0.6rem;
+}
+
+.ad-slide-info h2 {
+    font-size: 2.3rem;
+    color: #ffffff;
+    margin: 0 0 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ad-slide-info p {
+    color: #8c8ea3;
+    font-size: 0.92rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ad-slide-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ad-slide-actions button {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.ad-slide-actions button:hover {
+    transform: translateY(-2px);
+}
+
+.ad-slide-image {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-slide-image img {
+    max-height: 155px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
+    transition: transform 0.3s ease;
+}
+
+.ad-slide-item:hover .ad-slide-image img {
+    transform: scale(1.05);
+}
+
+.ad-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(16, 19, 23, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.ad-nav-btn:hover {
+    background: var(--accent);
+    color: #000000;
+    border-color: var(--accent);
+}
+
+.ad-nav-btn.prev-btn { left: 6px; }
+.ad-nav-btn.next-btn { right: 6px; }
+
+.ad-dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.8rem;
+}
+
+.ad-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ad-dot.active {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 6px;
+}
+
+/* --- HERO & MAIN --- */
 .hero {
     position: relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 285px - 4rem); /* Preenche toda a tela até o rodapé */
+    min-height: calc(100vh - 285px - 4rem);
     padding: 2rem 1.5rem;
 }
 
@@ -423,7 +585,7 @@ main {
 }
 
 .card {
-    background-color: rgba(23, 28, 35, 0.85); /* Semi-transparente estilo vidro */
+    background-color: rgba(23, 28, 35, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     padding: 1.25rem;
@@ -867,7 +1029,6 @@ footer {
         display: flex;
     }
 
-    /* PAINEL LATERAL DESLIZANTE COM TRANSPARÊNCIA */
     .navbar-bottom {
         position: fixed;
         top: 0;
@@ -994,5 +1155,28 @@ footer {
     .footer-content {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .ad-slide-item {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        gap: 0.8rem;
+    }
+
+    .ad-slide-info, .ad-slide-image {
+        max-width: 100%;
+    }
+
+    .ad-slide-info h2 {
+        font-size: 1.7rem;
+    }
+
+    .ad-slide-image img {
+        max-height: 110px;
+    }
+
+    .ad-slide-actions {
+        justify-content: center;
     }
 }

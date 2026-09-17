@@ -105,11 +105,35 @@
         <!-- TELA 1: Início -->
         <section id="home" class="page-section active-section">
             
-            <!-- CABEÇALHO LIMPO E CENTRALIZADO -->
-            <div class="container" style="margin-top: 2rem; margin-bottom: 1.2rem; text-align: center;">
+            <div class="container" style="margin-top: 1.5rem; margin-bottom: 0.5rem; text-align: center;">
                 <span class="badge" style="background: var(--accent); color: #000; font-weight: 800; font-size: 0.85rem; letter-spacing: 2px; padding: 6px 18px; border-radius: 4px; box-shadow: 0 0 15px rgba(0,0,0,0.5); display: inline-block;">
                     META DA TEMPORADA
                 </span>
+            </div>
+
+            <!-- BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDE ROTATIVO) -->
+            <div class="container" style="padding-top: 0; padding-bottom: 0;">
+                <section class="ad-banner-section" id="secaoMetaBanner">
+                    <div class="ad-banner-wrapper">
+                        <!-- Seta Esquerda -->
+                        <button class="ad-nav-btn prev-btn" id="adPrevBtn" type="button" aria-label="Anterior">&#10094;</button>
+
+                        <!-- Janela do Slider -->
+                        <div class="ad-banner-viewport">
+                            <div class="ad-banner-track" id="adBannerTrack">
+                                <!-- Slides gerados via script.js -->
+                            </div>
+                        </div>
+
+                        <!-- Seta Direita -->
+                        <button class="ad-nav-btn next-btn" id="adNextBtn" type="button" aria-label="Próximo">&#10095;</button>
+                    </div>
+
+                    <!-- As 3 Bolinhas Inferiores -->
+                    <div class="ad-dots-container" id="adDotsContainer">
+                        <!-- Geradas via script.js -->
+                    </div>
+                </section>
             </div>
 
             <div class="container">
@@ -171,7 +195,7 @@
                     <span id="catalogoCountTag" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #8c8ea3; font-size: 0.8rem; padding: 4px 10px;">Ordenado por Meta</span>
                 </div>
 
-                <!-- Grid Único com as armas Meta no topo -->
+                <!-- Grid Único de Armas -->
                 <div class="grid-armas">
                     <!-- Renderizado dinamicamente via script.js -->
                 </div>
@@ -216,7 +240,6 @@
                     <div class="form-col" style="flex: 2;">
                         <label for="gunsmithWeaponSelect" style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem; display: block;">SELECIONE A ARMA BASE</label>
                         <select id="gunsmithWeaponSelect" class="select-box" onchange="atualizarArmeiro()" style="width: 100%; padding: 0.8rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;">
-                            <!-- Preenchido dinamicamente via script.js -->
                         </select>
                     </div>
                     <div class="form-col" style="flex: 1;">
@@ -225,12 +248,11 @@
                     </div>
                 </div>
 
-                <!-- Prévia Visual da Arma com Apenas o Logo do Jogo -->
+                <!-- Prévia Visual da Arma -->
                 <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); border: 1px dashed #2a2e3d; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
                     
-                    <!-- Apenas o Logo do Jogo no canto superior direito -->
-                    <div style="position: absolute; top: 1rem; right: 1rem; display: flex; align-items: center; justify-content: center; background: rgba(17, 19, 27, 0.85); padding: 6px 12px; border-radius: 6px; border: 1px solid #232a35;">
-                        <img id="gunsmithGameLogo" src="" alt="Jogo" style="height: 24px; max-width: 65px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); display: none;">
+                    <div style="position: absolute; top: 1rem; right: 1rem; display: flex; align-items: center; justify-content: center; background: rgba(17, 19, 27, 0.85); padding: 1px 12px; border-radius: 6px; border: 1px solid #232a35;">
+                        <img id="gunsmithGameLogo" src="" alt="Jogo" style="height: 40px; max-width: 65px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); display: none;">
                     </div>
 
                     <div style="height: 130px; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 0.5rem;">
@@ -246,7 +268,7 @@
                     <span id="gunsmithSlotCounter" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #fff; font-weight: bold; font-size: 0.85rem; padding: 5px 12px; border-radius: 4px;">0 / 5 Equipados</span>
                 </div>
                 
-                <!-- Grade com 11 Categorias Oficiais -->
+                <!-- Grade de Slots -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <div class="form-col">
                         <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">1. BOCA</label>
@@ -299,7 +321,6 @@
                     <input type="text" id="customClassNotes" placeholder="Ex: Foco em velocidade de mira, sem recuo, controle de alcance..." style="width: 100%; padding: 0.7rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;">
                 </div>
 
-                <!-- Botões de Ação do Armeiro -->
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <button type="button" class="btn-submit btn-save" onclick="publicarClasseNoMural(this)" style="flex: 1.5; padding: 0.85rem; background: var(--accent); color: #000; font-weight: bold;">🚀 Publicar na Comunidade</button>
                     <button type="button" class="btn-submit" onclick="limparSlots()" style="flex: 1; padding: 0.85rem; background: #2a2e3d; border: 1px solid #3f4458;">🗑️ Limpar Slots</button>
@@ -311,7 +332,6 @@
         <section id="comunidade" class="container page-section">
             <h2>Builds da Comunidade</h2>
 
-            <!-- FILTRO DE ARMAS DA COMUNIDADE -->
             <div class="community-filter-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 1rem 0; padding: 1rem 1.2rem; background: rgba(17, 19, 27, 0.75); border: 1px solid #232a35; border-radius: 8px;">
                 <div style="display: flex; align-items: center; gap: 0.8rem; flex: 1; min-width: 260px;">
                     <label for="communityWeaponFilter" style="color: var(--accent); font-weight: bold; font-size: 0.88rem; white-space: nowrap;">FILTRAR POR ARMA:</label>
@@ -402,7 +422,7 @@
                     <h2 id="profileUsernameDisplay" style="color: var(--accent); font-size: 2.2rem; margin-top: 0.5rem; letter-spacing: 1px;">Usuário</h2>
                 </div>
 
-                <!-- BOX DE VÍNCULO DA ACTIVISION ID COM ESTATÍSTICAS -->
+                <!-- BOX DE VÍNCULO ACTIVISION ID -->
                 <div class="community-box" style="max-width: 650px; margin: 0 auto 2rem auto; border: 1px solid var(--accent); background: linear-gradient(180deg, rgba(26, 29, 38, 0.95) 0%, rgba(17, 19, 27, 0.95) 100%);">
                     <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #232a35; padding-bottom: 0.8rem; margin-bottom: 1.2rem;">
                         <div style="display: flex; align-items: center; gap: 0.6rem;">

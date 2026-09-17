@@ -8,6 +8,11 @@ const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets
 let listaMetaArmas = [];
 let acessoriosGlobais = {};
 
+// Variáveis do Banner Estilo Anúncio (Absolute Meta)
+let slideAtualBanner = 0;
+let totalSlidesBanner = 0;
+let intervaloAutoplayBanner = null;
+
 // Filtros e busca ativos na Tela Inicial (Home)
 let filtroHomeJogo = "TODOS";
 let filtroHomeClasse = "TODAS";
@@ -20,45 +25,12 @@ let filtroClasseAtual = "TODAS";
 // Filtro ativo na Comunidade
 let filtroArmaComunidade = "TODAS";
 
-// ========================================================
-//  TABELA OFICIAL DE TIERS - CODMUNITY / WZSTATS SEASON 6 |
-// ========================================================
-const TIER_LIST_SEASON_6 = {
-    "TIER S": [
-        "AN-94", "REV-46", "MK35 ISR", "MK35-ISR", "RYDEN 45K", "RYDEN-45K",
-        "FG42", "VST", "MPC-25", "DS20 MIRAGE", "DS20-MIRAGE",
-        "KAR98K", "HAWKER HX", "HAWKER-HX", "STRIDER 300", "STRIDER-300", "VS RECON", "VS-RECON"
-    ],
-    "TIER A": [
-        "AK-27", "CBRS-3", "VX COMPACT", "VX-COMPACT", "STURMWOLF 45", "STURMWOLF-45",
-        "VOYAK KT-3", "VOYAK-KT-3", "PEACEKEEPER MK1", "PEACEKEEPER-MK1", "M15 MOD 0", "M15-MOD-0",
-        "EGRT-17", "MXR-17", "KOGOT-7", "X9 MAVERICK", "CARBON 57", "DRAVEC 45",
-        "GREMLIN", "MK.78", "MK78", "RAZOR 9MM", "MADDOX RFB", "M8A1",
-        "FJX IMPERIUM", "SWORDFISH A1", "XM325", "AKITA", "SOKOL 545", "HDR",
-        "XR-3 ION", "MERRICK 556", "SG-12", "M10 BREACHER", "ECHO 12", "RK-9",
-        "LW3A1 FROSTLINE", "M34 NOVALINE", "TR2", "KILO 141", "GPR 91", "SWAT 5.56",
-        "CR-56 AMAX", "X52 RESONATOR", "STG44", "SUPERI 46", "JACKAL PDW"
-    ]
-};
-
-function obterTierAtualizado(nomeArma, tierOriginal) {
-    const nomeLimpo = (nomeArma || "").toUpperCase().trim();
-
-    if (TIER_LIST_SEASON_6["TIER S"].some(w => nomeLimpo.includes(w) || w.includes(nomeLimpo))) {
-        return "Tier S";
-    }
-    if (TIER_LIST_SEASON_6["TIER A"].some(w => nomeLimpo.includes(w) || w.includes(nomeLimpo))) {
-        return "Tier A";
-    }
-    return tierOriginal || "Tier B";
-}
-
 // Mapeamento de Logos dos Jogos
 function obterLogoJogo(jogo) {
     const mapaLogos = {
         "MW2": "logos/mw2-logo.svg",
         "MW3": "logos/mw3-logo.svg",
-        "BO6": "logos/bo7-logo.svg",
+        "BO6": "logos/bo6-logo.svg",
         "BO7": "logos/bo7-logo.svg"
     };
     return mapaLogos[jogo] || "logos/cod-logo.svg";
@@ -264,12 +236,13 @@ async function carregarDadosIniciais() {
     const container = document.querySelector("#home .grid-armas");
 
     try {
+        const timestamp = Date.now();
         const [resBO6, resBO7, resMW2, resMW3, resAcessorios] = await Promise.all([
-            fetch("./armas_bo6.json"),
-            fetch("./armas_bo7.json"),
-            fetch("./armas_mw2.json"),
-            fetch("./armas_mw3.json"),
-            fetch("./acessorios.json")
+            fetch(`./armas_bo6.json?v=${timestamp}`),
+            fetch(`./armas_bo7.json?v=${timestamp}`),
+            fetch(`./armas_mw2.json?v=${timestamp}`),
+            fetch(`./armas_mw3.json?v=${timestamp}`),
+            fetch(`./acessorios.json?v=${timestamp}`)
         ]);
 
         if (resBO6.ok && resBO7.ok && resMW2.ok && resMW3.ok) {
@@ -289,9 +262,10 @@ async function carregarDadosIniciais() {
     } catch (err) {
         console.warn("Recorrendo ao arquivo único armas.json...", err);
         try {
+            const timestamp = Date.now();
             const [resArmas, resAcessorios] = await Promise.all([
-                fetch("./armas.json"),
-                fetch("./acessorios.json")
+                fetch(`./armas.json?v=${timestamp}`),
+                fetch(`./acessorios.json?v=${timestamp}`)
             ]);
             listaMetaArmas = await resArmas.json();
             acessoriosGlobais = await resAcessorios.json();
@@ -304,11 +278,138 @@ async function carregarDadosIniciais() {
         }
     }
 
+    // Inicializa o Banner Rotativo Estilo Anúncio (Absolute Meta)
+    renderizarBannerAnuncio(listaMetaArmas);
 
     aplicarFiltrosHome();
     inicializarArmeiro();
     inicializarBuildsComunidadePadrao();
     loadCommunityBuilds(true);
+}
+
+// ========================================================
+//  BANNER ESTILO ANÚNCIO (ABSOLUTE META - SLIDER ROTATIVO)|
+// ========================================================
+function renderizarBannerAnuncio(listaCompleta) {
+    const track = document.getElementById("adBannerTrack");
+    const dotsContainer = document.getElementById("adDotsContainer");
+    const prevBtn = document.getElementById("adPrevBtn");
+    const nextBtn = document.getElementById("adNextBtn");
+    const secaoBanner = document.getElementById("secaoMetaBanner");
+
+    if (!track || !dotsContainer) return;
+
+    // Filtra estritamente as 3 armas do Absolute Meta (Tier S)
+    const armasAbsoluteMeta = listaCompleta.filter(arma => (arma.tier || "").toUpperCase() === "TIER S");
+    totalSlidesBanner = armasAbsoluteMeta.length;
+
+    if (totalSlidesBanner === 0) {
+        if (secaoBanner) secaoBanner.style.display = "none";
+        return;
+    } else {
+        if (secaoBanner) secaoBanner.style.display = "block";
+    }
+
+    track.innerHTML = "";
+    dotsContainer.innerHTML = "";
+    slideAtualBanner = 0;
+
+    armasAbsoluteMeta.forEach((arma, index) => {
+        const slide = document.createElement("div");
+        slide.className = "ad-slide-item";
+
+        const jogoArma = obterJogoDaArma(arma);
+        const classeArma = obterClasseDaArma(arma);
+
+        slide.innerHTML = `
+            <div class="ad-slide-info">
+                <span class="ad-meta-tag">⚡ ABSOLUTE META</span>
+                <h2>${arma.nome}</h2>
+                <p>${classeArma} • ${jogoArma}</p>
+                <div class="ad-slide-actions">
+                    <button type="button" onclick="abrirNoArmeiro('${arma.nome}')" style="background: var(--accent); color: #000;">
+                        ⚙️ Ver no Armeiro
+                    </button>
+                    <button type="button" onclick="abrirNaComunidade('${arma.nome}')" style="background: #2a2e3d; color: #fff; border: 1px solid #3f4458;">
+                        👥 Builds da Galera
+                    </button>
+                </div>
+            </div>
+            <div class="ad-slide-image">
+                <img 
+                    src="${ASSETS_CDN + arma.arquivo_imagem}" 
+                    alt="${arma.nome}"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+        `;
+        track.appendChild(slide);
+
+        // Cria a bolinha indicadora
+        const dot = document.createElement("div");
+        dot.className = `ad-dot ${index === 0 ? 'active' : ''}`;
+        dot.addEventListener("click", () => {
+            irParaSlideBanner(index);
+            reiniciarAutoplayBanner();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    // Eventos dos botões de navegação
+    if (nextBtn) {
+        nextBtn.onclick = () => {
+            slideAtualBanner = (slideAtualBanner + 1) % totalSlidesBanner;
+            atualizarPosicaoSlideBanner();
+            reiniciarAutoplayBanner();
+        };
+    }
+
+    if (prevBtn) {
+        prevBtn.onclick = () => {
+            slideAtualBanner = (slideAtualBanner - 1 + totalSlidesBanner) % totalSlidesBanner;
+            atualizarPosicaoSlideBanner();
+            reiniciarAutoplayBanner();
+        };
+    }
+
+    atualizarPosicaoSlideBanner();
+    iniciarAutoplayBanner();
+}
+
+function atualizarPosicaoSlideBanner() {
+    const track = document.getElementById("adBannerTrack");
+    const dots = document.querySelectorAll(".ad-dot");
+
+    if (!track) return;
+    track.style.transform = `translateX(-${slideAtualBanner * 100}%)`;
+
+    dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === slideAtualBanner);
+    });
+}
+
+function irParaSlideBanner(index) {
+    slideAtualBanner = index;
+    atualizarPosicaoSlideBanner();
+}
+
+function iniciarAutoplayBanner() {
+    pararAutoplayBanner();
+    intervaloAutoplayBanner = setInterval(() => {
+        if (totalSlidesBanner > 0) {
+            slideAtualBanner = (slideAtualBanner + 1) % totalSlidesBanner;
+            atualizarPosicaoSlideBanner();
+        }
+    }, 4500);
+}
+
+function pararAutoplayBanner() {
+    if (intervaloAutoplayBanner) clearInterval(intervaloAutoplayBanner);
+}
+
+function reiniciarAutoplayBanner() {
+    pararAutoplayBanner();
+    iniciarAutoplayBanner();
 }
 
 // ========================================================
@@ -388,10 +489,12 @@ function filtrarHomeClasse(classe, btnClicado) {
 
 function pontuarTierMeta(arma) {
     const tier = (arma.tier || "").toUpperCase();
-    if (tier.includes("TIER S") || tier.includes("META ABSOLUTO")) return 100;
-    if (tier.includes("TIER A")) return 75;
-    if (tier.includes("TIER B")) return 50;
-    return 10;
+    if (tier === "TIER S") return 100;
+    if (tier === "TIER A") return 80;
+    if (tier === "TIER B") return 60;
+    if (tier === "TIER C") return 40;
+    if (tier === "TIER D") return 20;
+    return 0; // Tier E
 }
 
 function aplicarFiltrosHome() {
@@ -402,7 +505,6 @@ function aplicarFiltrosHome() {
         return matchJogo && matchClasse && matchBusca;
     });
 
-    // Ordenação que garante todas as armas Tier S (Meta) no topo
     armasFiltradas.sort((a, b) => {
         const pontuacaoA = pontuarTierMeta(a);
         const pontuacaoB = pontuarTierMeta(b);
@@ -434,10 +536,10 @@ function renderMetaCards(armas) {
         const card = document.createElement("div");
         card.className = "card";
 
-        const tierClass = (arma.tier || "Tier S").toLowerCase().replace(/\s+/g, "-");
+        const tierClass = (arma.tier || "Tier E").toLowerCase().replace(/\s+/g, "-");
         const jogoArma = obterJogoDaArma(arma);
         const logoJogo = obterLogoJogo(jogoArma);
-        const isMetaTierS = (arma.tier || "").toUpperCase().includes("TIER S");
+        const isMetaTierS = (arma.tier || "").toUpperCase() === "TIER S";
 
         if (isMetaTierS) {
             card.style.borderColor = "var(--accent)";
@@ -447,13 +549,13 @@ function renderMetaCards(armas) {
         card.innerHTML = `
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="tier ${tierClass}" style="${isMetaTierS ? 'background: var(--accent); color: #000; font-weight: 800;' : ''}">
-                    ${isMetaTierS ? '★ META ABSOLUTO' : (arma.tier || 'Tier A')}
+                    ${isMetaTierS ? '★ META ABSOLUTO' : (arma.tier || 'Tier E')}
                 </span>
                 <img 
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}" 
-                    style="height: 20px; max-width: 55px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"
+                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -469,7 +571,7 @@ function renderMetaCards(armas) {
             </div>
 
             <h3>${arma.nome}</h3>
-            <p class="tipo">${arma.tipo || "Arma Meta"}</p>
+            <p class="tipo">${arma.tipo || "Arma Warzone"}</p>
 
             <div style="display: flex; gap: 0.5rem; margin-top: 0.8rem;">
                 <button 
@@ -1151,7 +1253,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}"
-                    style="height: 18px; max-width: 48px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -1345,7 +1447,7 @@ function renderSavedClassesInProfile() {
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
                     title="${jogoArma}"
-                    style="height: 18px; max-width: 48px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
+                    style="height: 40px; max-width: 80px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));" 
                     onerror="this.style.display='none'"
                 >
             </div>
