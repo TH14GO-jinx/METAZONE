@@ -80,85 +80,8 @@ function resetarJsonsParaTierE() {
     });
 }
 
-async function sincronizarComMetaTable() {
-    resetarJsonsParaTierE();
-
-    console.log("\n==========================================================");
-    console.log("  ETAPA 2: ABRINDO CODMUNITY E EXPANDINDO COMPARISON TABLE");
-    console.log("==========================================================\n");
-
-    const browser = await puppeteer.launch({
-        headless: 'new',
-        protocolTimeout: 240000,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--disable-blink-features=AutomationControlled',
-            '--window-size=1920,1080'
-        ]
-    });
-
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36');
-
-    console.log("🔗 Conectando a " + URL_CODMUNITY + "...");
-    await page.goto(URL_CODMUNITY, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    await new Promise(r => setTimeout(r, 4000));
-
-    console.log("⏳ Rolando até a seção da Meta Comparison Table...");
-    for (let passo = 0; passo < 10; passo++) {
-        await page.evaluate(() => window.scrollBy(0, 700));
-        await new Promise(r => setTimeout(r, 300));
-    }
-    await new Promise(r => setTimeout(r, 2000));
-
-    console.log("🎮 Ativando botões de filtro para BO6, MWIII e MWII...");
-    await page.evaluate(() => {
-        const botoes = Array.from(document.querySelectorAll('button, [role="tab"], [role="button"], span, div'));
-        
-        // Clica nos seletores de jogos da própria área da Comparison Table
-        const alvos = ['BO6', 'MW3', 'MWIII', 'MW2', 'MWII', 'ALL'];
-        botoes.forEach(b => {
-            const txt = (b.innerText || '').trim().toUpperCase();
-            if (alvos.some(a => txt === a || txt === `+ ${a}`) && b.offsetParent !== null) {
-                b.click();
-            }
-        });
-    });
-
-    await new Promise(r => setTimeout(r, 3000));
-
-    // Se houver botão "Show More" / "Load More" na tabela, clica nele repetidamente
-    console.log("📜 Expandindo todas as páginas/linhas da tabela comparativa...");
-    await page.evaluate(async () => {
-        for (let i = 0; i < 5; i++) {
-            const botoesMais = Array.from(document.querySelectorAll('button, a, span'));
-            const btnMais = botoesMais.find(b => {
-                const t = (b.innerText || '').trim().toUpperCase();
-                return (t.includes('SHOW MORE') || t.includes('LOAD MORE') || t.includes('VER MAIS')) && b.offsetParent !== null;
-            });
-
-            if (btnMais) {
-                btnMais.click();
-                await new Promise(res => setTimeout(res, 1500));
-            } else {
-                break;
-            }
-        }
-    });
-
-    // Scroll adicional leve para garantir que as novas linhas injetadas sejam montadas no DOM
-    for (let passo = 0; passo < 6; passo++) {
-        await page.evaluate(() => window.scrollBy(0, 600));
-        await new Promise(r => setTimeout(r, 250));
-    }
-    await new Promise(r => setTimeout(r, 2000));
-
-    console.log("📋 Extraindo dados consolidados de todas as linhas...");
-    const mapaGeral = await page.evaluate(() => {
+async function rasparTabelaVisivel(page) {
+    return await page.evaluate(() => {
         const resultado = {};
         const linhas = Array.from(document.querySelectorAll('tr, [role="row"], div[class*="table-row"], div[class*="row"]'));
 
@@ -169,7 +92,7 @@ async function sincronizarComMetaTable() {
             const elNome = linkArma.querySelector('h2, h3, h4, span, p') || linkArma;
             const nome = (elNome.innerText || '').split('\n')[0].trim().toUpperCase();
 
-            if (!nome || nome.length < 2 || nome.includes('TIER') || nome.includes('META') || nome.includes('LOADOUT')) return;
+            if (!nome || nome.length < 2 || nome.includes('TIER') || nome.includes('LOADOUT')) return;
             if (resultado[nome]) return;
 
             const textoLinha = (linha.innerText || '').toUpperCase();
@@ -206,10 +129,101 @@ async function sincronizarComMetaTable() {
 
         return resultado;
     });
+}
+
+async function sincronizarComMetaTable() {
+    resetarJsonsParaTierE();
+
+    console.log("\n==========================================================");
+    console.log("  ETAPA 2: LENDO COMPARISON TABLE OFICIAL DO WARZONE      ");
+    console.log("==========================================================\n");
+
+    const browser = await puppeteer.launch({
+        headless: 'new',
+        protocolTimeout: 240000,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-blink-features=AutomationControlled',
+            '--window-size=1920,1080'
+        ]
+    });
+
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36');
+
+    console.log("🔗 Conectando a " + URL_CODMUNITY + "...");
+    await page.goto(URL_CODMUNITY, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    await new Promise(r => setTimeout(r, 4000));
+
+    // 1. Rola suavemente até a Comparison Table sem alterar filtros (visão pura oficial)
+    console.log("⏳ Rolando até a Meta Comparison Table na visão oficial...");
+    for (let passo = 0; passo < 8; passo++) {
+        await page.evaluate(() => window.scrollBy(0, 750));
+        await new Promise(r => setTimeout(r, 300));
+    }
+    await new Promise(r => setTimeout(r, 2000));
+
+    // 2. Extrai o Meta Geral Primário (onde o Tier S real está intacto)
+    console.log("📋 Extraindo dados primários oficiais...");
+    const mapaOficial = await rasparTabelaVisivel(page);
+    console.log(`   ✓ ${Object.keys(mapaOficial).length} armas oficiais mapeadas.`);
+
+    // 3. Para catalogar armas restantes de outros jogos (BO6, MW3, MW2),
+    // alternamos individualmente, MAS impedimos que qualquer arma sobrescreva ou ganhe Tier S indevido
+    const mapaGeral = { ...mapaOficial };
+
+    const abasSecundarias = ['BO6', 'MW3', 'MW2'];
+    for (const aba of abasSecundarias) {
+        const clicou = await page.evaluate((nomeAba) => {
+            const botoes = Array.from(document.querySelectorAll('button, [role="tab"], [role="button"], span, div'));
+            const btn = botoes.find(el => {
+                const t = (el.innerText || '').trim().toUpperCase();
+                const ehVisivel = el.offsetParent !== null;
+                if (!ehVisivel) return false;
+                if (nomeAba === 'MW3') return t === 'MW3' || t === 'MWIII';
+                if (nomeAba === 'MW2') return t === 'MW2' || t === 'MWII';
+                return t === nomeAba;
+            });
+
+            if (btn) {
+                btn.click();
+                return true;
+            }
+            return false;
+        }, aba);
+
+        if (clicou) {
+            console.log(`🎮 Coletando dados complementares de ${aba}...`);
+            await new Promise(r => setTimeout(r, 2500));
+
+            // Rola levemente para garantir montagem
+            await page.evaluate(() => window.scrollBy(0, 300));
+            await new Promise(r => setTimeout(r, 1000));
+
+            const dadosAba = await rasparTabelaVisivel(page);
+
+            for (const [arma, tier] of Object.entries(dadosAba)) {
+                // REGRA CRÍTICA: Se a arma já foi definida no Meta Geral primário, NÃO SOBRESCREVE.
+                if (!mapaGeral[arma]) {
+                    // Armas legadas vindas de abas secundárias nunca podem ser Tier S no Warzone atual:
+                    // se a aba isolada deu Tier S para uma arma de MW3/MW2, ela é ajustada para Tier B/C conforme o meta global.
+                    let tierAjustado = tier;
+                    if (tierAjustado === 'Tier S') {
+                        tierAjustado = 'Tier B';
+                    }
+                    mapaGeral[arma] = tierAjustado;
+                }
+            }
+        }
+    }
 
     await browser.close();
 
-    console.log(`\n✓ Total de armas identificadas na Comparison Table: ${Object.keys(mapaGeral).length}`);
+    console.log(`\n✓ Total de armas consolidadas: ${Object.keys(mapaGeral).length}`);
 
     console.log("\n📡 Armas em Absolute Meta (Tier S):");
     let totalS = 0;
@@ -221,6 +235,7 @@ async function sincronizarComMetaTable() {
     }
     console.log("Total em Tier S: " + totalS);
 
+    // Gravação final nos arquivos JSON
     const dataHoje = new Date().toISOString().split('T')[0];
 
     ARQUIVOS_JSON.forEach(caminho => {
