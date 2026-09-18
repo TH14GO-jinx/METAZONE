@@ -3,7 +3,7 @@
     "nome": "TR51 PARA",
     "tipo": "Fuzis de Batalha",
     "jogo": "BO7",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/TR51-PARA.png",
     "acessorios": [
       {
@@ -1430,7 +1430,7 @@
     "nome": "REV-46",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier S",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/rev-46.png",
     "acessorios": [
       {
@@ -1763,7 +1763,7 @@
     "nome": "Sturmwolf-45",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/sturmwolf-45.png",
     "acessorios": [
       {
@@ -2000,7 +2000,7 @@
     "nome": "VST",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/vst.png",
     "acessorios": [
       {
