@@ -1179,4 +1179,49 @@ footer {
     .ad-slide-actions {
         justify-content: center;
     }
+
+    /* =========================================
+       NOVAS CORREÇÕES ESTRUTURAIS PARA MOBILE 
+       ========================================= */
+
+    /* 1. Impede cards de vazarem na lateral (1 coluna no mobile) */
+    .grid-armas, .grid-perks {
+        grid-template-columns: 1fr !important; 
+    }
+
+    /* 2. Força os filtros inline (Home e Armeiro) a quebrarem a linha e ocuparem 100% da tela */
+    .home-search-filter-wrapper > div,
+    .community-filter-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    /* Remove a largura mínima rígida para caber em telas pequenas */
+    .home-search-filter-wrapper > div > div, 
+    .community-filter-container > div {
+        min-width: 0 !important;
+    }
+
+    /* 3. Ajusta botões e caixas de texto para ocuparem a largura toda no celular */
+    .home-search-filter-wrapper input,
+    #btnToggleHomeFilters,
+    #communityWeaponFilter {
+        width: 100% !important;
+    }
+
+    /* 4. Grid de slots do armeiro que estava com inline-style */
+    section#armeiro div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 5. Corrige os 4 blocos de stats da Activision (Muda para 2 colunas x 2 linhas) */
+    #activisionStatsContainer div[style*="display: grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+
+    /* 6. Esconde as setas do Banner Absolute Meta no mobile para não sobrepor a imagem */
+    .ad-nav-btn {
+        display: none !important; 
+    }
 }
