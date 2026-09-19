@@ -26,6 +26,11 @@ body[data-theme="bo6"], body[data-theme="blue"] {
     --accent-dim: rgba(255, 106, 0, 0.15);
 }
 
+body[data-theme="bo7"] {
+    --accent: #38bdf8;
+    --accent-dim: rgba(56, 189, 248, 0.15);
+}
+
 body {
     background-color: #0d0f12;
     color: #e5e7eb;
@@ -206,6 +211,11 @@ body {
 .theme-bo6.active {
     border-color: #ff6a00;
     box-shadow: 0 0 12px rgba(255, 106, 0, 0.45);
+}
+
+.theme-bo7.active {
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.45);
 }
 
 .mobile-theme-container {
@@ -609,6 +619,31 @@ main {
 .tier-s {
     background-color: #ef4444;
     color: #fff;
+}
+
+.tier-a {
+    background-color: #f97316;
+    color: #111;
+}
+
+.tier-b {
+    background-color: #eab308;
+    color: #111;
+}
+
+.tier-c {
+    background-color: #38bdf8;
+    color: #111;
+}
+
+.tier-d {
+    background-color: #94a3b8;
+    color: #111;
+}
+
+.tier-e {
+    background-color: #374151;
+    color: #d1d5db;
 }
 
 .tag {

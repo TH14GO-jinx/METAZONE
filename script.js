@@ -4,6 +4,67 @@
 const USUARIO_GITHUB = "TH14GO-jinx";
 const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets@main/`;
 
+
+// ========================================================
+//  0. UTILITÁRIOS (SEGURANÇA, STORAGE, LOOKUP)            |
+// ========================================================
+// Escapa texto vindo do usuário/JSON antes de entrar em innerHTML
+function escapeHTML(valor) {
+    return String(valor ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+// Gera um argumento JS seguro para usar dentro de onclick="fn(...)"
+function jsArg(valor) {
+    return escapeHTML(JSON.stringify(String(valor ?? "")));
+}
+
+// Lê JSON do localStorage sem quebrar a página se estiver corrompido
+function lerJSON(chave, padrao) {
+    try {
+        const bruto = localStorage.getItem(chave);
+        if (bruto === null) return padrao;
+        const valor = JSON.parse(bruto);
+        if (valor === null) return padrao;
+        if (Array.isArray(padrao) && !Array.isArray(valor)) return padrao;
+        return valor;
+    } catch (e) {
+        console.warn(`localStorage["${chave}"] inválido, usando padrão.`, e);
+        return padrao;
+    }
+}
+
+// Resolve o jogo a partir do texto "NOME (JOGO - CLASSE)" das builds da comunidade
+function obterJogoPorNomeArma(textoArma) {
+    const bruto = String(textoArma || "");
+    const nome = bruto.split("(")[0].trim().toUpperCase();
+
+    const achada = listaMetaArmas.find(a => (a.nome || "").toUpperCase() === nome);
+    if (achada) return obterJogoDaArma(achada);
+
+    const m = bruto.match(/\((MW2|MW3|BO6|BO7)\b/i);
+    if (m) return m[1].toUpperCase();
+
+    return obterJogoDaArma({ nome });
+}
+
+// A classe vem do campo "tipo" do JSON; as listas de nomes só servem de reserva
+const CLASSE_POR_TIPO = {
+    "espingardas": "Espingardas", "espingarda": "Espingardas", "shotgun": "Espingardas",
+    "submetralhadoras": "SMT", "submetralhadora": "SMT", "smt": "SMT", "smg": "SMT",
+    "fuzis de precisão": "Fuzis de Precisão", "fuzis de precisao": "Fuzis de Precisão", "sniper": "Fuzis de Precisão",
+    "fuzis de atirador": "Fuzis de Atirador", "marksman": "Fuzis de Atirador",
+    "lmg": "ML", "ml": "ML", "metralhadoras leves": "ML", "metralhadora leve": "ML",
+    "fuzis de batalha": "Fuzis de Batalha", "battle rifle": "Fuzis de Batalha",
+    "pistolas": "Pistolas", "pistola": "Pistolas", "handgun": "Pistolas",
+    "fuzis de assalto": "Fuzis de Assalto",
+    "lançadores / especiais / facas": "Especiais", "lançadores": "Especiais", "especiais": "Especiais"
+};
+
 // Armazenamento em memória dos dados dos arquivos JSON
 let listaMetaArmas = [];
 let acessoriosGlobais = {};
@@ -88,13 +149,16 @@ const slotsBloqueadosPorKit = {
 const themeVideos = {
     mw4: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw2.webm",
     mw3: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw3.webm",
-    bo6: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm"
+    bo6: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm",
+    // TODO: trocar pelo vídeo próprio do BO7 quando existir (por enquanto reaproveita o do BO6)
+    bo7: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm"
 };
 
 const themeParticleColors = {
     mw4: ["#4ade80", "#22c55e", "#86efac", "#16a34a", "#ffffff"],
     mw3: ["#ef4444", "#dc2626", "#f87171", "#b91c1c", "#ff9999"],
-    bo6: ["#ff5500", "#ff6a00", "#ff7700", "#ff8c00", "#ffa600"]
+    bo6: ["#ff5500", "#ff6a00", "#ff7700", "#ff8c00", "#ffa600"],
+    bo7: ["#38bdf8", "#0ea5e9", "#7dd3fc", "#0284c7", "#e0f2fe"]
 };
 
 // ========================================================
@@ -146,6 +210,9 @@ function obterJogoDaArma(arma) {
 function obterClasseDaArma(arma) {
     const tipo = (arma.tipo || "").toLowerCase().trim();
     const nome = (arma.nome || "").toUpperCase().trim();
+
+    // O campo "tipo" do JSON é a fonte da verdade; as listas abaixo só cobrem tipos desconhecidos
+    if (CLASSE_POR_TIPO[tipo]) return CLASSE_POR_TIPO[tipo];
 
     if (tipo.includes("espingarda") || tipo.includes("shotgun")) return "Espingardas";
     const shotgunNomes = [
@@ -243,7 +310,7 @@ async function carregarDadosIniciais() {
             fetch(`./acessorios.json?v=${timestamp}`)
         ]);
 
-        if (resBO6.ok && resBO7.ok && resMW2.ok && resMW3.ok) {
+        if (resBO6.ok && resBO7.ok && resMW2.ok && resMW3.ok && resAcessorios.ok) {
             const [bo6, bo7, mw2, mw3, acessorios] = await Promise.all([
                 resBO6.json(),
                 resBO7.json(),
@@ -322,22 +389,22 @@ function renderizarBannerAnuncio(listaCompleta) {
 
         slide.innerHTML = `
             <div class="ad-slide-info">
-                <span class="ad-meta-tag">⚡ ABSOLUTE META</span>
-                <h2>${arma.nome}</h2>
+                <span class="ad-meta-tag">ABSOLUTE META</span>
+                <h2>${escapeHTML(arma.nome)}</h2>
                 <p>${classeArma} • ${jogoArma}</p>
                 <div class="ad-slide-actions">
-                    <button type="button" onclick="abrirNoArmeiro('${arma.nome}')" style="background: var(--accent); color: #000;">
-                        ⚙️ Ver no Armeiro
+                    <button type="button" onclick="abrirNoArmeiro(${jsArg(arma.nome)})" style="background: var(--accent); color: #000;">
+                        Ver no Armeiro
                     </button>
-                    <button type="button" onclick="abrirNaComunidade('${arma.nome}')" style="background: #2a2e3d; color: #fff; border: 1px solid #3f4458;">
-                        👥 Builds da Galera
+                    <button type="button" onclick="abrirNaComunidade(${jsArg(arma.nome)})" style="background: #2a2e3d; color: #fff; border: 1px solid #3f4458;">
+                        Builds da Galera
                     </button>
                 </div>
             </div>
             <div class="ad-slide-image">
                 <img 
                     src="${ASSETS_CDN + arma.arquivo_imagem}" 
-                    alt="${arma.nome}"
+                    alt="${escapeHTML(arma.nome)}"
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -499,7 +566,7 @@ function pontuarTierMeta(arma) {
 function aplicarFiltrosHome() {
     let armasFiltradas = listaMetaArmas.filter(arma => {
         const matchJogo = (filtroHomeJogo === "TODOS" || obterJogoDaArma(arma) === filtroHomeJogo);
-        const matchClasse = (filtroHomeClasse === "TODAS" || obterClasseDaArma(arma) === filtroClasseAtual);
+        const matchClasse = (filtroHomeClasse === "TODAS" || obterClasseDaArma(arma) === filtroHomeClasse);
         const matchBusca = !termoBuscaHome || (arma.nome && arma.nome.toLowerCase().includes(termoBuscaHome));
         return matchJogo && matchClasse && matchBusca;
     });
@@ -562,28 +629,28 @@ function renderMetaCards(armas) {
             <div style="width: 100%; height: 115px; display: flex; align-items: center; justify-content: center; margin: 0.5rem 0;">
                 <img 
                     src="${ASSETS_CDN + arma.arquivo_imagem}" 
-                    alt="${arma.nome}" 
+                    alt="${escapeHTML(arma.nome)}" 
                     style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));"
                     loading="lazy"
                     onerror="this.style.display='none'"
                 >
             </div>
 
-            <h3>${arma.nome}</h3>
-            <p class="tipo">${arma.tipo || "Arma Warzone"}</p>
+            <h3>${escapeHTML(arma.nome)}</h3>
+            <p class="tipo">${escapeHTML(arma.tipo || "Arma Warzone")}</p>
 
             <div style="display: flex; gap: 0.5rem; margin-top: 0.8rem;">
                 <button 
                     class="btn-submit" 
-                    onclick="abrirNoArmeiro('${arma.nome}')" 
+                    onclick="abrirNoArmeiro(${jsArg(arma.nome)})" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: var(--accent); color: #000; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    ⚙️ Armeiro
+                    Armeiro
                 </button>
                 <button 
                     class="btn-submit" 
-                    onclick="abrirNaComunidade('${arma.nome}')" 
+                    onclick="abrirNaComunidade(${jsArg(arma.nome)})" 
                     style="flex: 1; padding: 0.65rem 0.3rem; font-weight: bold; background: #2a2e3d; color: #fff; border: 1px solid #3f4458; border-radius: 4px; cursor: pointer; font-size: 0.8rem; text-align: center;">
-                    👥 Comunidade
+                    Comunidade
                 </button>
             </div>
         `;
@@ -1065,7 +1132,7 @@ function publicarClasseNoMural(btn) {
 
     const code = `WZ-${arma.nome.toUpperCase().replace(/[^A-Z0-9]/g, "")}-CUSTOM`;
 
-    const builds = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
+    const builds = lerJSON("wz_community_builds", []);
     const novaBuild = { 
         id: `pub-${Date.now()}`,
         author, 
@@ -1096,8 +1163,7 @@ function publicarClasseNoMural(btn) {
 //  6. FEED, CURTIDAS, COMENTÁRIOS E SALVAR (COMUNIDADE)   |
 // ========================================================
 function inicializarBuildsComunidadePadrao() {
-    const dadosAtuais = localStorage.getItem("wz_community_builds");
-    if (!dadosAtuais || JSON.parse(dadosAtuais).length === 0) {
+    if (lerJSON("wz_community_builds", []).length === 0) {
         const buildsPadrao = [
             {
                 id: "b1",
@@ -1171,8 +1237,8 @@ function atualizarSelectFiltroComunidade(builds) {
 }
 
 function loadCommunityBuilds(atualizarSelect = true) {
-    const list = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
-    const savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
+    const list = lerJSON("wz_community_builds", []);
+    const savedList = lerJSON("wz_saved_classes", []);
     const container = document.getElementById("communityCards");
     const counterTag = document.getElementById("communityCountTag");
     if (!container) return;
@@ -1199,7 +1265,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
         container.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #8c8ea3; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px dashed #2a2e3d;">
                 <p style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Nenhuma build encontrada</p>
-                <small>Não há classes da comunidade para ${filtroAtual === "TODAS" ? "nenhuma arma ainda" : `a arma "${filtroAtual}"`}.</small>
+                <small>Não há classes da comunidade para ${filtroAtual === "TODAS" ? "nenhuma arma ainda" : `a arma "${escapeHTML(filtroAtual)}"`}.</small>
             </div>
         `;
         return;
@@ -1214,7 +1280,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
         if (b.img) {
             imgHtml = `
                 <div style="width: 100%; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0.4rem 0;">
-                    <img src="${ASSETS_CDN + b.img}" alt="${b.weapon}" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
+                    <img src="${ASSETS_CDN + b.img}" alt="${escapeHTML(b.weapon)}" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
                 </div>
             `;
         }
@@ -1224,17 +1290,16 @@ function loadCommunityBuilds(atualizarSelect = true) {
         const commentsList = b.comments || [];
         const isSaved = savedList.some(s => s.id === b.id || (s.weapon === b.weapon && s.desc === b.desc));
 
-        const nomeArmaLimpo = (b.weapon || "").split("(")[0].trim();
-        const jogoArma = obterJogoDaArma({ nome: nomeArmaLimpo });
+        const jogoArma = obterJogoPorNomeArma(b.weapon);
         const logoJogo = obterLogoJogo(jogoArma);
 
         let commentsHtml = commentsList.map(c => `
             <div style="padding: 0.5rem; background: rgba(0,0,0,0.3); border-left: 2px solid var(--accent); border-radius: 4px; margin-bottom: 0.4rem; font-size: 0.82rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
-                    <strong style="color: var(--accent);">${c.author}</strong>
+                    <strong style="color: var(--accent);">${escapeHTML(c.author)}</strong>
                     <span style="color: #6b7280; font-size: 0.72rem;">${c.time || "Agora"}</span>
                 </div>
-                <span style="color: #d1d5db; word-break: break-word;">${c.text}</span>
+                <span style="color: #d1d5db; word-break: break-word;">${escapeHTML(c.text)}</span>
             </div>
         `).join("");
 
@@ -1244,7 +1309,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
 
         card.innerHTML = `
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="tag">Por: ${b.author}</span>
+                <span class="tag">Por: ${escapeHTML(b.author)}</span>
                 <img 
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
@@ -1254,27 +1319,27 @@ function loadCommunityBuilds(atualizarSelect = true) {
                 >
             </div>
             ${imgHtml}
-            <h3 style="margin-top: 0.4rem;">${b.weapon}</h3>
+            <h3 style="margin-top: 0.4rem;">${escapeHTML(b.weapon)}</h3>
             <div class="acessorios" style="margin-top: 0.5rem;">
-                <p style="font-size: 0.85rem; line-height: 1.4;">${b.desc}</p>
+                <p style="font-size: 0.85rem; line-height: 1.4;">${escapeHTML(b.desc)}</p>
             </div>
             
-            ${b.code ? `<button class="btn-copy" onclick="copyCode('${b.code}')" style="margin: 0.8rem 0 0.5rem 0;">📋 Copiar Código (${b.code})</button>` : ""}
+            ${b.code ? `<button class="btn-copy" onclick="copyCode(${jsArg(b.code)})" style="margin: 0.8rem 0 0.5rem 0;">📋 Copiar Código (${escapeHTML(b.code)})</button>` : ""}
 
             <div style="display: flex; gap: 0.4rem; margin-top: 0.8rem; border-top: 1px solid #232a35; padding-top: 0.8rem;">
                 <button 
-                    onclick="alternarCurtida('${b.id}')"
+                    onclick="alternarCurtida(${jsArg(b.id)})"
                     id="btn-like-${b.id}"
                     style="flex: 1; padding: 0.5rem 0.2rem; background: ${isLiked ? 'rgba(239, 68, 68, 0.2)' : '#1a1d26'}; border: 1px solid ${isLiked ? '#ef4444' : '#2e3545'}; color: ${isLiked ? '#ef4444' : '#fff'}; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
                     ${isLiked ? '❤️' : '🤍'} <span>${likesCount}</span>
                 </button>
                 <button 
-                    onclick="toggleAreaComentarios('${b.id}')"
+                    onclick="toggleAreaComentarios(${jsArg(b.id)})"
                     style="flex: 1; padding: 0.5rem 0.2rem; background: #1a1d26; border: 1px solid #2e3545; color: #fff; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
                     💬 <span>${commentsList.length}</span>
                 </button>
                 <button 
-                    onclick="alternarSalvarClasse('${b.id}')"
+                    onclick="alternarSalvarClasse(${jsArg(b.id)})"
                     id="btn-save-${b.id}"
                     style="flex: 1; padding: 0.5rem 0.2rem; background: ${isSaved ? 'var(--accent)' : '#1a1d26'}; border: 1px solid ${isSaved ? 'var(--accent)' : '#2e3545'}; color: ${isSaved ? '#000' : '#fff'}; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
                     ${isSaved ? '★ Salvo' : '☆ Salvar'}
@@ -1285,7 +1350,7 @@ function loadCommunityBuilds(atualizarSelect = true) {
                 <div id="lista-comentarios-${b.id}" style="max-height: 140px; overflow-y: auto; margin-bottom: 0.6rem; padding-right: 0.2rem;">
                     ${commentsHtml}
                 </div>
-                <form onsubmit="adicionarComentario(event, '${b.id}')" style="display: flex; gap: 0.4rem;">
+                <form onsubmit="adicionarComentario(event, ${jsArg(b.id)})" style="display: flex; gap: 0.4rem;">
                     <input 
                         type="text" 
                         id="input-comentario-${b.id}" 
@@ -1305,8 +1370,8 @@ function loadCommunityBuilds(atualizarSelect = true) {
 }
 
 function alternarSalvarClasse(buildId) {
-    const list = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
-    const savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
+    const list = lerJSON("wz_community_builds", []);
+    const savedList = lerJSON("wz_saved_classes", []);
 
     const build = list.find(b => b.id === buildId);
     if (!build) return;
@@ -1333,7 +1398,7 @@ function alternarSalvarClasse(buildId) {
 }
 
 function alternarCurtida(buildId) {
-    const list = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
+    const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     if (!build) return;
 
@@ -1363,14 +1428,14 @@ function adicionarComentario(event, buildId) {
     const texto = input.value.trim();
     if (!texto) return;
 
-    const list = JSON.parse(localStorage.getItem("wz_community_builds") || "[]");
+    const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     if (!build) return;
 
     if (!build.comments) build.comments = [];
 
     const autorLogado = localStorage.getItem("wz_logged_user") || "Operador";
-    const profile = JSON.parse(localStorage.getItem("wz_user_profile"));
+    const profile = lerJSON("wz_user_profile", null);
     const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
 
     build.comments.push({
@@ -1401,7 +1466,7 @@ function renderSavedClassesInProfile() {
     const countTag = document.getElementById("profileSavedCountTag");
     if (!container) return;
 
-    const savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
+    const savedList = lerJSON("wz_saved_classes", []);
 
     if (countTag) {
         countTag.textContent = `${savedList.length} ${savedList.length === 1 ? 'salva' : 'salvas'}`;
@@ -1427,18 +1492,18 @@ function renderSavedClassesInProfile() {
         if (s.img) {
             imgHtml = `
                 <div style="width: 100%; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0.4rem 0;">
-                    <img src="${ASSETS_CDN + s.img}" alt="${s.weapon}" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
+                    <img src="${ASSETS_CDN + s.img}" alt="${escapeHTML(s.weapon)}" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
                 </div>
             `;
         }
 
         const nomeArmaLimpo = (s.weapon || "").split("(")[0].trim();
-        const jogoArma = obterJogoDaArma({ nome: nomeArmaLimpo });
+        const jogoArma = obterJogoPorNomeArma(s.weapon);
         const logoJogo = obterLogoJogo(jogoArma);
 
         card.innerHTML = `
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="tag">Autor: ${s.author}</span>
+                <span class="tag">Autor: ${escapeHTML(s.author)}</span>
                 <img 
                     src="${ASSETS_CDN + logoJogo}" 
                     alt="${jogoArma}" 
@@ -1448,19 +1513,19 @@ function renderSavedClassesInProfile() {
                 >
             </div>
             ${imgHtml}
-            <h3 style="margin-top: 0.4rem;">${s.weapon}</h3>
+            <h3 style="margin-top: 0.4rem;">${escapeHTML(s.weapon)}</h3>
             <div class="acessorios" style="margin-top: 0.5rem;">
-                <p style="font-size: 0.85rem; line-height: 1.4;">${s.desc}</p>
+                <p style="font-size: 0.85rem; line-height: 1.4;">${escapeHTML(s.desc)}</p>
             </div>
 
             <div style="display: flex; gap: 0.5rem; margin-top: 0.8rem;">
                 <button 
-                    onclick="abrirNoArmeiro('${nomeArmaLimpo}')"
+                    onclick="abrirNoArmeiro(${jsArg(nomeArmaLimpo)})"
                     style="flex: 1; padding: 0.55rem; background: var(--accent); color: #000; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
                     ⚙️ Armeiro
                 </button>
                 <button 
-                    onclick="removerClasseSalva('${s.id}')"
+                    onclick="removerClasseSalva(${jsArg(s.id)})"
                     style="padding: 0.55rem 0.8rem; background: #2a2e3d; color: #ef4444; border: 1px solid #3f4458; border-radius: 4px; cursor: pointer; font-size: 0.8rem; font-weight: bold;">
                     🗑️
                 </button>
@@ -1471,7 +1536,7 @@ function renderSavedClassesInProfile() {
 }
 
 function removerClasseSalva(savedId) {
-    let savedList = JSON.parse(localStorage.getItem("wz_saved_classes") || "[]");
+    let savedList = lerJSON("wz_saved_classes", []);
     savedList = savedList.filter(s => s.id !== savedId);
     localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
 
@@ -1578,7 +1643,7 @@ function handleLogin(event) {
     const email = document.getElementById("emailInput").value.trim();
     const username = email.split('@')[0]; 
     
-    let profile = JSON.parse(localStorage.getItem("wz_user_profile")) || {};
+    let profile = lerJSON("wz_user_profile", null) || {};
     profile.name = username;
     if (!profile.style) profile.style = "Rusher";
 
@@ -1601,11 +1666,11 @@ function checkLoginStatus() {
     const user = localStorage.getItem("wz_logged_user");
     const loginNav = document.getElementById("nav-login");
     const nameTag = document.getElementById("profileNameTag");
-    const profile = JSON.parse(localStorage.getItem("wz_user_profile"));
+    const profile = lerJSON("wz_user_profile", null);
     
     if (user && loginNav) {
         const displayName = profile ? profile.name : user;
-        loginNav.innerHTML = `<span class="avatar-letter">${displayName.charAt(0).toUpperCase()}</span>`;
+        loginNav.innerHTML = `<span class="avatar-letter">${escapeHTML(displayName.charAt(0).toUpperCase())}</span>`;
         loginNav.title = `Meu Perfil (${displayName})`;
         
         if (nameTag) {
@@ -1700,7 +1765,7 @@ function exibirEstatisticasActivision(stats) {
 }
 
 function loadProfileData() {
-    const profile = JSON.parse(localStorage.getItem("wz_user_profile"));
+    const profile = lerJSON("wz_user_profile", null);
     const user = localStorage.getItem("wz_logged_user");
     const currentName = profile ? profile.name : (user || "Convidado");
 
@@ -1715,7 +1780,7 @@ function loadProfileData() {
     const nameDisplay = document.getElementById("profileUsernameDisplay");
     if (nameDisplay) nameDisplay.textContent = currentName;
 
-    const savedStats = JSON.parse(localStorage.getItem("wz_activision_stats"));
+    const savedStats = lerJSON("wz_activision_stats", null);
     const statusBadge = document.getElementById("activisionStatusBadge");
     const idInput = document.getElementById("activisionIdInput");
     const platSelect = document.getElementById("activisionPlatformSelect");
@@ -1746,7 +1811,7 @@ function saveProfile(event) {
     event.preventDefault();
     const newName = document.getElementById("profName").value.trim();
     
-    let profile = JSON.parse(localStorage.getItem("wz_user_profile")) || {};
+    let profile = lerJSON("wz_user_profile", null) || {};
     profile.name = newName;
     profile.style = document.getElementById("profStyle").value;
     profile.weapon = document.getElementById("profWeapon").value.trim();

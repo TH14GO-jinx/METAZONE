@@ -50,7 +50,10 @@
                         <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/mw3-logo.svg" alt="MW3" class="theme-game-img">
                     </button>
                     <button class="theme-btn theme-bo6" onclick="setTheme('bo6')" title="Call of Duty: Black Ops 6">
-                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo7-logo.svg" alt="BO6" class="theme-game-img">
+                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo6-logo.svg" alt="BO6" class="theme-game-img">
+                    </button>
+                    <button class="theme-btn theme-bo7" onclick="setTheme('bo7')" title="Call of Duty: Black Ops 7">
+                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo7-logo.svg" alt="BO7" class="theme-game-img">
                     </button>
                 </div>
 
@@ -94,7 +97,10 @@
                         <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/mw3-logo.svg" alt="MW3" class="theme-game-img">
                     </button>
                     <button class="theme-btn theme-bo6" onclick="setTheme('bo6')" title="BO6">
-                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo7-logo.svg" alt="BO6" class="theme-game-img">
+                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo6-logo.svg" alt="BO6" class="theme-game-img">
+                    </button>
+                    <button class="theme-btn theme-bo7" onclick="setTheme('bo7')" title="BO7">
+                        <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/bo7-logo.svg" alt="BO7" class="theme-game-img">
                     </button>
                 </div>
             </div>
@@ -145,7 +151,7 @@
                                 type="text" 
                                 id="homeSearchInput" 
                                 oninput="filtrarHomeBusca(this.value)" 
-                                placeholder="🔍 Buscar arma por nome (ex: Kar98k, SVA, Jackal...)" 
+                                placeholder="Buscar arma por nome (ex: Kar98k, SVA, Jackal...)" 
                                 style="width: 100%; padding: 0.75rem 1rem; background: rgba(17, 19, 27, 0.85); color: #fff; border: 1px solid #232a35; border-radius: 6px; font-size: 0.92rem; outline: none; transition: border-color 0.2s;"
                                 onfocus="this.style.borderColor='var(--accent)'"
                                 onblur="this.style.borderColor='#232a35'"
@@ -157,7 +163,7 @@
                             id="btnToggleHomeFilters" 
                             onclick="toggleFiltrosHome()" 
                             style="padding: 0.75rem 1.2rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s ease;">
-                            <span>⚙️ Filtros</span>
+                            <span>Filtros</span>
                             <span id="homeFilterArrow" style="font-size: 0.75rem;">▼</span>
                         </button>
                     </div>
@@ -186,6 +192,7 @@
                             <button type="button" class="btn-filter-home-classe" onclick="filtrarHomeClasse('Fuzis de Precisão', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Fuzis de Precisão</button>
                             <button type="button" class="btn-filter-home-classe" onclick="filtrarHomeClasse('Fuzis de Batalha', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Fuzis de Batalha</button>
                             <button type="button" class="btn-filter-home-classe" onclick="filtrarHomeClasse('Pistolas', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Pistolas</button>
+                            <button type="button" class="btn-filter-home-classe" onclick="filtrarHomeClasse('Especiais', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Especiais</button>
                         </div>
                     </div>
                 </div>
@@ -232,6 +239,7 @@
                         <button type="button" class="btn-filter-classe" onclick="filtrarClasseArmeiro('Fuzis de Precisão', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Fuzis de Precisão</button>
                         <button type="button" class="btn-filter-classe" onclick="filtrarClasseArmeiro('Fuzis de Batalha', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Fuzis de Batalha</button>
                         <button type="button" class="btn-filter-classe" onclick="filtrarClasseArmeiro('Pistolas', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Pistolas</button>
+                        <button type="button" class="btn-filter-classe" onclick="filtrarClasseArmeiro('Especiais', this)" style="padding: 0.35rem 0.8rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">Especiais</button>
                     </div>
                 </div>
 
@@ -321,8 +329,8 @@
                 </div>
 
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <button type="button" class="btn-submit btn-save" onclick="publicarClasseNoMural(this)" style="flex: 1.5; padding: 0.85rem; background: var(--accent); color: #000; font-weight: bold;">🚀 Publicar na Comunidade</button>
-                    <button type="button" class="btn-submit" onclick="limparSlots()" style="flex: 1; padding: 0.85rem; background: #2a2e3d; border: 1px solid #3f4458;">🗑️ Limpar Slots</button>
+                    <button type="button" class="btn-submit btn-save" onclick="publicarClasseNoMural(this)" style="flex: 1.5; padding: 0.85rem; background: var(--accent); color: #000; font-weight: bold;">Publicar na Comunidade</button>
+                    <button type="button" class="btn-submit" onclick="limparSlots()" style="flex: 1; padding: 0.85rem; background: #2a2e3d; border: 1px solid #3f4458;">Limpar Slots</button>
                 </div>
             </div>
         </section>
@@ -517,7 +525,7 @@
                 <!-- SEÇÃO: CLASSES SALVAS NO PERFIL -->
                 <div style="max-width: 900px; margin: 3rem auto 0 auto;">
                     <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #232a35; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
-                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0; letter-spacing: 1px;">⭐ MINHAS CLASSES SALVAS</h3>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0; letter-spacing: 1px;">MINHAS CLASSES SALVAS</h3>
                         <span id="profileSavedCountTag" class="tag" style="background: #11131b; border: 1px solid #232a35; color: var(--accent); font-weight: bold; padding: 4px 12px;">0 salvas</span>
                     </div>
                     <div id="profileSavedCards" class="grid-armas">
