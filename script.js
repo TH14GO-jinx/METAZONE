@@ -1721,28 +1721,50 @@ function showSection(event, sectionId, clickedElement) {
 // ========================================================
 //  10. AUTENTICAÇÃO E PERFIL DO USUÁRIO                   |
 // ========================================================
-function handleLogin(event) {
-    event.preventDefault(); 
-    const email = document.getElementById("emailInput").value.trim();
-    const username = email.split('@')[0]; 
-    
+function loginGoogle() {
+    if (!supabaseClient) return alert('Supabase não inicializado');
+    supabaseClient.auth.signInWithOAuth({ provider: 'google' });
+}
+function loginFacebook() {
+    if (!supabaseClient) return alert('Supabase não inicializado');
+    supabaseClient.auth.signInWithOAuth({ provider: 'facebook' });
+}
+function saveLocalProfile(username) {
     let profile = lerJSON("wz_user_profile", null) || {};
     profile.name = username;
     if (!profile.style) profile.style = "Rusher";
-
     localStorage.setItem("wz_user_profile", JSON.stringify(profile));
     localStorage.setItem("wz_logged_user", username);
-    
     const msg = document.getElementById("loginMessage");
     msg.textContent = `Acesso liberado, ${username}!`;
     msg.style.display = "block";
-    
-    checkLoginStatus(); 
+    checkLoginStatus();
     setTimeout(() => {
         msg.style.display = "none";
-        event.target.reset(); 
-        document.querySelector('#nav-login').click(); 
+        document.querySelector('#nav-login').click();
     }, 1500);
+}
+function handleLogin(event) {
+    event.preventDefault(); 
+    const email = document.getElementById("emailInput").value.trim();
+    const password = document.getElementById("passwordInput").value.trim();
+    const username = email.split('@')[0];
+
+    if (supabaseClient) {
+        supabaseClient.auth.signUp({ email, password }).then(({ data, error }) => {
+            if (error) return alert('Erro ao criar conta: ' + error.message);
+            if (data.user && !data.session) return alert('Verifique seu email para confirmar a conta.');
+            // se já logado direto
+            saveLocalProfile(username);
+        }).catch(() => {
+            supabaseClient.auth.signInWithPassword({ email, password }).then(({ error }) => {
+                if (error) return alert('Erro: ' + error.message);
+                saveLocalProfile(username);
+            });
+        });
+    } else {
+        saveLocalProfile(username);
+    }
 }
 
 function checkLoginStatus() {
