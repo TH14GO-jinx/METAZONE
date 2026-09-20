@@ -197,8 +197,12 @@
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
                     <h2 style="margin: 0;">Arsenal Completo</h2>
+                    <div style="display: flex; gap: 0.4rem;">
+                        <button type="button" onclick="mudarVisualArsenal('grid')" id="btnViewGrid" class="btn-view" title="Visualização em grade" style="padding: 0.35rem 0.7rem; background: var(--accent); color: #000; border: 1px solid var(--accent); border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">�▓ Grid</button>
+                        <button type="button" onclick="mudarVisualArsenal('lista')" id="btnViewLista" class="btn-view" title="Visualização em lista" style="padding: 0.35rem 0.7rem; background: #1a1d26; color: #fff; border: 1px solid #2e3545; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.82rem;">☰ Lista</button>
+                    </div>
                     <span id="catalogoCountTag" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #8c8ea3; font-size: 0.8rem; padding: 4px 10px;">Ordenado por Meta</span>
                 </div>
 
@@ -345,6 +349,12 @@
                 <div class="form-col" style="margin-bottom: 1.5rem;">
                     <label for="customClassNotes" style="color: #8c8ea3; font-size: 0.85rem; margin-bottom: 0.3rem; display: block;">ESTILO / OBJETIVO DA BUILD</label>
                     <input type="text" id="customClassNotes" placeholder="Ex: Foco em velocidade de mira, sem recuo, controle de alcance..." style="width: 100%; padding: 0.7rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;">
+                </div>
+
+                <div class="form-col" style="margin-bottom: 1.5rem;">
+                    <label for="customClassCodeReal" style="color: var(--accent); font-size: 0.85rem; margin-bottom: 0.3rem; display: block;">CÓDIGO DA BUILD (do jogo — opcional)</label>
+                    <input type="text" id="customClassCodeReal" placeholder="Ex: BO7-AN94-XXXX (copiado do Warzone)" style="width: 100%; padding: 0.7rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px; font-family: monospace;">
+                    <small style="color: #6b7280; font-size: 0.75rem;">Se quiser, cole o código real da sua build do jogo. Se deixar em branco, geramos um código interno.</small>
                 </div>
 
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">

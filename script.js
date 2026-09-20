@@ -586,6 +586,8 @@ function aplicarFiltrosHome() {
 function renderMetaCards(armas) {
     const container = document.querySelector("#home .grid-armas");
     if (!container) return;
+    const modoLista = localStorage.getItem("wz_arsenal_view") || "grid";
+    container.style.display = modoLista === "lista" ? "block" : "grid";
     container.innerHTML = "";
 
     if (armas.length === 0) {
@@ -595,6 +597,44 @@ function renderMetaCards(armas) {
                 <small>Tente buscar por outro nome ou altere os filtros selecionados.</small>
             </div>
         `;
+        return;
+    }
+
+    if (modoLista === "lista") {
+        const grupos = {};
+        armas.forEach(arma => {
+            const tier = (arma.tier || "Tier E").toUpperCase();
+            if (!grupos[tier]) grupos[tier] = [];
+            grupos[tier].push(arma);
+        });
+        const ordem = ["TIER S","TIER A","TIER B","TIER C","TIER D","TIER E"];
+        const ordemExistente = ordem.filter(t => grupos[t] && grupos[t].length > 0);
+        container.innerHTML = `
+            <div style="width: 100%; display: flex; flex-direction: column; gap: 1rem;">` +
+            ordemExistente.map(tier => {
+                const armasTier = grupos[tier];
+                const corTier = tier === "TIER S" ? "#f59e0b" : tier === "TIER A" ? "#4ade80" : tier === "TIER B" ? "#38bdf8" : tier === "TIER C" ? "#eab308" : tier === "TIER D" ? "#ef4444" : "#2e3545";
+                return `<div style="background: rgba(12,14,22,0.88); border: 1px solid ${corTier}; border-radius: 8px; overflow: hidden;">
+                    <div style="background: ${corTier}99; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 0.6rem 1rem; letter-spacing: 1px;">${tier === "TIER S" ? "★ META ABSOLUTO" : tier}</div>
+                    <div style="padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem;">` +
+                    armasTier.map(arma => {
+                        const jogoArma = obterJogoDaArma(arma);
+                        const logoJogo = obterLogoJogo(jogoArma);
+                        return `<div style="display: flex; align-items: center; gap: 0.8rem; padding: 0.4rem; border-bottom: 1px solid #232a35;"
+                            onmouseover="this.style.background='#161820'" onmouseout="this.style.background='transparent'">
+                            <img src="${ASSETS_CDN + arma.arquivo_imagem}" alt="${escapeHTML(arma.nome)}" style="max-height: 40px; max-width: 90px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));" onerror="this.style.display='none'">
+                            <div style="flex: 1;">
+                                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">${escapeHTML(arma.nome)}</div>
+                                <div style="font-size: 0.78rem; color: #8c8ea3;">${escapeHTML(arma.tipo || "Arma Meta")}</div>
+                            </div>
+                            <img src="${ASSETS_CDN + logoJogo}" alt="${jogoArma}" style="height: 24px; width: 24px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6));" onerror="this.style.display='none'">
+                            <button onclick="abrirNoArmeiro(${jsArg(arma.nome)})" style="padding: 0.35rem 0.7rem; background: var(--accent); color: #000; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.78rem;">Armeiro</button>
+                            <button onclick="abrirNaComunidade(${jsArg(arma.nome)})" style="padding: 0.35rem 0.7rem; background: #2a2e3d; color: #fff; border: 1px solid #3f4458; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.78rem;">Comunidade</button>
+                        </div>`;
+                    }).join("") +
+                    `</div></div>`;
+            }).join("") +
+            `</div>`;
         return;
     }
 
@@ -1135,7 +1175,8 @@ function publicarClasseNoMural(btn) {
 
     if (estilo) desc += ` [Foco: ${estilo}]`;
 
-    const code = `WZ-${arma.nome.toUpperCase().replace(/[^A-Z0-9]/g, "")}-CUSTOM`;
+    const codeReal = document.getElementById("customClassCodeReal")?.value.trim();
+    const code = codeReal ? codeReal : "";
 
     const builds = lerJSON("wz_community_builds", []);
     const novaBuild = { 
@@ -1168,36 +1209,9 @@ function publicarClasseNoMural(btn) {
 //  6. FEED, CURTIDAS, COMENTÁRIOS E SALVAR (COMUNIDADE)   |
 // ========================================================
 function inicializarBuildsComunidadePadrao() {
+    // builds padrão removidos; comunidade inicia vazia apenas se ainda não tiver conteúdo
     if (lerJSON("wz_community_builds", []).length === 0) {
-        const buildsPadrao = [
-            {
-                id: "b1",
-                author: "Ghost_BR",
-                weapon: "AN-94 (BO7 - Fuzis de Assalto)",
-                desc: "Silenciador VT-7 Spiritfire • Cano Longo Pesado • Empunhadura Bruen Heavy • Tambor de 60 Projéteis • Mira Corio Eagleseye 2.5x [Foco: Hiper-rajada meta absoluto]",
-                code: "WZ-AN94-BURST",
-                img: "armas/an-94.png",
-                likes: 184,
-                liked: true,
-                comments: [
-                    { author: "CapitaoPrice", text: "Melhor AR do Warzone Season 6 sem dúvidas!", time: "Há 1 hora" }
-                ]
-            },
-            {
-                id: "b2",
-                author: "SniperPro99",
-                weapon: "REV-46 (BO7 - SMT)",
-                desc: "Quebra-chamas Compensado • Cano Longo Reinforced • Parada de Mão DR-6 • Tambor Estendido • Coronha Dobrável CQB [Foco: TTK dominante de curta distância]",
-                code: "WZ-REV46-CQB",
-                img: "armas/rev-46.png",
-                likes: 152,
-                liked: true,
-                comments: [
-                    { author: "Alex_V", text: "A SMT mais rápida do jogo no momento.", time: "Ontem" }
-                ]
-            }
-        ];
-        localStorage.setItem("wz_community_builds", JSON.stringify(buildsPadrao));
+        localStorage.setItem("wz_community_builds", JSON.stringify([]));
     }
 }
 
@@ -1855,6 +1869,17 @@ function logoutUser() {
 
 function showRegister() {
     alert("O cadastro está em modo simulação.\nBasta preencher qualquer e-mail e senha no formulário para testar.");
+}
+
+function mudarVisualArsenal(modo) {
+    localStorage.setItem("wz_arsenal_view", modo);
+    document.getElementById("btnViewGrid").style.background = modo === "grid" ? "var(--accent)" : "#1a1d26";
+    document.getElementById("btnViewGrid").style.color = modo === "grid" ? "#000" : "#fff";
+    document.getElementById("btnViewGrid").style.borderColor = modo === "grid" ? "var(--accent)" : "#2e3545";
+    document.getElementById("btnViewLista").style.background = modo === "lista" ? "var(--accent)" : "#1a1d26";
+    document.getElementById("btnViewLista").style.color = modo === "lista" ? "#000" : "#fff";
+    document.getElementById("btnViewLista").style.borderColor = modo === "lista" ? "var(--accent)" : "#2e3545";
+    aplicarFiltrosHome();
 }
 
 // ========================================================
