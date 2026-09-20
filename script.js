@@ -150,8 +150,7 @@ const themeVideos = {
     mw4: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw2.webm",
     mw3: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/mw3.webm",
     bo6: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm",
-    // TODO: trocar pelo vídeo próprio do BO7 quando existir (por enquanto reaproveita o do BO6)
-    bo7: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo6.webm"
+    bo7: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo7.webm"
 };
 
 const themeParticleColors = {
@@ -160,6 +159,12 @@ const themeParticleColors = {
     bo6: ["#ff5500", "#ff6a00", "#ff7700", "#ff8c00", "#ffa600"],
     bo7: ["#38bdf8", "#0ea5e9", "#7dd3fc", "#0284c7", "#e0f2fe"]
 };
+
+const SUPABASE_URL = "https://kcnicefqqaycscihadvg.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjbmljZWZxcWF5Y3NjaWhhZHZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4ODU5MDcsImV4cCI6MjEwNTQ2MTkwN30.TnnYe7rSMxhg-TIIAjToadoUopJhK-oGP_FPo54oR6U";
+const supabaseClient = (typeof window !== "undefined" && window.supabase)
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON)
+    : null;
 
 // ========================================================
 //  2. IDENTIFICADORES DE JOGO E CLASSE DE ARMA            |
@@ -1179,8 +1184,8 @@ function publicarClasseNoMural(btn) {
     const code = codeReal ? codeReal : "";
 
     const builds = lerJSON("wz_community_builds", []);
-    const novaBuild = { 
-        id: `pub-${Date.now()}`,
+    const novaBuild = {
+        id: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(),
         author, 
         weapon: `${arma.nome} (${obterJogoDaArma(arma)} - ${obterClasseDaArma(arma)})`, 
         desc, 
@@ -1193,6 +1198,23 @@ function publicarClasseNoMural(btn) {
 
     builds.unshift(novaBuild);
     localStorage.setItem("wz_community_builds", JSON.stringify(builds));
+
+    // Publica no Supabase se disponível
+    if (supabaseClient) {
+        supabaseClient.from('builds').insert([{
+            id: novaBuild.id,
+            author: novaBuild.author,
+            weapon: novaBuild.weapon,
+            descricao: novaBuild.desc,
+            code: novaBuild.code,
+            img: novaBuild.img,
+            likes: novaBuild.likes,
+            created_at: new Date().toISOString(),
+            comments: novaBuild.comments
+        }]).then(({ error }) => {
+            if (error) console.warn("Erro ao publicar no Supabase:", error);
+        });
+    }
 
     loadCommunityBuilds(true);
 
@@ -1256,8 +1278,41 @@ function atualizarSelectFiltroComunidade(builds) {
 }
 
 function loadCommunityBuilds(atualizarSelect = true) {
-    const list = lerJSON("wz_community_builds", []);
-    const savedList = lerJSON("wz_saved_classes", []);
+    // PASSO 1: se não tiver supabaseClient, volta para localStorage (modo offline)
+    if (!supabaseClient) {
+        const list = lerJSON("wz_community_builds", []);
+        const savedList = lerJSON("wz_saved_classes", []);
+        renderCommunityBuilds(list, savedList, atualizarSelect);
+        return;
+    }
+
+    // PASSO 2: busca as builds no banco Supabase
+    supabaseClient.from('builds').select('*').order('created_at', { ascending: false })
+        .then(({ data, error }) => {
+            if (error) {
+                console.warn("Erro ao buscar builds:", error);
+                const list = lerJSON("wz_community_builds", []);
+                const savedList = lerJSON("wz_saved_classes", []);
+                renderCommunityBuilds(list, savedList, atualizarSelect);
+                return;
+            }
+            // PASSO 3: converte os dados recebidos para o formato que o site usa
+            const buildsConvertidas = (data || []).map(b => ({
+                id: b.id || b.id,
+                author: b.author,
+                weapon: b.weapon,
+                desc: b.descricao,
+                code: b.code,
+                img: b.img,
+                likes: b.likes || 0,
+                liked: false,
+                comments: b.comments || []
+            }));
+            const savedList = lerJSON("wz_saved_classes", []);
+            renderCommunityBuilds(buildsConvertidas, savedList, atualizarSelect);
+        });
+}
+function renderCommunityBuilds(list, savedList, atualizarSelect) {
     const container = document.getElementById("communityCards");
     const counterTag = document.getElementById("communityCountTag");
     if (!container) return;
