@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warzone Meta Hub</title>
+    <title>METAZONE</title>
     
     <!-- Fontes COD do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -213,7 +213,7 @@
         <section id="armeiro" class="container page-section">
             <h2>Armeiro — Monte sua Classe</h2>
             
-            <div class="community-box" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+            <div class="community-box" style="max-width: 1100px; margin: 0 auto; padding: 2rem;">
                 
                 <!-- FILTROS DO ARMEIRO -->
                 <div class="game-filter-container" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid #232a35;">
@@ -256,70 +256,89 @@
                     </div>
                 </div>
 
-                <!-- Prévia Visual da Arma -->
-                <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); border: 1px dashed #2a2e3d; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
-                    <div style="position: absolute; top: 1rem; right: 1rem; display: flex; align-items: center; justify-content: center; background: rgba(17, 19, 27, 0.85); padding: 1px 12px; border-radius: 6px; border: 1px solid #232a35;">
-                        <img id="gunsmithGameLogo" src="" alt="Jogo" style="height: 40px; max-width: 65px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); display: none;">
+                <!-- ARMEIRO VISUAL (estilo bancada de armas) -->
+                <div class="armeiro-stage" id="armeiroStage">
+                    <div class="stage-topbar">
+                        <div class="stage-title-block">
+                            <span id="gunsmithWeaponCategory" class="stage-class">-</span>
+                            <h3 id="gunsmithWeaponTitle">-</h3>
+                        </div>
+                        <div class="stage-game-logo">
+                            <img id="gunsmithGameLogo" src="" alt="Jogo" style="display: none;">
+                        </div>
                     </div>
 
-                    <div style="height: 130px; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 0.5rem;">
-                        <img id="gunsmithPreviewImg" src="" alt="Arma Selecionada" style="max-height: 100%; max-width: 100%; object-fit: contain; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.8)); display: none;">
+                    <div class="stage-weapon">
+                        <img id="gunsmithPreviewImg" src="" alt="Arma Selecionada" style="display: none;">
                     </div>
-                    <h3 id="gunsmithWeaponTitle" style="font-size: 1.6rem; color: #fff; margin-top: 0.8rem; letter-spacing: 1px;">-</h3>
-                    <span id="gunsmithWeaponCategory" class="tag" style="margin-top: 0.2rem;">-</span>
+
+                    <!-- Nós de acessórios (gerados pelo JS) -->
+                    <div class="stage-nodes" id="armeiroNodes"></div>
+
+                    <div class="stage-mods">
+                        <span class="stage-mods-label">MODIFICAÇÕES</span>
+                        <span class="stage-pips" id="armeiroPips"></span>
+                        <span id="gunsmithSlotCounter" class="stage-counter">0 / 5</span>
+                    </div>
+
+                    <!-- Painel de escolha do acessório -->
+                    <div class="armeiro-picker" id="armeiroPicker" hidden>
+                        <div class="picker-header">
+                            <div>
+                                <span class="picker-sub">ESCOLHER ACESSÓRIO</span>
+                                <strong id="armeiroPickerTitulo">-</strong>
+                            </div>
+                            <button type="button" class="picker-close" onclick="fecharSeletorSlot()" aria-label="Fechar">✕</button>
+                        </div>
+                        <div class="picker-list" id="armeiroPickerLista"></div>
+                    </div>
                 </div>
 
-                <!-- Cabeçalho dos Slots com Contador -->
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #232a35; padding-bottom: 0.6rem;">
-                    <h4 style="color: #c4c7d4; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px;">Slots de Acessórios:</h4>
-                    <span id="gunsmithSlotCounter" class="tag" style="background: #11131b; border: 1px solid #232a35; color: #fff; font-weight: bold; font-size: 0.85rem; padding: 5px 12px; border-radius: 4px;">0 / 5 Equipados</span>
-                </div>
-                
-                <!-- Grade de Slots -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- Selects ocultos: continuam sendo a fonte de dados dos slots (publicar, kits, contador) -->
+                <div class="armeiro-selects-ocultos" hidden>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">1. BOCA</label>
-                        <select id="slot-boca" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>1. BOCA</label>
+                        <select id="slot-boca" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: var(--accent); font-size: 0.82rem; margin-bottom: 0.3rem; display: block; font-weight: bold;">2. CANO (Exclusivo)</label>
-                        <select id="slot-cano" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>2. CANO (Exclusivo)</label>
+                        <select id="slot-cano" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">3. LASER</label>
-                        <select id="slot-laser" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>3. LASER</label>
+                        <select id="slot-laser" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">4. MIRA</label>
-                        <select id="slot-mira" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>4. MIRA</label>
+                        <select id="slot-mira" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: var(--accent); font-size: 0.82rem; margin-bottom: 0.3rem; display: block; font-weight: bold;">5. CORONHA (Exclusivo)</label>
-                        <select id="slot-coronha" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>5. CORONHA (Exclusivo)</label>
+                        <select id="slot-coronha" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">6. ACOPLAMENTO</label>
-                        <select id="slot-acoplamento" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>6. ACOPLAMENTO</label>
+                        <select id="slot-acoplamento" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: var(--accent); font-size: 0.82rem; margin-bottom: 0.3rem; display: block; font-weight: bold;">7. CARREGADOR (Exclusivo)</label>
-                        <select id="slot-carregador" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>7. CARREGADOR (Exclusivo)</label>
+                        <select id="slot-carregador" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">8. TIPO DE MUNIÇÃO</label>
-                        <select id="slot-municao" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>8. TIPO DE MUNIÇÃO</label>
+                        <select id="slot-municao" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">9. GATILHO / MODO DE DISPARO</label>
-                        <select id="slot-gatilho" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>9. GATILHO / MODO DE DISPARO</label>
+                        <select id="slot-gatilho" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #8c8ea3; font-size: 0.82rem; margin-bottom: 0.3rem; display: block;">10. CABO (EMPUNHADURA TRAS.)</label>
-                        <select id="slot-cabo" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>10. CABO (EMPUNHADURA TRAS.)</label>
+                        <select id="slot-cabo" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                     <div class="form-col">
-                        <label style="color: #f59e0b; font-size: 0.82rem; margin-bottom: 0.3rem; display: block; font-weight: bold;">11. KIT DE CONVERSÃO (Aftermarket)</label>
-                        <select id="slot-kit-conversao" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()" style="width: 100%; padding: 0.6rem; background: #11131b; color: #fff; border: 1px solid #232a35; border-radius: 6px;"></select>
+                        <label>11. KIT DE CONVERSÃO (Aftermarket)</label>
+                        <select id="slot-kit-conversao" class="select-box slot-gunsmith" onchange="atualizarContadorSlots()"></select>
                     </div>
                 </div>
 
@@ -354,27 +373,14 @@
 
         <!-- TELA 4: Perks -->
         <section id="perks" class="container page-section">
-            <h2>Pacotes de Perks</h2>
-            <div class="grid-perks">
-                <div class="perk-box">
-                    <h3>Velocidade & Rusher</h3>
-                    <p>Acelerado • Massacre • Mãos Leves • Alerta Vermelho</p>
-                </div>
-                <div class="perk-box">
-                    <h3>Suporte & Sniper</h3>
-                    <p>Foco • Sangue-Frio • Reabastecer • Fantasma</p>
-                </div>
-            </div>
+            <h2>Perks</h2>
+            <div style="text-align:center; padding: 3rem; color: #8a8d99; font-size: 1.1rem;">Em breve</div>
         </section>
 
         <!-- TELA 5: Otimização -->
         <section id="otimizacao" class="container page-section">
-            <h2>Otimização (Windows & Jogo)</h2>
-            <ul class="tips-list">
-                <li><strong>Modo de Jogo do Windows:</strong> Mantenha ativado em Configurações > Jogos.</li>
-                <li><strong>Plano de Energia:</strong> Altere para "Desempenho Máximo" no Painel de Controle.</li>
-                <li><strong>Escala de VRAM:</strong> Configure o limite de memória para 70% nas opções gráficas do jogo.</li>
-            </ul>
+            <h2>Otimização</h2>
+            <div style="text-align:center; padding: 3rem; color: #8a8d99; font-size: 1.1rem;">Em breve</div>
         </section>
 
         <!-- TELA 6: Login -->

@@ -718,14 +718,17 @@ function abrirNoArmeiro(nomeArma) {
                 if (elementId) {
                     const selElement = document.getElementById(elementId);
                     if (selElement && !selElement.disabled) {
-                        const optExiste = Array.from(selElement.options).some(o => o.value === acc.nome || o.textContent.includes(acc.nome));
-                        if (!optExiste) {
+                        const optMatch = Array.from(selElement.options).find(o => o.value === acc.nome)
+                            || Array.from(selElement.options).find(o => o.value && o.textContent.includes(acc.nome));
+                        if (optMatch) {
+                            selElement.value = optMatch.value;
+                        } else {
                             const newOpt = document.createElement("option");
                             newOpt.value = acc.nome;
                             newOpt.textContent = acc.nome;
                             selElement.appendChild(newOpt);
+                            selElement.value = acc.nome;
                         }
-                        selElement.value = acc.nome;
                     }
                 }
             }
@@ -843,6 +846,7 @@ function popularSelectArmas() {
 }
 
 function inicializarArmeiro() {
+    construirNosArmeiro();
     popularSelectArmas();
 }
 
@@ -876,36 +880,41 @@ function atualizarArmeiro() {
     atualizarContadorSlots();
 }
 
+// Slots que certas classes de arma simplesmente não possuem (edite à vontade)
+const slotsIndisponiveisPorClasse = {
+    "Pistolas": ["slot-acoplamento"]
+};
+
 function carregarAcessoriosNosSlots(arma) {
     const jogoArma = obterJogoDaArma(arma);
     const pool = obterPoolDoJogo(jogoArma);
     const exclusivos = arma.acessorios_exclusivos || {};
+    const bloqueadosClasse = slotsIndisponiveisPorClasse[obterClasseDaArma(arma)] || [];
 
-    preencherSelectSimples(document.getElementById("slot-boca"), pool.bocas || ["Nenhum"]);
+    // Preenche o slot com as opções reais. Sem opções (ou bloqueado pela classe) => indisponível.
+    const preencherSlot = (slotId, opcoes) => {
+        const sel = document.getElementById(slotId);
+        if (!sel) return;
+        const reais = (opcoes || []).filter(o => o && o !== "Nenhum");
+        const disponivel = reais.length > 0 && !bloqueadosClasse.includes(slotId);
+        preencherSelectSimples(sel, ["Nenhum", ...(disponivel ? reais : [])]);
+        sel.setAttribute("data-indisponivel", disponivel ? "false" : "true");
+    };
 
-    const canos = exclusivos.cano && exclusivos.cano.length > 0 
-        ? ["Nenhum", ...exclusivos.cano] 
-        : ["Nenhum", `Cano Padrão ${arma.nome}`];
-    preencherSelectSimples(document.getElementById("slot-cano"), canos);
+    // Coronha só com "Sem Coronha" não é uma escolha de verdade => indisponível
+    const coronhas = exclusivos.coronha || [];
+    const coronhasValidas = coronhas.some(c => c !== "Sem Coronha") ? coronhas : [];
 
-    preencherSelectSimples(document.getElementById("slot-laser"), pool.lasers || ["Nenhum"]);
-    preencherSelectSimples(document.getElementById("slot-mira"), pool.miras || ["Nenhum"]);
-
-    const coronhas = exclusivos.coronha && exclusivos.coronha.length > 0 
-        ? ["Nenhum", ...exclusivos.coronha] 
-        : ["Nenhum", `Coronha Padrão ${arma.nome}`, "Sem Coronha"];
-    preencherSelectSimples(document.getElementById("slot-coronha"), coronhas);
-
-    preencherSelectSimples(document.getElementById("slot-acoplamento"), pool.acoplamentos || ["Nenhum"]);
-
-    const carregadores = exclusivos.carregador && exclusivos.carregador.length > 0 
-        ? ["Nenhum", ...exclusivos.carregador] 
-        : ["Nenhum", "Carregador Padrão"];
-    preencherSelectSimples(document.getElementById("slot-carregador"), carregadores);
-
-    preencherSelectSimples(document.getElementById("slot-municao"), pool.municoes || ["Nenhum"]);
-    preencherSelectSimples(document.getElementById("slot-gatilho"), pool.modos_disparo || ["Nenhum"]);
-    preencherSelectSimples(document.getElementById("slot-cabo"), pool.cabos || ["Nenhum"]);
+    preencherSlot("slot-boca", exclusivos.boca || pool.bocas);
+    preencherSlot("slot-cano", exclusivos.cano);
+    preencherSlot("slot-laser", exclusivos.laser || pool.lasers);
+    preencherSlot("slot-mira", exclusivos.mira || pool.miras);
+    preencherSlot("slot-coronha", coronhasValidas);
+    preencherSlot("slot-acoplamento", exclusivos.acoplamento || pool.acoplamentos);
+    preencherSlot("slot-carregador", exclusivos.carregador);
+    preencherSlot("slot-municao", pool.municoes);
+    preencherSlot("slot-gatilho", pool.modos_disparo);
+    preencherSlot("slot-cabo", pool.cabos);
 
     configurarSlotKitConversao(arma);
 }
@@ -1026,15 +1035,9 @@ function atualizarContadorSlots() {
 
     const counter = document.getElementById("gunsmithSlotCounter");
     if (counter) {
-        if (equipados >= 5) {
-            counter.style.background = "#22c55e";
-            counter.style.color = "#000";
-            counter.textContent = "5 / 5 Equipados (Limite Atingido)";
-        } else {
-            counter.style.background = "#11131b";
-            counter.style.color = "#fff";
-            counter.textContent = `${equipados} / 5 Equipados`;
-        }
+        counter.textContent = `${Math.min(equipados, 5)} / 5`;
+        counter.classList.toggle("cheio", equipados >= 5);
+        counter.title = equipados >= 5 ? "Limite de 5 acessórios atingido" : "";
     }
 
     selects.forEach(sel => {
@@ -1078,6 +1081,8 @@ function atualizarContadorSlots() {
             }
         }
     });
+
+    renderizarArmeiroVisual();
 }
 
 function limparSlots() {
@@ -1370,6 +1375,9 @@ function loadCommunityBuilds(atualizarSelect = true) {
 }
 
 function alternarSalvarClasse(buildId) {
+    const logado = localStorage.getItem("wz_logged_user");
+    if (!logado) { showSection(null, "login", null); return; }
+
     const list = lerJSON("wz_community_builds", []);
     const savedList = lerJSON("wz_saved_classes", []);
 
@@ -1398,6 +1406,9 @@ function alternarSalvarClasse(buildId) {
 }
 
 function alternarCurtida(buildId) {
+    const logado = localStorage.getItem("wz_logged_user");
+    if (!logado) { showSection(null, "login", null); return; }
+
     const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     if (!build) return;
@@ -1422,6 +1433,9 @@ function toggleAreaComentarios(buildId) {
 
 function adicionarComentario(event, buildId) {
     event.preventDefault();
+    const logado = localStorage.getItem("wz_logged_user");
+    if (!logado) { showSection(null, "login", null); return; }
+
     const input = document.getElementById(`input-comentario-${buildId}`);
     if (!input) return;
 
@@ -1868,3 +1882,174 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// ========================================================
+//  ARMEIRO VISUAL (bancada com nós de acessórios)         |
+// ========================================================
+// true  => slots indisponíveis para a arma somem do palco
+// false => ficam visíveis, apagados e com cadeado
+const OCULTAR_SLOTS_INDISPONIVEIS = false;
+
+const ICONES_SLOT = {
+    boca: '<rect x="3" y="9" width="11" height="6" rx="1"/><path d="M14 12h7M17 9l3-2M17 15l3 2"/>',
+    cano: '<rect x="2" y="10" width="20" height="4" rx="1"/><path d="M7 10V7M12 10V7M17 10V7"/>',
+    laser: '<circle cx="5" cy="12" r="2.5"/><path d="M8 12h14M11 8l-1-3M11 16l-1 3"/>',
+    mira: '<circle cx="12" cy="12" r="6.5"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/>',
+    coronha: '<path d="M3 8h10l3 2h5v8H8l-2-4H3z"/>',
+    acoplamento: '<rect x="3" y="5" width="18" height="4" rx="1"/><path d="M10 9v11h4V9"/>',
+    carregador: '<path d="M8 3h8v14l-2 4H8z"/><path d="M8 8h8M8 12h8"/>',
+    municao: '<path d="M9 21v-9a3 3 0 0 1 6 0v9z"/><path d="M9 17h6"/>',
+    gatilho: '<path d="M5 5h9v5H9v9"/><path d="M9 14c2 0 5 1 5 4"/>',
+    cabo: '<path d="M8 3h8v6l3 12H10L8 9z"/>',
+    kit: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+    cadeado: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'
+};
+
+// x / y em % do palco (posição de cada nó ao redor da arma)
+const SLOTS_ARMEIRO = [
+    { id: "slot-cano",         rotulo: "Cano",         icone: "cano",        x: 16, y: 26 },
+    { id: "slot-boca",         rotulo: "Boca",         icone: "boca",        x: 13, y: 45 },
+    { id: "slot-acoplamento",  rotulo: "Acoplamento",  icone: "acoplamento", x: 20, y: 66 },
+    { id: "slot-laser",        rotulo: "Laser",        icone: "laser",       x: 48, y: 13 },
+    { id: "slot-mira",         rotulo: "Mira",         icone: "mira",        x: 72, y: 14 },
+    { id: "slot-coronha",      rotulo: "Coronha",      icone: "coronha",     x: 85, y: 40 },
+    { id: "slot-cabo",         rotulo: "Cabo",         icone: "cabo",        x: 82, y: 62 },
+    { id: "slot-gatilho",      rotulo: "Gatilho/Modo", icone: "gatilho",     x: 66, y: 76 },
+    { id: "slot-carregador",   rotulo: "Carregador",   icone: "carregador",  x: 46, y: 88 },
+    { id: "slot-municao",      rotulo: "Munição",      icone: "municao",     x: 27, y: 80 },
+    { id: "slot-kit-conversao",rotulo: "Kit de Conversão", icone: "kit",     x: 85, y: 88, kit: true }
+];
+
+let slotSeletorAberto = null;
+
+function svgSlot(nome) {
+    return `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONES_SLOT[nome] || ""}</svg>`;
+}
+
+function construirNosArmeiro() {
+    const cont = document.getElementById("armeiroNodes");
+    if (!cont || cont.children.length) return;
+
+    SLOTS_ARMEIRO.forEach(cfg => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "slot-node" + (cfg.kit ? " slot-node-kit" : "");
+        btn.dataset.slot = cfg.id;
+        btn.style.setProperty("--x", cfg.x);
+        btn.style.setProperty("--y", cfg.y);
+        btn.innerHTML =
+            `<span class="slot-node-icon">${svgSlot(cfg.icone)}</span>` +
+            `<span class="slot-node-text">` +
+                `<span class="slot-node-slot">${cfg.rotulo}</span>` +
+                `<span class="slot-node-name"></span>` +
+                `<span class="slot-node-aviso"></span>` +
+            `</span>`;
+        btn.addEventListener("click", () => abrirSeletorSlot(cfg.id));
+        cont.appendChild(btn);
+    });
+
+    const pips = document.getElementById("armeiroPips");
+    if (pips && !pips.children.length) {
+        for (let i = 0; i < 5; i++) pips.appendChild(document.createElement("i"));
+    }
+
+    document.addEventListener("click", (e) => {
+        if (!slotSeletorAberto) return;
+        if (e.target.closest("#armeiroPicker") || e.target.closest(".slot-node")) return;
+        fecharSeletorSlot();
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") fecharSeletorSlot();
+    });
+}
+
+function renderizarArmeiroVisual() {
+    const cont = document.getElementById("armeiroNodes");
+    if (!cont) return;
+
+    let equipados = 0;
+
+    SLOTS_ARMEIRO.forEach(cfg => {
+        const sel = document.getElementById(cfg.id);
+        const no = cont.querySelector(`[data-slot="${cfg.id}"]`);
+        if (!sel || !no) return;
+
+        const indisponivel = sel.getAttribute("data-indisponivel") === "true";
+        const bloqueadoKit = sel.getAttribute("data-bloqueado-kit") === "true";
+        const vazio = !sel.value;
+        const limite = sel.disabled && !indisponivel && !bloqueadoKit && vazio;
+        if (!vazio && !indisponivel && !bloqueadoKit) equipados++;
+
+        no.classList.toggle("indisponivel", indisponivel);
+        no.classList.toggle("bloqueado-kit", bloqueadoKit && !indisponivel);
+        no.classList.toggle("limite", limite);
+        no.classList.toggle("equipado", !vazio && !indisponivel && !bloqueadoKit);
+        no.hidden = OCULTAR_SLOTS_INDISPONIVEIS && indisponivel;
+
+        const travado = indisponivel || bloqueadoKit || limite;
+        no.disabled = travado;
+
+        const icone = no.querySelector(".slot-node-icon");
+        icone.innerHTML = svgSlot(travado ? "cadeado" : cfg.icone);
+
+        const nome = no.querySelector(".slot-node-name");
+        const aviso = no.querySelector(".slot-node-aviso");
+        const opt = sel.selectedOptions && sel.selectedOptions[0];
+        nome.textContent = (!vazio && opt) ? opt.textContent.replace(/^★\s*/, "") : "";
+
+        if (indisponivel) aviso.textContent = "Indisponível para esta arma";
+        else if (bloqueadoKit) aviso.textContent = "Bloqueado pelo Kit";
+        else if (limite) aviso.textContent = "Limite de 5 atingido";
+        else aviso.textContent = "";
+
+        no.title = aviso.textContent || (vazio ? `Escolher ${cfg.rotulo}` : `${cfg.rotulo}: ${nome.textContent}`);
+    });
+
+    document.querySelectorAll("#armeiroPips i").forEach((p, i) => p.classList.toggle("on", i < equipados));
+}
+
+function abrirSeletorSlot(slotId) {
+    const sel = document.getElementById(slotId);
+    const painel = document.getElementById("armeiroPicker");
+    const lista = document.getElementById("armeiroPickerLista");
+    const titulo = document.getElementById("armeiroPickerTitulo");
+    if (!sel || !painel || !lista || sel.disabled) return;
+
+    if (slotSeletorAberto === slotId) { fecharSeletorSlot(); return; }
+    slotSeletorAberto = slotId;
+
+    const cfg = SLOTS_ARMEIRO.find(s => s.id === slotId);
+    titulo.textContent = cfg ? cfg.rotulo : "Acessório";
+    lista.innerHTML = "";
+
+    Array.from(sel.options).forEach(opt => {
+        const item = document.createElement("button");
+        item.type = "button";
+        item.className = "picker-item" + (opt.value === sel.value ? " selecionada" : "") + (opt.value === "" ? " remover" : "");
+        item.textContent = opt.value === "" ? "— Nenhum (remover) —" : opt.textContent;
+        item.addEventListener("click", () => escolherOpcaoSlot(slotId, opt.value));
+        lista.appendChild(item);
+    });
+
+    painel.hidden = false;
+    lista.scrollTop = 0;
+    const atual = lista.querySelector(".selecionada");
+    if (atual) atual.scrollIntoView({ block: "nearest" });
+
+    document.querySelectorAll(".slot-node").forEach(n => n.classList.toggle("ativo", n.dataset.slot === slotId));
+}
+
+function fecharSeletorSlot() {
+    slotSeletorAberto = null;
+    const painel = document.getElementById("armeiroPicker");
+    if (painel) painel.hidden = true;
+    document.querySelectorAll(".slot-node.ativo").forEach(n => n.classList.remove("ativo"));
+}
+
+function escolherOpcaoSlot(slotId, valor) {
+    const sel = document.getElementById(slotId);
+    if (!sel) return;
+    sel.value = valor;
+    fecharSeletorSlot();
+    atualizarContadorSlots();
+}
