@@ -1456,7 +1456,7 @@ function renderCommunityBuilds(list, savedList, atualizarSelect) {
                 <div id="lista-comentarios-${b.id}" style="max-height: 140px; overflow-y: auto; margin-bottom: 0.6rem; padding-right: 0.2rem;">
                     ${commentsHtml}
                 </div>
-                <form onsubmit="adicionarComentario(event, '${b.id}')" style="display: flex; gap: 0.4rem;">
+                <form style="display: flex; gap: 0.4rem;" onsubmit="event.preventDefault(); adicionarComentario(event, '${b.id}'); return false;">
                     <input 
                         type="text" 
                         id="input-comentario-${b.id}" 
