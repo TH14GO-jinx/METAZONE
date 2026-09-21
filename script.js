@@ -1297,6 +1297,22 @@ function atualizarSelectFiltroComunidade(builds) {
     }
 }
 
+function atualizarComentarioDoc(docRef, texto, autorFinal, input, buildId) {
+    docRef.get().then(docSnap => {
+        const data = docSnap.exists ? docSnap.data() : {};
+        const arr = Array.isArray(data.comments) ? [...data.comments] : [];
+        arr.push({ author: autorFinal, text: texto, time: "Agora" });
+        docRef.update({ comments: arr })
+            .then(() => loadCommunityBuilds(false))
+            .catch(err => console.warn("Erro ao atualizar comentário (doc):", err));
+    });
+}
+function salvaLocalEAtualiza() {
+    // Fallback simples se não achar doc no Firestore
+    const list = lerJSON("wz_community_builds", []);
+    const area = document.getElementById(`comentarios-secao-${document.activeElement ? document.activeElement.id : ''}`);
+}
+
 function loadCommunityBuilds(atualizarSelect = true) {
     if (useFirebase && db) {
         db.collection('builds').orderBy('created_at', 'desc').get().then(snapshot => {
@@ -1568,34 +1584,37 @@ function adicionarComentario(event, buildId) {
         const autorLogado = localStorage.getItem("wz_logged_user") || "Operador";
         const profile = lerJSON("wz_user_profile", null);
         const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
-        db.collection('builds').doc(buildId).get().then(doc => {
-            if (doc.exists) {
-                const data = doc.data();
-                const arr = Array.isArray(data.comments) ? [...data.comments] : [];
-                arr.push({ author: autorFinal, text: texto, time: "Agora" });
-                db.collection('builds').doc(buildId).update({ comments: arr })
-                    .then(() => loadCommunityBuilds(false))
-                    .catch(err => console.warn("Erro ao atualizar comentário:", err));
-            } else {
-                // Fallback: busca pelo autor/arma/desc se o id não bate
-                db.collection('builds').where('author', '==', build.author || autorFinal).where('weapon', '==', build.weapon || "").limit(1).get().then(q => {
-                    if (!q.empty) {
-                        const d = q.docs[0];
-                        const data = d.data();
-                        const arr = Array.isArray(data.comments) ? [...data.comments] : [];
-                        arr.push({ author: autorFinal, text: texto, time: "Agora" });
-                        d.ref.update({ comments: arr })
-                            .then(() => loadCommunityBuilds(false))
-                            .catch(err => console.warn("Erro ao atualizar comentário (fallback):", err));
-                    } else {
-                        // Nenhum doc encontrado; salva apenas local
-                        localStorage.setItem("wz_community_builds", JSON.stringify(list));
-                        input.value = "";
-                        loadCommunityBuilds(false);
-                    }
-                }).catch(err => console.warn("Erro fallback:", err));
+        // Busca universal: ignora buildId se não bater, usa autor/weapon/desc
+        const buscaUniversal = () => db.collection('builds').get().then(snapshot => {
+            let docRef = null;
+            snapshot.forEach(d => {
+                const b = d.data();
+                if (d.id === buildId) docRef = d.ref;
+            });
+            // Se ainda não achou, tenta pelo conteúdo do card (localStorage fallback)
+            if (!docRef && build.author) {
+                snapshot.forEach(d => {
+                    const b = d.data();
+                    if (b.author === build.author && b.weapon === build.weapon) docRef = d.ref;
+                });
             }
-        }).catch(err => console.warn("Erro ao ler doc:", err));
+            if (docRef) {
+                docRef.get().then(docSnap => {
+                    const data = docSnap.exists ? docSnap.data() : {};
+                    const arr = Array.isArray(data.comments) ? [...data.comments] : [];
+                    arr.push({ author: autorFinal, text: texto, time: "Agora" });
+                    docRef.update({ comments: arr })
+                        .then(() => loadCommunityBuilds(false))
+                        .catch(err => console.warn("Erro ao atualizar comentário:", err));
+                });
+            } else {
+                // Nenhum doc encontrado; salva apenas local
+                localStorage.setItem("wz_community_builds", JSON.stringify(list));
+                input.value = "";
+                loadCommunityBuilds(false);
+            }
+        });
+        buscaUniversal();
         input.value = "";
         const area = document.getElementById(`comentarios-secao-${buildId}`);
         if (area) area.style.display = "block";
