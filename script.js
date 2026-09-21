@@ -1,7 +1,7 @@
 // ========================================================
 //  1. CONFIGURAÇÃO DE ASSETS & CDN DO GITHUB              |
 // ========================================================
-const USUARIO_GITHUB = "TH14GO-jinx";
+const USUARIO_GITHUB = "th14go-jinx";
 const ASSETS_CDN = `https://cdn.jsdelivr.net/gh/${USUARIO_GITHUB}/warzone-assets@main/`;
 
 

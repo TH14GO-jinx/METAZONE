@@ -8,7 +8,7 @@
       // Redireciona o token do OAuth (que vem na raiz) para a página /METAZONE/
       if (window.location.pathname === '/' && window.location.hash.includes('access_token=')) {
         const hash = window.location.hash;
-        window.location.href = '/METAZONE/' + hash;
+        window.location.href = '/metazone/' + hash;
       }
     </script>
     
