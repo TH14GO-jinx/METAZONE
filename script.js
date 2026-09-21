@@ -1564,6 +1564,31 @@ function adicionarComentario(event, buildId) {
         time: "Agora"
     });
 
+    if (useFirebase && db) {
+        const autorLogado = localStorage.getItem("wz_logged_user") || "Operador";
+        const profile = lerJSON("wz_user_profile", null);
+        const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
+        db.collection('builds').doc(buildId).get().then(doc => {
+            const data = doc.exists ? doc.data() : {};
+            const arr = Array.isArray(data.comments) ? data.comments : [];
+            arr.push({ author: autorFinal, text: texto, time: "Agora" });
+            const ref = db.collection('builds').doc(buildId);
+            if (doc.exists) {
+                ref.update({ comments: arr })
+                    .then(() => loadCommunityBuilds(false))
+                    .catch(err => console.warn("Erro ao atualizar comentário:", err));
+            } else {
+                ref.set({ comments: arr, likes: 0, liked_by: [] }, { merge: true })
+                    .then(() => loadCommunityBuilds(false))
+                    .catch(err => console.warn("Erro ao criar doc de comentário:", err));
+            }
+        }).catch(err => console.warn("Erro ao ler/criar doc:", err));
+        input.value = "";
+        const area = document.getElementById(`comentarios-secao-${buildId}`);
+        if (area) area.style.display = "block";
+        return;
+    }
+
     localStorage.setItem("wz_community_builds", JSON.stringify(list));
     input.value = "";
     loadCommunityBuilds(false);
