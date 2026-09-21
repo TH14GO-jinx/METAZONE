@@ -1349,6 +1349,19 @@ function renderCommunityBuilds(list, savedList, atualizarSelect) {
     const counterTag = document.getElementById("communityCountTag");
     if (!container) return;
 
+    // Delegação de eventos para comentários (mobile + desktop)
+    container.addEventListener('click', function(e) {
+        const btn = e.target.closest('button');
+        if (btn && btn.textContent.trim() === 'Enviar') {
+            const input = btn.closest('div').querySelector('input[type="text"]');
+            if (input) {
+                const buildId = input.id.replace('input-comentario-', '');
+                adicionarComentario({preventDefault: function() {}}, buildId);
+                input.value = '';
+            }
+        }
+    });
+
     if (atualizarSelect) {
         atualizarSelectFiltroComunidade(list);
     }
