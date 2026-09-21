@@ -1186,6 +1186,9 @@ function obterAcessoriosEquipados() {
 }
 
 function publicarClasseNoMural(btn) {
+    const logado = localStorage.getItem("wz_logged_user");
+    if (!logado) { showSection(null, "login", null); return; }
+
     const select = document.getElementById("gunsmithWeaponSelect");
     const arma = listaMetaArmas[select.value];
     if (!arma) return;
