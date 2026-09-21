@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "firebase": "^12.19.0",
     "puppeteer": "^25.11.0"
   },
   "name": "metazone",
