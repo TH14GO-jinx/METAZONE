@@ -1465,6 +1465,7 @@ function renderCommunityBuilds(list, savedList, atualizarSelect) {
                         style="flex: 1; padding: 0.45rem 0.6rem; background: #0c0e14; border: 1px solid #232a35; border-radius: 4px; color: #fff; font-size: 0.82rem;">
                     <button
                         onclick="adicionarComentario({preventDefault:function(){}}, '${b.id}')"
+                        ontouchstart="adicionarComentario({preventDefault:function(){}}, '${b.id}')"
                         style="padding: 0.45rem 0.8rem; background: var(--accent); color: #000; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
                         Enviar
                     </button>
