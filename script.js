@@ -153,6 +153,26 @@ const themeVideos = {
     bo7: "https://pub-dc0d4c618f8f4c25b750f2d586285321.r2.dev/bo7.webm"
 };
 
+// Processa token OAuth na URL (se veio do Facebook/Google via redirect)
+(function handleOAuthHash() {
+    const hash = window.location.hash;
+    if (!hash || !hash.includes('access_token=')) return;
+    if (!supabaseClient) return;
+    const params = new URLSearchParams(hash.substring(1));
+    const access_token = params.get('access_token');
+    const refresh_token = params.get('refresh_token');
+    const expires_in = params.get('expires_in');
+    if (access_token) {
+        supabaseClient.auth.setSession({ access_token, refresh_token, expires_in: parseInt(expires_in || '3600') }).then(({ error }) => {
+            if (!error) {
+                window.history.replaceState(null, '', window.location.pathname);
+                checkLoginStatus();
+                loadCommunityBuilds(true);
+            }
+        });
+    }
+})();
+
 const themeParticleColors = {
     mw4: ["#4ade80", "#22c55e", "#86efac", "#16a34a", "#ffffff"],
     mw3: ["#ef4444", "#dc2626", "#f87171", "#b91c1c", "#ff9999"],

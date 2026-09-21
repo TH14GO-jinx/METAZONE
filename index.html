@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>METAZONE</title>
+    <script>
+      // Redireciona o token do OAuth (que vem na raiz) para a página /METAZONE/
+      if (window.location.pathname === '/' && window.location.hash.includes('access_token=')) {
+        const hash = window.location.hash;
+        window.location.href = '/METAZONE/' + hash;
+      }
+    </script>
     
     <!-- Fontes COD do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
