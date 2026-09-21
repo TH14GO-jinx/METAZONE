@@ -1564,12 +1564,16 @@ function adicionarComentario(event, buildId) {
     const texto = input.value.trim();
     if (!texto) return;
 
+    const autorLogado = localStorage.getItem("wz_logged_user") || "Operador";
+    const profile = lerJSON("wz_user_profile", null);
+    const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
+
     const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     // Se não achar no localStorage, ainda tenta Firestore; não bloqueia
     const commentsArr = build ? (build.comments || []) : [];
     commentsArr.push({
-        author: autorLogado,
+        author: autorFinal,
         text: texto,
         time: "Agora"
     });
