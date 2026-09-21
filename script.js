@@ -1463,29 +1463,37 @@ function alternarSalvarClasse(buildId) {
     const logado = localStorage.getItem("wz_logged_user");
     if (!logado) { showSection(null, "login", null); return; }
 
-    const list = lerJSON("wz_community_builds", []);
     const savedList = lerJSON("wz_saved_classes", []);
-
+    if (useFirebase && db) {
+        // Busca build no Firebase por ID (documento = buildId)
+        db.collection('builds').doc(buildId).get().then(doc => {
+            if (!doc.exists) return;
+            const b = doc.data();
+            const index = savedList.findIndex(s => s.id === buildId);
+            if (index !== -1) {
+                savedList.splice(index, 1);
+                localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
+            } else {
+                savedList.unshift({ id: buildId, author: b.author, weapon: b.weapon, desc: b.descricao, code: b.code, img: b.img });
+                localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
+            }
+            loadCommunityBuilds(false);
+            renderSavedClassesInProfile();
+        });
+        return;
+    }
+    // Fallback local
+    const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     if (!build) return;
-
     const index = savedList.findIndex(s => s.id === build.id || (s.weapon === build.weapon && s.desc === build.desc));
-
     if (index !== -1) {
         savedList.splice(index, 1);
         localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
     } else {
-        savedList.unshift({
-            id: build.id,
-            author: build.author,
-            weapon: build.weapon,
-            desc: build.desc,
-            code: build.code,
-            img: build.img
-        });
+        savedList.unshift({ id: build.id, author: build.author, weapon: build.weapon, desc: build.desc, code: build.code, img: build.img });
         localStorage.setItem("wz_saved_classes", JSON.stringify(savedList));
     }
-
     loadCommunityBuilds(false);
     renderSavedClassesInProfile();
 }
@@ -1494,10 +1502,24 @@ function alternarCurtida(buildId) {
     const logado = localStorage.getItem("wz_logged_user");
     if (!logado) { showSection(null, "login", null); return; }
 
+    if (useFirebase && db) {
+        db.collection('builds').doc(buildId).get().then(doc => {
+            if (!doc.exists) return;
+            const b = doc.data();
+            const liked = b.liked_by && Array.isArray(b.liked_by) ? b.liked_by.includes(logado) : false;
+            const newLikes = liked ? Math.max(0, (b.likes || 1) - 1) : (b.likes || 0) + 1;
+            const newLikedBy = liked ? (b.liked_by || []).filter(u => u !== logado) : [...(b.liked_by || []), logado];
+            db.collection('builds').doc(buildId).update({ likes: newLikes, liked_by: newLikedBy })
+                .then(() => loadCommunityBuilds(false))
+                .catch(err => console.warn("Erro ao curtir:", err));
+        }).catch(err => console.warn("Erro ao ler build:", err));
+        return;
+    }
+
+    // Fallback localStorage
     const list = lerJSON("wz_community_builds", []);
     const build = list.find(b => b.id === buildId);
     if (!build) return;
-
     if (build.liked) {
         build.likes = Math.max(0, (build.likes || 1) - 1);
         build.liked = false;
@@ -1505,7 +1527,6 @@ function alternarCurtida(buildId) {
         build.likes = (build.likes || 0) + 1;
         build.liked = true;
     }
-
     localStorage.setItem("wz_community_builds", JSON.stringify(list));
     loadCommunityBuilds(false);
 }
