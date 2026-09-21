@@ -1745,10 +1745,6 @@ function loginGoogle() {
     if (!supabaseClient) return alert('Supabase não inicializado');
     supabaseClient.auth.signInWithOAuth({ provider: 'google' });
 }
-function loginFacebook() {
-    if (!supabaseClient) return alert('Supabase não inicializado');
-    supabaseClient.auth.signInWithOAuth({ provider: 'facebook' });
-}
 function saveLocalProfile(username) {
     let profile = lerJSON("wz_user_profile", null) || {};
     profile.name = username;
