@@ -180,11 +180,11 @@ const themeParticleColors = {
     bo7: ["#38bdf8", "#0ea5e9", "#7dd3fc", "#0284c7", "#e0f2fe"]
 };
 
-const SUPABASE_URL = "https://kcnicefqqaycscihadvg.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjbmljZWZxcWF5Y3NjaWhhZHZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4ODU5MDcsImV4cCI6MjEwNTQ2MTkwN30.TnnYe7rSMxhg-TIIAjToadoUopJhK-oGP_FPo54oR6U";
-const supabaseClient = (typeof window !== "undefined" && window.supabase)
-    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON)
-    : null;
+// ========================================================
+//  0. CONFIGURAÇÃO FIREBASE (novo banco)
+// ========================================================
+// Usa db/auth global criados em firebase-config.js (compat)
+const useFirebase = (typeof db !== 'undefined' && db !== null) && (typeof auth !== 'undefined' && auth !== null);
 
 // ========================================================
 //  2. IDENTIFICADORES DE JOGO E CLASSE DE ARMA            |
@@ -1216,12 +1216,13 @@ function publicarClasseNoMural(btn) {
         comments: []
     };
 
+    // Salva local (cache)
     builds.unshift(novaBuild);
     localStorage.setItem("wz_community_builds", JSON.stringify(builds));
 
-    // Publica no Supabase se disponível
-    if (supabaseClient) {
-        supabaseClient.from('builds').insert([{
+    // Publica no Firebase se disponível
+    if (useFirebase && db) {
+        db.collection('builds').add({
             id: novaBuild.id,
             author: novaBuild.author,
             weapon: novaBuild.weapon,
@@ -1229,11 +1230,10 @@ function publicarClasseNoMural(btn) {
             code: novaBuild.code,
             img: novaBuild.img,
             likes: novaBuild.likes,
-            created_at: new Date().toISOString(),
-            comments: novaBuild.comments
-        }]).then(({ error }) => {
-            if (error) console.warn("Erro ao publicar no Supabase:", error);
-        });
+            created_at: new Date(),
+            comments: novaBuild.comments || []
+        }).then(() => console.log("Build publicada no Firebase"))
+          .catch(err => console.warn("Erro ao publicar no Firebase:", err));
     }
 
     loadCommunityBuilds(true);
@@ -1298,39 +1298,35 @@ function atualizarSelectFiltroComunidade(builds) {
 }
 
 function loadCommunityBuilds(atualizarSelect = true) {
-    // PASSO 1: se não tiver supabaseClient, volta para localStorage (modo offline)
-    if (!supabaseClient) {
-        const list = lerJSON("wz_community_builds", []);
-        const savedList = lerJSON("wz_saved_classes", []);
-        renderCommunityBuilds(list, savedList, atualizarSelect);
-        return;
-    }
-
-    // PASSO 2: busca as builds no banco Supabase
-    supabaseClient.from('builds').select('*').order('created_at', { ascending: false })
-        .then(({ data, error }) => {
-            if (error) {
-                console.warn("Erro ao buscar builds:", error);
-                const list = lerJSON("wz_community_builds", []);
-                const savedList = lerJSON("wz_saved_classes", []);
-                renderCommunityBuilds(list, savedList, atualizarSelect);
-                return;
-            }
-            // PASSO 3: converte os dados recebidos para o formato que o site usa
-            const buildsConvertidas = (data || []).map(b => ({
-                id: b.id || b.id,
-                author: b.author,
-                weapon: b.weapon,
-                desc: b.descricao,
-                code: b.code,
-                img: b.img,
-                likes: b.likes || 0,
-                liked: false,
-                comments: b.comments || []
-            }));
+    if (useFirebase && db) {
+        db.collection('builds').orderBy('created_at', 'desc').get().then(snapshot => {
+            const buildsConvertidas = snapshot.docs.map(d => {
+                const b = d.data();
+                return {
+                    id: d.id,
+                    author: b.author,
+                    weapon: b.weapon,
+                    desc: b.descricao,
+                    code: b.code,
+                    img: b.img,
+                    likes: b.likes || 0,
+                    liked: false,
+                    comments: b.comments || []
+                };
+            });
             const savedList = lerJSON("wz_saved_classes", []);
             renderCommunityBuilds(buildsConvertidas, savedList, atualizarSelect);
+        }).catch(err => {
+            console.warn("Erro ao buscar builds Firebase:", err);
+            const list = lerJSON("wz_community_builds", []);
+            renderCommunityBuilds(list, [], atualizarSelect);
         });
+        return;
+    }
+    // Fallback local
+    const list = lerJSON("wz_community_builds", []);
+    const savedList = lerJSON("wz_saved_classes", []);
+    renderCommunityBuilds(list, savedList, atualizarSelect);
 }
 function renderCommunityBuilds(list, savedList, atualizarSelect) {
     const container = document.getElementById("communityCards");
@@ -1742,8 +1738,18 @@ function showSection(event, sectionId, clickedElement) {
 //  10. AUTENTICAÇÃO E PERFIL DO USUÁRIO                   |
 // ========================================================
 function loginGoogle() {
-    if (!supabaseClient) return alert('Supabase não inicializado');
-    supabaseClient.auth.signInWithOAuth({ provider: 'google' });
+    if (!useFirebase || !auth) return alert('Firebase Auth não inicializado');
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+        .then((result) => {
+            const user = result.user;
+            if (user) {
+                const username = user.displayName || user.email || 'Operador';
+                saveLocalProfile(username);
+                loadCommunityBuilds(true);
+            }
+        })
+        .catch((err) => alert('Erro ao logar com Google: ' + err.message));
 }
 function saveLocalProfile(username) {
     let profile = lerJSON("wz_user_profile", null) || {};
@@ -1761,23 +1767,23 @@ function saveLocalProfile(username) {
     }, 1500);
 }
 function handleLogin(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     const email = document.getElementById("emailInput").value.trim();
     const password = document.getElementById("passwordInput").value.trim();
     const username = email.split('@')[0];
 
-    if (supabaseClient) {
-        supabaseClient.auth.signUp({ email, password }).then(({ data, error }) => {
-            if (error) return alert('Erro ao criar conta: ' + error.message);
-            if (data.user && !data.session) return alert('Verifique seu email para confirmar a conta.');
-            // se já logado direto
-            saveLocalProfile(username);
-        }).catch(() => {
-            supabaseClient.auth.signInWithPassword({ email, password }).then(({ error }) => {
-                if (error) return alert('Erro: ' + error.message);
-                saveLocalProfile(username);
+    if (useFirebase && auth) {
+        auth.signInWithEmailAndPassword(email, password)
+            .then(({ user }) => {
+                saveLocalProfile(user ? (user.displayName || username) : username);
+            })
+            .catch(() => {
+                auth.createUserWithEmailAndPassword(email, password)
+                    .then(({ user }) => {
+                        saveLocalProfile(user ? (user.displayName || username) : username);
+                    })
+                    .catch(err => alert('Erro: ' + err.message));
             });
-        });
     } else {
         saveLocalProfile(username);
     }
