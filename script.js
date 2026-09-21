@@ -1569,20 +1569,33 @@ function adicionarComentario(event, buildId) {
         const profile = lerJSON("wz_user_profile", null);
         const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
         db.collection('builds').doc(buildId).get().then(doc => {
-            const data = doc.exists ? doc.data() : {};
-            const arr = Array.isArray(data.comments) ? data.comments : [];
-            arr.push({ author: autorFinal, text: texto, time: "Agora" });
-            const ref = db.collection('builds').doc(buildId);
             if (doc.exists) {
-                ref.update({ comments: arr })
+                const data = doc.data();
+                const arr = Array.isArray(data.comments) ? [...data.comments] : [];
+                arr.push({ author: autorFinal, text: texto, time: "Agora" });
+                db.collection('builds').doc(buildId).update({ comments: arr })
                     .then(() => loadCommunityBuilds(false))
                     .catch(err => console.warn("Erro ao atualizar comentário:", err));
             } else {
-                ref.set({ comments: arr, likes: 0, liked_by: [] }, { merge: true })
-                    .then(() => loadCommunityBuilds(false))
-                    .catch(err => console.warn("Erro ao criar doc de comentário:", err));
+                // Fallback: busca pelo autor/arma/desc se o id não bate
+                db.collection('builds').where('author', '==', build.author || autorFinal).where('weapon', '==', build.weapon || "").limit(1).get().then(q => {
+                    if (!q.empty) {
+                        const d = q.docs[0];
+                        const data = d.data();
+                        const arr = Array.isArray(data.comments) ? [...data.comments] : [];
+                        arr.push({ author: autorFinal, text: texto, time: "Agora" });
+                        d.ref.update({ comments: arr })
+                            .then(() => loadCommunityBuilds(false))
+                            .catch(err => console.warn("Erro ao atualizar comentário (fallback):", err));
+                    } else {
+                        // Nenhum doc encontrado; salva apenas local
+                        localStorage.setItem("wz_community_builds", JSON.stringify(list));
+                        input.value = "";
+                        loadCommunityBuilds(false);
+                    }
+                }).catch(err => console.warn("Erro fallback:", err));
             }
-        }).catch(err => console.warn("Erro ao ler/criar doc:", err));
+        }).catch(err => console.warn("Erro ao ler doc:", err));
         input.value = "";
         const area = document.getElementById(`comentarios-secao-${buildId}`);
         if (area) area.style.display = "block";
