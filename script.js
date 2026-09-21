@@ -1584,37 +1584,16 @@ function adicionarComentario(event, buildId) {
         const autorLogado = localStorage.getItem("wz_logged_user") || "Operador";
         const profile = lerJSON("wz_user_profile", null);
         const autorFinal = (profile && profile.name) ? profile.name : autorLogado;
-        // Busca universal: ignora buildId se não bater, usa autor/weapon/desc
-        const buscaUniversal = () => db.collection('builds').get().then(snapshot => {
-            let docRef = null;
-            snapshot.forEach(d => {
-                const b = d.data();
-                if (d.id === buildId) docRef = d.ref;
-            });
-            // Se ainda não achou, tenta pelo conteúdo do card (localStorage fallback)
-            if (!docRef && build.author) {
-                snapshot.forEach(d => {
-                    const b = d.data();
-                    if (b.author === build.author && b.weapon === build.weapon) docRef = d.ref;
-                });
-            }
-            if (docRef) {
-                docRef.get().then(docSnap => {
-                    const data = docSnap.exists ? docSnap.data() : {};
-                    const arr = Array.isArray(data.comments) ? [...data.comments] : [];
-                    arr.push({ author: autorFinal, text: texto, time: "Agora" });
-                    docRef.update({ comments: arr })
-                        .then(() => loadCommunityBuilds(false))
-                        .catch(err => console.warn("Erro ao atualizar comentário:", err));
-                });
-            } else {
-                // Nenhum doc encontrado; salva apenas local
-                localStorage.setItem("wz_community_builds", JSON.stringify(list));
-                input.value = "";
-                loadCommunityBuilds(false);
-            }
-        });
-        buscaUniversal();
+        // Usa direto o doc com o buildId do card; se falhar, não bloqueia
+        db.collection('builds').doc(buildId).get().then(doc => {
+            const data = doc.exists ? doc.data() : {};
+            const arr = Array.isArray(data.comments) ? [...data.comments] : [];
+            arr.push({ author: autorFinal, text: texto, time: "Agora" });
+            const ref = doc.exists ? doc.ref : db.collection('builds').doc(buildId);
+            ref.update({ comments: arr })
+                .then(() => loadCommunityBuilds(false))
+                .catch(err => console.warn("Erro ao atualizar:", err));
+        }).catch(err => console.warn("Erro ao ler doc:", err));
         input.value = "";
         const area = document.getElementById(`comentarios-secao-${buildId}`);
         if (area) area.style.display = "block";
