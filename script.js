@@ -1456,19 +1456,19 @@ function renderCommunityBuilds(list, savedList, atualizarSelect) {
                 <div id="lista-comentarios-${b.id}" style="max-height: 140px; overflow-y: auto; margin-bottom: 0.6rem; padding-right: 0.2rem;">
                     ${commentsHtml}
                 </div>
-                <form style="display: flex; gap: 0.4rem;" onsubmit="event.preventDefault(); adicionarComentario(event, '${b.id}'); return false;">
-                    <input 
-                        type="text" 
-                        id="input-comentario-${b.id}" 
-                        placeholder="Escreva um comentário..." 
-                        required 
+                <div style="display: flex; gap: 0.4rem;">
+                    <input
+                        type="text"
+                        id="input-comentario-${b.id}"
+                        placeholder="Escreva um comentário..."
+                        required
                         style="flex: 1; padding: 0.45rem 0.6rem; background: #0c0e14; border: 1px solid #232a35; border-radius: 4px; color: #fff; font-size: 0.82rem;">
-                    <button 
-                        type="submit" 
+                    <button
+                        onclick="adicionarComentario({preventDefault:function(){}}, '${b.id}')"
                         style="padding: 0.45rem 0.8rem; background: var(--accent); color: #000; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
                         Enviar
                     </button>
-                </form>
+                </div>
             </div>
         `;
         container.appendChild(card);
