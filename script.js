@@ -639,7 +639,7 @@ function renderMetaCards(armas) {
             <div style="width: 100%; display: flex; flex-direction: column; gap: 1rem;">` +
             ordemExistente.map(tier => {
                 const armasTier = grupos[tier];
-                const corTier = tier === "NOVO" ? "#7ee787" : tier === "META" ? "#7fb3d5" : tier === "ABSOLUTE META" ? "#ffd966" : "#2e3545";
+                const corTier = tier === "NOVO" ? "#09a2e9" : tier === "META" ? "#ff0000" : tier === "ABSOLUTE META" ? "#ffbf00" : "#292928";
                 return `<div style="background: rgba(12,14,22,0.88); border: 1px solid ${corTier}; border-radius: 8px; overflow: hidden;">
                     <div style="background: ${corTier}99; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 0.6rem 1rem; letter-spacing: 1px;">${tier === "ABSOLUTE META" ? "★ META ABSOLUTO" : (tier === "NOVO" ? "★ NOVO" : (tier === "META" ? "★ META" : (tier === "TIER E" ? "OUTRAS" : tier)))}</div>
                     <div style="padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem;">` +

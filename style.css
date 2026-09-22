@@ -12,12 +12,12 @@ h1, h2, h3, .badge, .tier, .btn-submit, .btn-copy, .btn-social {
 
 /* --- TEMAS DOS JOGOS --- */
 body[data-theme="mw4"], body[data-theme="green"] {
-    --accent: #4ade80;
+    --accent: #00ad1d;
     --accent-dim: rgba(74, 222, 128, 0.15);
 }
 
 body[data-theme="mw3"], body[data-theme="red"] {
-    --accent: #ef4444;
+    --accent: #ff0000;
     --accent-dim: rgba(239, 68, 68, 0.15);
 }
 
@@ -27,7 +27,7 @@ body[data-theme="bo6"], body[data-theme="blue"] {
 }
 
 body[data-theme="bo7"] {
-    --accent: #38bdf8;
+    --accent: #089bda;
     --accent-dim: rgba(56, 189, 248, 0.15);
 }
 
@@ -557,9 +557,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.badge-novo { background: #1a472a; color: #7ee787; border-color: #7ee787; }
+.badge-novo { background: #0b1b11; color: #00b30f; border-color: #02ff17; }
 .badge-absolute { background: #3d2e05; color: #ffd966; border-color: #ffd966; }
-.badge-meta { background: #0d2b45; color: #7fb3d5; border-color: #7fb3d5; }
+.badge-meta { background: #014683; color: #7fb3d5; border-color: #7fb3d5; }
 
 .hero h1 {
     font-size: 4.8rem;
