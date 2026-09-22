@@ -3,7 +3,7 @@
     "nome": ".50 GS",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/50-gs.png",
     "acessorios": [
       {
@@ -42,13 +42,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "556 Icarus",
     "jogo": "MW2",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/556-icarus.png",
     "acessorios": [
       {
@@ -88,13 +88,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "9mm Daemon",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/9mm-daemon.png",
     "acessorios": [
       {
@@ -132,7 +132,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "BAS-P",
@@ -179,13 +179,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Basilisk",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/basilisk.png",
     "acessorios": [
       {
@@ -223,13 +223,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Bryson 800",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/bryson-800.png",
     "acessorios": [
       {
@@ -270,13 +270,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Bryson 890",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/bryson-890.png",
     "acessorios": [
       {
@@ -317,13 +317,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Carrack .300",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/carrack-300.png",
     "acessorios": [
       {
@@ -364,13 +364,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Chimera",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/chimera.png",
     "acessorios": [
       {
@@ -411,13 +411,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Cronen Squall",
     "jogo": "MW2",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/cronen-squall.png",
     "acessorios": [
       {
@@ -459,7 +459,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Crossbow",
@@ -470,13 +470,13 @@
     "acessorios": [],
     "acessorios_exclusivos": {},
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "EBR-14",
     "jogo": "MW2",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/ebr-14.png",
     "acessorios": [
       {
@@ -517,13 +517,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Expedite 12",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/expedite-12.png",
     "acessorios": [
       {
@@ -563,13 +563,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Fennec 45",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/fennec-45.png",
     "acessorios": [
       {
@@ -610,7 +610,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "FJX Imperium",
@@ -657,13 +657,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "FR Avancer",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/fr-avancer.png",
     "acessorios": [
       {
@@ -705,13 +705,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "FSS Hurricane",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/fss-hurricane.png",
     "acessorios": [
       {
@@ -751,13 +751,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "FTAC Recon",
     "jogo": "MW2",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/ftac-recon.png",
     "acessorios": [
       {
@@ -798,13 +798,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "FTAC Siege",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/ftac-siege.png",
     "acessorios": [
       {
@@ -845,7 +845,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "GS Magna",
@@ -890,13 +890,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "HCR 56",
     "jogo": "MW2",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/hcr-56.png",
     "acessorios": [
       {
@@ -938,13 +938,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "ISO 45",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/iso-45.png",
     "acessorios": [
       {
@@ -985,13 +985,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "ISO 9mm",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier A",
     "arquivo_imagem": "armas/iso-9mm.png",
     "acessorios": [
       {
@@ -1032,13 +1032,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "ISO Hemlock",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier D",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/iso-hemlock.png",
     "acessorios": [
       {
@@ -1079,13 +1079,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Kastov 545",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kastov-545.png",
     "acessorios": [
       {
@@ -1127,13 +1127,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Kastov 762",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kastov-762.png",
     "acessorios": [
       {
@@ -1177,13 +1177,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Kastov-74u",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/kastov-74u.png",
     "acessorios": [
       {
@@ -1224,13 +1224,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "KV Broadside",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier D",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/kv-broadside.png",
     "acessorios": [
       {
@@ -1271,13 +1271,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "LA-B 330",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/la-b-330.png",
     "acessorios": [
       {
@@ -1318,13 +1318,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lachmann Shroud",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier D",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lachmann-shroud.png",
     "acessorios": [
       {
@@ -1364,13 +1364,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lachmann Sub",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lachmann-sub.png",
     "acessorios": [
       {
@@ -1412,13 +1412,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lachmann-556",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/lachmann-556.png",
     "acessorios": [
       {
@@ -1460,7 +1460,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lachmann-762",
@@ -1508,13 +1508,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "LM-S",
     "jogo": "MW2",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/lm-s.png",
     "acessorios": [
       {
@@ -1556,13 +1556,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lockwood 300",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/lockwood-300.png",
     "acessorios": [
       {
@@ -1605,13 +1605,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Lockwood MK2",
     "jogo": "MW2",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/lockwood-mk2.png",
     "acessorios": [
       {
@@ -1651,13 +1651,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "M13B",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/m13b.png",
     "acessorios": [
       {
@@ -1699,13 +1699,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "M13C",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/m13c.png",
     "acessorios": [
       {
@@ -1746,13 +1746,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "M16",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/m16.png",
     "acessorios": [
       {
@@ -1797,7 +1797,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "M4",
@@ -1848,13 +1848,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "MCPR-300",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mcpr-300.png",
     "acessorios": [
       {
@@ -1895,13 +1895,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Minibak",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/minibak.png",
     "acessorios": [
       {
@@ -1941,13 +1941,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "MX Guardian",
     "jogo": "MW2",
     "tipo": "Espingardas",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/mx-guardian.png",
     "acessorios": [
       {
@@ -1986,13 +1986,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "MX9",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/mx9.png",
     "acessorios": [
       {
@@ -2033,13 +2033,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "P890",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/p890.png",
     "acessorios": [
       {
@@ -2078,13 +2078,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "PDSW 528",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/pdsw-528.png",
     "acessorios": [
       {
@@ -2124,13 +2124,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "RAAL MG",
     "jogo": "MW2",
     "tipo": "LMG",
-    "tier": "Tier D",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/raal-mg.png",
     "acessorios": [
       {
@@ -2172,13 +2172,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "RAPP H",
     "jogo": "MW2",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/rapp-h.png",
     "acessorios": [
       {
@@ -2219,13 +2219,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "RPK",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/rpk.png",
     "acessorios": [
       {
@@ -2269,13 +2269,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "SA-B 50",
     "jogo": "MW2",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/sa-b-50.png",
     "acessorios": [
       {
@@ -2316,13 +2316,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Sakin MG38",
     "jogo": "MW2",
     "tipo": "LMG",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/sakin-mg38.png",
     "acessorios": [
       {
@@ -2363,13 +2363,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Signal 50",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/signal-50.png",
     "acessorios": [
       {
@@ -2410,7 +2410,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "SO-14",
@@ -2458,7 +2458,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "SP-R 208",
@@ -2505,13 +2505,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "SP-X 80",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/sp-x-80.png",
     "acessorios": [
       {
@@ -2552,13 +2552,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "STB 556",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/stb-556.png",
     "acessorios": [
       {
@@ -2599,13 +2599,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "TAQ-56",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier D",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/taq-56.png",
     "acessorios": [
       {
@@ -2647,7 +2647,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "TAQ-M",
@@ -2695,13 +2695,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "TAQ-V",
     "jogo": "MW2",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/taq-v.png",
     "acessorios": [
       {
@@ -2743,13 +2743,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Tempus Razorback",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier D",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/tempus-razorback.png",
     "acessorios": [
       {
@@ -2791,13 +2791,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Tempus Torrent",
     "jogo": "MW2",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/tempus-torrent.png",
     "acessorios": [
       {
@@ -2839,13 +2839,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "TR-76 Geist",
     "jogo": "MW2",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier E",
+    "tier": "Tier C",
     "arquivo_imagem": "armas/tr-76-geist.png",
     "acessorios": [
       {
@@ -2887,7 +2887,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Vaznev-9K",
@@ -2934,13 +2934,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Vel 46",
     "jogo": "MW2",
     "tipo": "Submetralhadoras",
-    "tier": "Tier D",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/vel-46.png",
     "acessorios": [
       {
@@ -2982,13 +2982,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "Victus XMR",
     "jogo": "MW2",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "tier": "Tier E",
     "arquivo_imagem": "armas/victus-xmr.png",
     "acessorios": [
       {
@@ -3028,13 +3028,13 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "X12",
     "jogo": "MW2",
     "tipo": "Pistolas",
-    "tier": "Tier E",
+    "tier": "Tier D",
     "arquivo_imagem": "armas/x12.png",
     "acessorios": [
       {
@@ -3073,7 +3073,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   },
   {
     "nome": "X13 Auto",
@@ -3119,6 +3119,6 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-20"
+    "ultima_atualizacao": "2026-09-22"
   }
 ]
