@@ -1280,7 +1280,44 @@ footer {
 
     /* 6. Esconde as setas do Banner Absolute Meta no mobile para não sobrepor a imagem */
     .ad-nav-btn {
-        display: none !important; 
+        display: none !important;
+    }
+
+    /* === MOBILE: só modo LISTA, grid removido === */
+    .grid-armas { display: block !important; }
+    #btnViewGrid { display: none !important; }
+    .card { padding: 0.75rem !important; border-radius: 6px !important; word-break: break-word; }
+    .card h3 { font-size: 1.3rem !important; }
+    .card {
+        padding: 0.85rem !important;
+        border-radius: 6px !important;
+        word-break: break-word;
+    }
+    .card h3 { font-size: 1.35rem !important; }
+    .card .tipo { font-size: 0.85rem !important; }
+    .damage-visual { padding: 0.5rem !important; font-size: 0.9rem !important; }
+
+    .grid-armas, .grid-perks {
+        grid-template-columns: 1fr !important;
+        gap: 0.9rem !important;
+    }
+
+    .perk-box { padding: 0.85rem !important; }
+    .perk-box h3 { font-size: 1.15rem !important; }
+
+    .tips-list li { padding: 0.75rem !important; font-size: 0.95rem; }
+
+    /* Lista / picker no mobile */
+    .picker-list { padding: 0.2rem !important; }
+    .picker-item { padding: 0.55rem 0.6rem !important; font-size: 0.9rem; word-break: break-word; }
+
+    /* Blocos de stats / community-box */
+    .community-box { padding: 1rem !important; }
+    .form-row { flex-direction: column !important; gap: 0.5rem !important; }
+
+    /* Cards em lista de arsenal (se houver) */
+    [class*="lista"], [id*="lista"] {
+        display: block !important;
     }
 }
 

@@ -611,7 +611,7 @@ function aplicarFiltrosHome() {
 function renderMetaCards(armas) {
     const container = document.querySelector("#home .grid-armas");
     if (!container) return;
-    const modoLista = localStorage.getItem("wz_arsenal_view") || "grid";
+    const modoLista = (window.innerWidth <= 800) ? "lista" : (localStorage.getItem("wz_arsenal_view") || "grid");
     container.style.display = modoLista === "lista" ? "block" : "grid";
     container.innerHTML = "";
 
@@ -646,16 +646,14 @@ function renderMetaCards(armas) {
                     armasTier.map(arma => {
                         const jogoArma = obterJogoDaArma(arma);
                         const logoJogo = obterLogoJogo(jogoArma);
-                        return `<div style="display: flex; align-items: center; gap: 0.8rem; padding: 0.4rem; border-bottom: 1px solid #232a35;"
-                            onmouseover="this.style.background='#161820'" onmouseout="this.style.background='transparent'">
-                            <img src="${ASSETS_CDN + arma.arquivo_imagem}" alt="${escapeHTML(arma.nome)}" style="max-height: 40px; max-width: 90px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));" onerror="this.style.display='none'">
-                            <div style="flex: 1;">
-                                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">${escapeHTML(arma.nome)}</div>
-                                <div style="font-size: 0.78rem; color: #8c8ea3;">${escapeHTML(arma.tipo || "Arma Meta")}</div>
+                        return `<div style="display: flex; align-items: center; gap: 0.6rem; padding: 0.35rem; border-bottom: 1px solid #232a35;">
+                            <img src="${ASSETS_CDN + arma.arquivo_imagem}" alt="${escapeHTML(arma.nome)}" style="max-height: 36px; max-width: 70px; object-fit: contain;" onerror="this.style.display='none'">
+                            <div style="flex:1; min-width:0;">
+                                <div style="font-weight:700; color:#fff; font-size:0.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${escapeHTML(arma.nome)}</div>
+                                <div style="font-size:0.78rem; color:#8c8ea3;">${escapeHTML(arma.tipo || "Arma Meta")}</div>
                             </div>
-                            <img src="${ASSETS_CDN + logoJogo}" alt="${jogoArma}" style="height: 24px; width: 24px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6));" onerror="this.style.display='none'">
-                            <button onclick="abrirNoArmeiro(${jsArg(arma.nome)})" style="padding: 0.35rem 0.7rem; background: var(--accent); color: #000; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.78rem;">Armeiro</button>
-                            <button onclick="abrirNaComunidade(${jsArg(arma.nome)})" style="padding: 0.35rem 0.7rem; background: #2a2e3d; color: #fff; border: 1px solid #3f4458; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.78rem;">Comunidade</button>
+                            <img src="${ASSETS_CDN + logoJogo}" alt="${jogoArma}" style="height:20px;width:20px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'">
+                            <button onclick="abrirNoArmeiro(${jsArg(arma.nome)})" style="padding:0.25rem 0.55rem;background:var(--accent);color:#000;border:none;border-radius:4px;font-weight:bold;cursor:pointer;font-size:0.75rem;flex-shrink:0;">Armeiro</button>
                         </div>`;
                     }).join("") +
                     `</div></div>`;
