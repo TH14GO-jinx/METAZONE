@@ -25,11 +25,11 @@ jobs:
       - name: Instalar dependências e navegador Chromium
         run: |
           npm init -y
-          npm install puppeteer
-          npx puppeteer browsers install chrome
+          npm install playwright
+          npx playwright install chrome
 
       - name: Executar script de sincronizacao do Meta
-        run: node atualizar_meta_local.js
+        run: node bot_atualiza.js
 
       - name: Salvar alterações no repositório
         run: |

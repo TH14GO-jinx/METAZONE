@@ -390,7 +390,7 @@ function renderizarBannerAnuncio(listaCompleta) {
     if (!track || !dotsContainer) return;
 
     // Filtra todas as armas que estiverem no Tier S
-    const armasAbsoluteMeta = listaCompleta.filter(arma => (arma.tier || "").toUpperCase() === "TIER S");
+    const armasAbsoluteMeta = listaCompleta.filter(arma => (arma.status || "").toUpperCase() === "ABSOLUTE META");
     totalSlidesBanner = armasAbsoluteMeta.length;
 
     // Se nenhuma estiver classificada como S, esconde o banner
@@ -579,7 +579,7 @@ function filtrarHomeClasse(classe, btnClicado) {
 }
 
 function pontuarTierMeta(arma) {
-    const tier = (arma.tier || "").toUpperCase();
+    const tier = (arma.status || "").toUpperCase();
     if (tier === "TIER S") return 100;
     if (tier === "TIER A") return 80;
     if (tier === "TIER B") return 60;
@@ -628,19 +628,20 @@ function renderMetaCards(armas) {
     if (modoLista === "lista") {
         const grupos = {};
         armas.forEach(arma => {
-            const tier = (arma.tier || "Tier E").toUpperCase();
+            let tier = (arma.status || arma.tier || "").toUpperCase();
+            if (!tier) tier = "TIER E"; // lista tudo sem dizer "Tier" no título
             if (!grupos[tier]) grupos[tier] = [];
             grupos[tier].push(arma);
         });
-        const ordem = ["TIER S","TIER A","TIER B","TIER C","TIER D","TIER E"];
+        const ordem = ["NOVO","META","ABSOLUTE META","TIER E"];
         const ordemExistente = ordem.filter(t => grupos[t] && grupos[t].length > 0);
         container.innerHTML = `
             <div style="width: 100%; display: flex; flex-direction: column; gap: 1rem;">` +
             ordemExistente.map(tier => {
                 const armasTier = grupos[tier];
-                const corTier = tier === "TIER S" ? "#f59e0b" : tier === "TIER A" ? "#4ade80" : tier === "TIER B" ? "#38bdf8" : tier === "TIER C" ? "#eab308" : tier === "TIER D" ? "#ef4444" : "#2e3545";
+                const corTier = tier === "NOVO" ? "#7ee787" : tier === "META" ? "#7fb3d5" : tier === "ABSOLUTE META" ? "#ffd966" : "#2e3545";
                 return `<div style="background: rgba(12,14,22,0.88); border: 1px solid ${corTier}; border-radius: 8px; overflow: hidden;">
-                    <div style="background: ${corTier}99; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 0.6rem 1rem; letter-spacing: 1px;">${tier === "TIER S" ? "★ META ABSOLUTO" : tier}</div>
+                    <div style="background: ${corTier}99; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 0.6rem 1rem; letter-spacing: 1px;">${tier === "ABSOLUTE META" ? "★ META ABSOLUTO" : (tier === "NOVO" ? "★ NOVO" : (tier === "META" ? "★ META" : (tier === "TIER E" ? "OUTRAS" : tier)))}</div>
                     <div style="padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem;">` +
                     armasTier.map(arma => {
                         const jogoArma = obterJogoDaArma(arma);
@@ -663,14 +664,65 @@ function renderMetaCards(armas) {
         return;
     }
 
+    // Ordena para meta/no topo no grid:
+    const ordemStatus = {"NOVO":1,"META":2,"ABSOLUTE META":3};
+    armas.sort((a,b)=>{
+        const sa=(a.status||"").toUpperCase()||""; const sb=(b.status||"").toUpperCase()||"";
+        const va=ordemStatus[sa]||99; const vb=ordemStatus[sb]||99;
+        return va-vb;
+    });
+
+    // Se grid: agrupa por status com retângulos
+    if (modoLista === "grid") {
+        const gruposGrid={};
+        armas.forEach(a=>{ const s=(a.status||a.tier||"").toUpperCase()||"TIER E"; if(!gruposGrid[s]) gruposGrid[s]=[]; gruposGrid[s].push(a); });
+        const ordemGrid=["NOVO","ABSOLUTE META","META","TIER E"];
+        container.innerHTML=""; container.style.display="block"; container.style.flexDirection="column";
+        ordemGrid.forEach(g=>{
+            const lista=gruposGrid[g]; if(!lista||!lista.length) return;
+            const cor=g==="NOVO"?"#7ee787":g==="META"?"#7fb3d5":g==="ABSOLUTE META"?"#ffd966":"#2e3545";
+            const titulo=g==="ABSOLUTE META"?"★ META ABSOLUTO":(g==="NOVO"?"★ NOVO":(g==="META"?"★ META":"OUTRAS"));
+            const sec=document.createElement("div");
+            sec.style.cssText="width:100%;border:1px solid "+cor+";border-radius:8px;overflow:hidden;margin-bottom:1.2rem;background:rgba(12,14,22,0.88);";
+            sec.innerHTML=`<div style="background:${cor}99;color:#fff;font-weight:800;font-size:0.85rem;padding:0.6rem 1rem;letter-spacing:1px;">${titulo}</div>`;
+            const inner=document.createElement("div"); inner.style.cssText="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:1rem;";
+            lista.forEach(arma=>{
+                const card=document.createElement("div"); card.className="card"; card.style.margin="0";
+                const statusNorm=(arma.status||"").toUpperCase();
+                const isNovo=statusNorm==="NOVO"; const isAbs=statusNorm==="ABSOLUTE META"; const isMeta=statusNorm==="META";
+                const tierClass=isAbs?"badge-absolute":isMeta?"badge-meta":isNovo?"badge-novo":"";
+                const isMetaTierS=isAbs||isMeta||isNovo;
+                if(isMetaTierS){card.style.borderColor="var(--accent)"; card.style.boxShadow="0 4px 14px rgba(0,0,0,0.6)";}
+                const jogoArma=obterJogoDaArma(arma); const logoJogo=obterLogoJogo(jogoArma);
+                card.innerHTML=`<div class="card-header" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span class="badge ${tierClass}" style="${isMetaTierS ? 'font-weight: 800;' : 'display:none;'}">${isAbs?'★ ABSOLUTE META':isMeta?'★ META':isNovo?'★ NOVO':''}</span>
+                    <img src="${ASSETS_CDN+logoJogo}" alt="${jogoArma}" style="height:36px;max-width:70px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.7));" onerror="this.style.display='none'">
+                </div>
+                <div style="width:100%;height:100px;display:flex;align-items:center;justify-content:center;margin:0.5rem 0;"><img src="${ASSETS_CDN+arma.arquivo_imagem}" alt="${arma.nome}" style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6));" loading="lazy" onerror="this.style.display='none'"></div>
+                <h3>${arma.nome}</h3><p class="tipo">${arma.tipo||"Arma Warzone"}</p>
+                <div style="display:flex;gap:0.5rem;margin-top:0.8rem;">
+                    <button class="btn-submit" onclick="abrirNoArmeiro('${arma.nome.replace(/'/g,"\\'")}')" style="flex:1;padding:0.65rem 0.3rem;font-weight:bold;background:var(--accent);color:#000;border:none;border-radius:4px;cursor:pointer;font-size:0.8rem;">Armeiro</button>
+                    <button class="btn-submit" onclick="abrirNaComunidade('${arma.nome.replace(/'/g,"\\'")}')" style="flex:1;padding:0.65rem 0.3rem;font-weight:bold;background:#2a2e3d;border:1px solid #3f4458;border-radius:4px;cursor:pointer;font-size:0.8rem;color:#fff;">Comunidade</button>
+                </div>`;
+                inner.appendChild(card);
+            });
+            sec.appendChild(inner); container.appendChild(sec);
+        });
+        return;
+    }
+
     armas.forEach(arma => {
         const card = document.createElement("div");
         card.className = "card";
 
-        const tierClass = (arma.tier || "Tier E").toLowerCase().replace(/\s+/g, "-");
+        const statusNorm = (arma.status || "").toUpperCase();
+        const isNovo = statusNorm === "NOVO";
+        const isAbsolute = statusNorm === "ABSOLUTE META";
+        const isMeta = statusNorm === "META";
+        const tierClass = isAbsolute ? "badge-absolute" : isMeta ? "badge-meta" : isNovo ? "badge-novo" : "";
         const jogoArma = obterJogoDaArma(arma);
         const logoJogo = obterLogoJogo(jogoArma);
-        const isMetaTierS = (arma.tier || "").toUpperCase() === "TIER S";
+        const isMetaTierS = isAbsolute || isMeta || isNovo;
 
         if (isMetaTierS) {
             card.style.borderColor = "var(--accent)";
@@ -679,8 +731,8 @@ function renderMetaCards(armas) {
 
         card.innerHTML = `
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="tier ${tierClass}" style="${isMetaTierS ? 'background: var(--accent); color: #000; font-weight: 800;' : ''}">
-                    ${isMetaTierS ? '★ META ABSOLUTO' : (arma.tier || 'Tier E')}
+                <span class="badge ${tierClass}" style="${isMetaTierS ? 'font-weight: 800;' : (tierClass ? '' : 'display:none;')}"
+                    ${isAbsolute ? '★ ABSOLUTE META' : isMeta ? '★ META' : isNovo ? '★ NOVO' : 'Tier E'}
                 </span>
                 <img 
                     src="${ASSETS_CDN + logoJogo}" 

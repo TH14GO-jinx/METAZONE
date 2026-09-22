@@ -3,7 +3,7 @@
     "nome": "TR51 PARA",
     "tipo": "Fuzis de Batalha",
     "jogo": "BO7",
-    "tier": "Tier A",
+    "status": "Novo",
     "arquivo_imagem": "armas/TR51-PARA.png",
     "acessorios": [
       {
@@ -41,13 +41,14 @@
         "Carregador Rápido"
       ]
     },
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "VMP",
+    "nome": "VMP-9MM",
     "tipo": "SMT",
     "jogo": "BO7",
-    "tier": "Tier S",
+    "status": "Novo",
     "arquivo_imagem": "armas/VMP.png",
     "acessorios": [
       {
@@ -85,13 +86,14 @@
         "Tambor de 50 Projéteis"
       ]
     },
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "1911",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/1911.png",
     "acessorios": [
       {
@@ -130,13 +132,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "AK-27",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/ak-27.png",
     "acessorios": [
       {
@@ -178,13 +181,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Akita",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/akita.png",
     "acessorios": [
       {
@@ -226,13 +230,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "AN-94",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/an-94.png",
     "acessorios": [
       {
@@ -274,13 +279,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Carbon 57",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "status": "Meta",
     "arquivo_imagem": "armas/carbon-57.png",
     "acessorios": [
       {
@@ -322,13 +328,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "CBRS-3",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/cbrs-3.png",
     "acessorios": [
       {
@@ -370,13 +377,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Coda 9",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/coda-9.png",
     "acessorios": [
       {
@@ -419,13 +427,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Dravec 45",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "status": "Meta",
     "arquivo_imagem": "armas/dravec-45.png",
     "acessorios": [
       {
@@ -467,13 +476,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "DS20-Mirage",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "Meta",
     "arquivo_imagem": "armas/ds20-mirage.png",
     "acessorios": [
       {
@@ -515,13 +525,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Echo 12",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/echo-12.png",
     "acessorios": [
       {
@@ -563,13 +574,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "EGRT-17",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "status": "Meta",
     "arquivo_imagem": "armas/egrt-17.png",
     "acessorios": [
       {
@@ -611,13 +623,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "FG42",
+    "nome": "FG-42",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/fg42.png",
     "acessorios": [
       {
@@ -659,13 +672,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Gremlin",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/gremlin.png",
     "acessorios": [
       {
@@ -707,13 +721,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "Hawker-HX",
+    "nome": "Hawker HX",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "status": "Meta",
     "arquivo_imagem": "armas/hawker-hx.png",
     "acessorios": [
       {
@@ -755,13 +770,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "J-Ger 45",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/j-ger-45.png",
     "acessorios": [
       {
@@ -800,13 +816,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Kogot-7",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "status": "Meta",
     "arquivo_imagem": "armas/kogot-7.png",
     "acessorios": [
       {
@@ -848,13 +865,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "KRS-762",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/krs-762.png",
     "acessorios": [
       {
@@ -896,13 +914,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "M10 Breacher",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/m10-breacher.png",
     "acessorios": [
       {
@@ -944,13 +963,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "M15-Mod-0",
     "jogo": "BO7",
     "tipo": "Fuzis de Batalha",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/m15-mod-0.png",
     "acessorios": [
       {
@@ -992,13 +1012,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "M34 Novaline",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/m34-novaline.png",
     "acessorios": [
       {
@@ -1040,13 +1061,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "M8A1",
+    "nome": "M8A 1",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/m8a1.png",
     "acessorios": [
       {
@@ -1088,13 +1110,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Maddox RFB",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/maddox-rfb.png",
     "acessorios": [
       {
@@ -1136,13 +1159,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "MK35 ISR",
+    "nome": "MK35-ISR",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/mk35-isr.png",
     "acessorios": [
       {
@@ -1184,13 +1208,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "MK78",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/mk78.png",
     "acessorios": [
       {
@@ -1232,13 +1257,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "MPC-25",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "status": "",
     "arquivo_imagem": "armas/mpc-25.png",
     "acessorios": [
       {
@@ -1280,13 +1306,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "MXR-17",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier C",
+    "status": "Absolute Meta",
     "arquivo_imagem": "armas/mxr-17.png",
     "acessorios": [
       {
@@ -1328,13 +1355,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Peacekeeper-MK1",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/peacekeeper-mk1.png",
     "acessorios": [
       {
@@ -1376,13 +1404,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Razor 9mm",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/razor-9mm.png",
     "acessorios": [
       {
@@ -1424,13 +1453,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "REV-46",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "status": "",
     "arquivo_imagem": "armas/rev-46.png",
     "acessorios": [
       {
@@ -1472,13 +1502,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "RK-9",
+    "nome": "RK 9",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/rk-9.png",
     "acessorios": [
       {
@@ -1517,13 +1548,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Ryden-45K",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "status": "",
     "arquivo_imagem": "armas/ryden-45k.png",
     "acessorios": [
       {
@@ -1565,13 +1597,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "SG-12",
+    "nome": "SG 12",
     "jogo": "BO7",
     "tipo": "Espingardas",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/sg-12.png",
     "acessorios": [
       {
@@ -1613,13 +1646,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Shadow SK",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier D",
+    "status": "",
     "arquivo_imagem": "armas/shadow-sk.png",
     "acessorios": [
       {
@@ -1661,13 +1695,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Sokol 545",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/sokol-545.png",
     "acessorios": [
       {
@@ -1709,13 +1744,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "Strider-300",
+    "nome": "Strider 300",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier S",
+    "status": "Absolute Meta",
     "arquivo_imagem": "armas/strider-300.png",
     "acessorios": [
       {
@@ -1757,13 +1793,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Sturmwolf-45",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "status": "",
     "arquivo_imagem": "armas/sturmwolf-45.png",
     "acessorios": [
       {
@@ -1805,13 +1842,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Swordfish A1",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/swordfish-a1.png",
     "acessorios": [
       {
@@ -1853,13 +1891,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Velox 57",
     "jogo": "BO7",
     "tipo": "Pistolas",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/velox-57.png",
     "acessorios": [
       {
@@ -1898,13 +1937,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Voyak KT-3",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier S",
+    "status": "Meta",
     "arquivo_imagem": "armas/voyak-kt-3.png",
     "acessorios": [
       {
@@ -1946,13 +1986,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "VS-Recon",
+    "nome": "VS Recon",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "status": "Meta",
     "arquivo_imagem": "armas/vs-recon.png",
     "acessorios": [
       {
@@ -1994,13 +2035,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "VST",
+    "nome": "VST SMG",
     "jogo": "BO7",
     "tipo": "Submetralhadoras",
-    "tier": "Tier B",
+    "status": "Absolute Meta",
     "arquivo_imagem": "armas/vst.png",
     "acessorios": [
       {
@@ -2042,13 +2084,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "VX-Compact",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "status": "",
     "arquivo_imagem": "armas/vx-compact.png",
     "acessorios": [
       {
@@ -2093,13 +2136,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "Warden 308",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/warden-308.png",
     "acessorios": [
       {
@@ -2141,13 +2185,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "X9 Maverick",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/x9-maverick.png",
     "acessorios": [
       {
@@ -2189,13 +2234,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
-    "nome": "XM325",
+    "nome": "XM 325",
     "jogo": "BO7",
     "tipo": "LMG",
-    "tier": "Tier C",
+    "status": "",
     "arquivo_imagem": "armas/xm325.png",
     "acessorios": [
       {
@@ -2237,13 +2283,14 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   },
   {
     "nome": "XR-3 Ion",
     "jogo": "BO7",
     "tipo": "Fuzis de Precisão",
-    "tier": "Tier B",
+    "status": "",
     "arquivo_imagem": "armas/xr-3-ion.png",
     "acessorios": [
       {
@@ -2285,6 +2332,7 @@
       ]
     },
     "patch_versao": "patch-notes-landing-template",
-    "ultima_atualizacao": "2026-09-22"
+    "ultima_atualizacao": "2026-09-22",
+    "tier": ""
   }
 ]

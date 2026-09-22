@@ -557,6 +557,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.badge-novo { background: #1a472a; color: #7ee787; border-color: #7ee787; }
+.badge-absolute { background: #3d2e05; color: #ffd966; border-color: #ffd966; }
+.badge-meta { background: #0d2b45; color: #7fb3d5; border-color: #7fb3d5; }
+
 .hero h1 {
     font-size: 4.8rem;
     margin-bottom: 0.5rem;
