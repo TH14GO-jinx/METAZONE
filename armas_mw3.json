@@ -1953,7 +1953,7 @@
     "nome": "Striker",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/striker.png",
     "acessorios": [
       {
@@ -2000,7 +2000,7 @@
     "nome": "Striker 9",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/striker-9.png",
     "acessorios": [
       {
@@ -2048,7 +2048,7 @@
     "nome": "Superi 46",
     "jogo": "MW3",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/superi-46.png",
     "acessorios": [
       {
@@ -2095,7 +2095,7 @@
     "nome": "SVA 545",
     "jogo": "MW3",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/sva-545.png",
     "acessorios": [
       {

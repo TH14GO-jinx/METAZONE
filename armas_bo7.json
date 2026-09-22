@@ -47,7 +47,7 @@
     "nome": "VMP",
     "tipo": "SMT",
     "jogo": "BO7",
-    "tier": "Tier A",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/VMP.png",
     "acessorios": [
       {
@@ -1715,7 +1715,7 @@
     "nome": "Strider-300",
     "jogo": "BO7",
     "tipo": "Fuzis de Atirador",
-    "tier": "Tier A",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/strider-300.png",
     "acessorios": [
       {
@@ -1904,7 +1904,7 @@
     "nome": "Voyak KT-3",
     "jogo": "BO7",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier S",
     "arquivo_imagem": "armas/voyak-kt-3.png",
     "acessorios": [
       {

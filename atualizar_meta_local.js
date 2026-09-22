@@ -1,7 +1,7 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
-const URL_CODMUNITY = 'https://codmunity.gg/pt/tier-list/warzone';
+const URL_CODMUNITY = 'https://codmunity.gg/tier-list/warzone';
 
 const ARQUIVOS_JSON = [
     './armas_bo7.json',

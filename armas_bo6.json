@@ -375,7 +375,7 @@
     "nome": "C9",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/c9.png",
     "acessorios": [
       {
@@ -585,7 +585,7 @@
     "nome": "Dresden 9mm",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/dresden-9mm.png",
     "acessorios": [
       {
@@ -1242,7 +1242,7 @@
     "nome": "Krig C",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/krig-c.png",
     "acessorios": [
       {
@@ -1289,7 +1289,7 @@
     "nome": "KSV",
     "jogo": "BO6",
     "tipo": "Submetralhadoras",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/ksv.png",
     "acessorios": [
       {
@@ -1613,7 +1613,7 @@
     "nome": "Merrick 556",
     "jogo": "BO6",
     "tipo": "Fuzis de Assalto",
-    "tier": "Tier A",
+    "tier": "Tier B",
     "arquivo_imagem": "armas/merrick-556.png",
     "acessorios": [
       {
