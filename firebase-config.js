@@ -1,6 +1,6 @@
 const firebaseConfig = {
-  "apiKey": "AIzaSyBzHirzo51eHB5trIvbAGk81ECC5tgzCdw",
-  "authDomain": "builds-4213e.firebaseio.com",
+  "apiKey": "AIzaSyCkR3L5oy2WkWKCtLwXvl8SgpsV0ng",
+  "authDomain": "builds-4213e.firebaseapp.com",
   "projectId": "builds-4213e",
   "storageBucket": "builds-4213e.firebasestorage.app",
   "messagingSenderId": "612728705593",
