@@ -1,3 +1,8 @@
 node_modules/
 package-lock.json
 .cache/
+
+# Segurança: configurações do Firebase NUNCA devem ser commitadas
+firebase-config.js
+.env
+.env.local

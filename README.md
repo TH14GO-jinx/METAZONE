@@ -20,22 +20,6 @@ Site para acompanhamento de meta de armas do jogo warzone, com lista dinâmica, 
 | bot_atualiza.js | Bot de atualização (Firebase/automação) |
 | firebase-config.js / firebase.json | Configuração do Firebase |
 
-## 7. Segurança das Credenciais do Firebase
-O `firebase-config.js` contém as chaves do Firebase e **NUNCA deve ser commitado**.
-Ele é gerado localmente a partir do `.env` (gitignored) pelo script `gerar-firebase-config.js`.
-
-Arquivos de referência (gitignored ou templates):
-- `.env` — credenciais reais (NUNCA commitado)
-- `.env.example` — template sem valores
-- `firebase-config.example.js` — template de configuração
-- `gerar-firebase-config.js` — gera `firebase-config.js` a partir do `.env`
-
-Para configurar em uma nova máquina:
-1. Copie `.env.example` para `.env` e preencha as credenciais do [Firebase Console](https://console.firebase.google.com).
-2. Execute `node gerar-firebase-config.js` para gerar o `firebase-config.js`.
-
-> ⚠️ A `apiKey` do Firebase é uma **chave pública** (projetada para uso no cliente) e as regras do Firestore já exigem autenticação (`request.auth != null`). Mesmo assim, evite expor o histórico no repositório para não consumir cota ou permitir uso indevido.
-
 ## 4. Funcionalidades Principais
 - Seletor de tema (jogo): MW4, MW3, BO6, BO7
 - Menu mobile lateral
