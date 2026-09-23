@@ -89,7 +89,7 @@
                 <li><a href="#" class="nav-item" onclick="showSection(event, 'armeiro', this); closeMobileMenu();">Armeiro</a></li>
                 <li><a href="#" class="nav-item" onclick="showSection(event, 'comunidade', this); closeMobileMenu();">Comunidade</a></li>
                 <li><a href="#" class="nav-item" onclick="showSection(event, 'perks', this); closeMobileMenu();">Perks</a></li>
-                <li><a href="#" class="nav-item" onclick="showSection(event, 'otimizacao', this); closeMobileMenu();">Otimização</a></li>
+                <li><a href="#" class="nav-item" onclick="showSection(event, 'sobre-mim', this); closeMobileMenu();">Sobre Mim</a></li>
             </ul>
 
             <div class="menu-right-spacer"></div>
@@ -394,10 +394,110 @@
             <div style="text-align:center; padding: 3rem; color: #8a8d99; font-size: 1.1rem;">Em breve</div>
         </section>
 
-        <!-- TELA 5: Otimização -->
-        <section id="otimizacao" class="container page-section">
-            <h2>Otimização</h2>
-            <div style="text-align:center; padding: 3rem; color: #8a8d99; font-size: 1.1rem;">Em breve</div>
+        <!-- TELA 5: Sobre Mim -->
+        <section id="sobre-mim" class="container page-section">
+            <h2>Sobre Mim</h2>
+            <div style="text-align:center; margin-top:1rem;">
+                <div style="display:inline-block; width:160px; height:160px; border-radius:50%; overflow:hidden; box-shadow:0 0 30px rgba(250,204,21,0.45); margin:0 auto; border:3px solid var(--accent);">
+                    <img src="https://cdn.jsdelivr.net/gh/TH14GO-jinx/warzone-assets@main/logos/foto.png" alt="Thiago Souza" style="width:100%; height:100%; object-fit:cover; display:block;">
+                </div>
+                <h2 style="margin:0.4rem 0 0.15rem; font-size:2.2rem; letter-spacing:2px;">Thiago Souza</h2>
+                <h3 style="color:var(--accent); font-size:1.1rem; margin:0; font-weight:600;">Tecnólogo | Suporte N1 | Desenvolvedor</h3>
+            </div>
+
+            <p style="text-align:center; color:#8c8ea3; margin-bottom:2rem;">Thiago Souza — Tecnólogo, Instrutor e Desenvolvedor</p>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+                <!-- Resumo -->
+                <div class="community-box" style="padding:2rem;">
+                    <h3 style="color:var(--accent); margin-bottom:0.8rem;">Resumo Profissional</h3>
+                    <p style="color:#d1d5db; line-height:1.7; font-size:0.95rem;">Tecnólogo em Análise e Desenvolvimento de Sistemas (2024) em início de carreira em TI. Experiência prática em suporte técnico N1, manutenção de computadores, automação com Python/VBA, SAP, Salesforce e atendimento ao cliente. Instrutor de cursos. Em formação complementar em cibersegurança e banco de dados.</p>
+                </div>
+
+                <!-- Formação -->
+                <div class="community-box" style="padding:2rem;">
+                    <h3 style="color:var(--accent); margin-bottom:0.8rem;">Formação Acadêmica</h3>
+                    <div style="color:#d1d5db; line-height:1.8; font-size:0.9rem;">
+                        <strong style="color:#fff;">Tecnólogo em Análise e Desenvolvimento de Sistemas</strong><br>
+                        <span style="color:#8c8ea3;">FAMETRO – Manaus, AM | Concluído 06/2024</span>
+                    </div>
+                    <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid #232a35; color:#d1d5db; line-height:1.8; font-size:0.9rem;">
+                        <strong style="color:#fff;">Cursos Complementares</strong><br>
+                        <span style="color:#8c8ea3;">Cibersegurança do Google (em andamento)</span><br>
+                        <span style="color:#8c8ea3;">Analista de Cibersegurança Jr (em andamento)</span><br>
+                        <span style="color:#8c8ea3;">Fundamentos de TI — Fundação Bradesco (7h)</span><br>
+                        <span style="color:#8c8ea3;">Banco de Dados — Fundação Bradesco (15h)</span><br>
+                        <span style="color:#8c8ea3;">Análise de Dados — Power BI — Fundação Bradesco (5h)</span>
+                    </div>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="community-box" style="padding:2rem;">
+                    <h3 style="color:var(--accent); margin-bottom:0.8rem;">Habilidades Técnicas</h3>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem; color:#d1d5db; font-size:0.9rem;">
+                        <div><strong style="color:#fff;">Suporte:</strong> N1, Help Desk, diagnóstico, manutenção</div>
+                        <div><strong style="color:#fff;">Hardware:</strong> Montagem, limpeza, instalação de S.Os</div>
+                        <div><strong style="color:#fff;">Redes/Seg:</strong> Noções de redes e segurança</div>
+                        <div><strong style="color:#fff;">Web:</strong> HTML, CSS, JS, Node.js, Firebase</div>
+                        <div><strong style="color:#fff;">Dados:</strong> Python, VBA, Excel Avançado, Power BI</div>
+                        <div><strong style="color:#fff;">Sistemas:</strong> Office 365, Google Workspace, SAP, Salesforce</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projetos -->
+            <div class="community-box" style="padding:2rem; margin-top:1.5rem;">
+                <h3 style="color:var(--accent); margin-bottom:1rem;">Projetos</h3>
+                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:1rem;">
+                    <a href="https://github.com/TH14GO-jinx/METAZONE" target="_blank" style="background:#11131b; border:1px solid #232a35; border-radius:8px; padding:1.2rem; text-decoration:none; color:#fff; transition:all .2s; display:block;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#232a35'; this.style.transform='none'">
+                        <strong style="color:var(--accent); font-size:1.1rem;">MetaZone</strong><br>
+                        <small style="color:#8c8ea3;">Site de meta de armas Call of Duty Warzone — responsivo, temas dinâmicos, liste/grid, integração Firebase, armeiro interativo.</small><br>
+                        <span style="color:#22c55e; font-size:0.8rem;">github.com/TH14GO-jinx/METAZONE</span>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Experiência -->
+            <div class="community-box" style="padding:2rem; margin-top:1.5rem;">
+                <h3 style="color:var(--accent); margin-bottom:1rem;">Experiência Profissional</h3>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; color:#d1d5db; font-size:0.9rem; line-height:1.7;">
+                    <div>
+                        <strong style="color:#fff; font-size:1rem;">Técnico em TI — Autônomo</strong><br>
+                        <span style="color:#8c8ea3;">Manaus, AM</span><br>
+                        Suporte técnico presencial e remoto, diagnóstico, montagem, limpeza e manutenção de computadores. Scripts Python/VBA para automação.
+                    </div>
+                    <div>
+                        <strong style="color:#fff; font-size:1rem;">Instrutor de Cursos — Amazon Cursos</strong><br>
+                        <span style="color:#8c8ea3;">Juruti, PA — Abr 2025 a Dez 2025</span><br>
+                        Informática Básica/Avançada, Robótica Educacional, Desenvolvimento de Jogos 2D, Análise de Dados e Automação de Planilhas. Mais de 80 alunos capacitados.
+                    </div>
+                    <div>
+                        <strong style="color:#fff; font-size:1rem;">Auxiliar de Escritório Aprendiz — Bemol</strong><br>
+                        <span style="color:#8c8ea3;">Manaus, AM — Fev 2022 a Mai 2024</span><br>
+                        SAP (ERP) e Salesforce (CRM). Controles de estoque, auditorias em planilhas, organização fiscal.
+                    </div>
+                    <div>
+                        <strong style="color:#fff; font-size:1rem;">Atendente / Vendedor — Tapajós Solar</strong><br>
+                        <span style="color:#8c8ea3;">Juruti, PA — Abr 2019 a Dez 2021</span><br>
+                        Atendimento pré/pós-venda, propostas, orçamentos de sistemas fotovoltaicos e relatórios semanais.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificações -->
+            <div class="community-box" style="padding:2rem; margin-top:1.5rem;">
+                <h3 style="color:var(--accent); margin-bottom:0.8rem;">Cursos e Certificações</h3>
+                <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Certificado de Cibersegurança do Google</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Analista de Cibersegurança Jr</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Fundamentos de TI — Fundação Bradesco</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Banco de Dados — Fundação Bradesco</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Análise de Dados — Power BI</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Excel Avançado e Automação</span>
+                    <span style="background:#11131b; border:1px solid #232a35; border-radius:20px; padding:0.35rem 0.8rem; font-size:0.82rem; color:#d1d5db;">Atendimento de Alta Performance</span>
+                </div>
+            </div>
         </section>
 
         <!-- TELA 6: Login -->
@@ -561,8 +661,8 @@
 
     <footer>
         <div class="footer-content">
-            <p>Warzone Meta Hub — Feito pela comunidade</p>
-            <p style="font-size: 0.75rem; opacity: 0.5;">v2-firebase</p>
+            <p>Metazone — projetado para interação da comnidade</p>
+            <p style="font-size: 0.75rem; opacity: 0.5;">V1</p>
             <div class="counter">Visitas únicas: <span id="visit-count">1.482</span></div>
         </div>
     </footer>
