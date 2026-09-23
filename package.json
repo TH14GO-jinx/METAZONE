@@ -6,7 +6,7 @@
   },
   "name": "metazone",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site para acompanhamento de meta de armas do jogo warzone, com lista dinâmica, banners, tema visual e integração com Firebase.",
   "main": "atualizar_meta_local.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
