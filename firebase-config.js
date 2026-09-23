@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  "apiKey": "AIzaSyCkR3L5oy2WkWKCtLwXvl8XrkstGpsV0ng",
-  "authDomain": "builds-4213e.firebaseapp.com",
-  "projectId": "builds-4213e",
-  "storageBucket": "builds-4213e.firebasestorage.app",
-  "messagingSenderId": "612728705593",
-  "appId": "1:612728705593:web:2091b8a995c1d04de273e8",
-  "measurementId": "G-9PCPQ90CKS"
+  "apiKey": "AIzaSyCzNOxPuzIksu4bsxBxAXMszTPVN6ZqOLg",
+  "authDomain": "builds-e8237.firebaseapp.com",
+  "projectId": "builds-e8237",
+  "storageBucket": "builds-e8237.firebasestorage.app",
+  "messagingSenderId": "538800210352",
+  "appId": "1:538800210352:web:638049156928fca09b9675",
+  "measurementId": "G-QNJWD4DXYD"
 };
 
 if (typeof firebase !== 'undefined' && firebase.apps && !firebase.apps.length) {
