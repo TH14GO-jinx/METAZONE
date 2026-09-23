@@ -633,7 +633,7 @@ function renderMetaCards(armas) {
             if (!grupos[tier]) grupos[tier] = [];
             grupos[tier].push(arma);
         });
-        const ordem = ["NOVO","META","ABSOLUTE META","TIER E"];
+        const ordem = ["NOVO","ABSOLUTE META","META","TIER E"];
         const ordemExistente = ordem.filter(t => grupos[t] && grupos[t].length > 0);
         container.innerHTML = `
             <div style="width: 100%; display: flex; flex-direction: column; gap: 1rem;">` +
@@ -2109,9 +2109,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTheme(savedTheme);
 
     const counterElement = document.getElementById("visit-count");
-    let currentVisits = parseInt(localStorage.getItem("wz_visits") || "1482", 10);
+    // RESET VISITAS: zera o contador e limpa o marcador de visita única
+    localStorage.removeItem("wz_unique_visited");
+    localStorage.setItem("wz_visits", "0");
+    let currentVisits = 0;
     currentVisits += 1;
     localStorage.setItem("wz_visits", currentVisits);
+    localStorage.setItem("wz_unique_visited", "1");
     if (counterElement) counterElement.textContent = currentVisits.toLocaleString("pt-BR");
 
     carregarDadosIniciais();
